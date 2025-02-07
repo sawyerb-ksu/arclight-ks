@@ -1,0 +1,155 @@
+include:
+  - project: devops/ci-config
+    file:
+      - /templates/container-flexible.gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  HELM_KUBEAPISERVER: https://api.prod.okd4.fitz.cloud.duke.edu:6443
+  OCI_HELPERS_IMAGE: gitlab-registry.oit.duke.edu/devops/oci-helpers/alpine:latest
+  OKD_REGISTRY: registry.apps.prod.okd4.fitz.cloud.duke.edu
+  OKD_IMAGE_TAG: ${CI_PIPELINE_ID}-${CI_COMMIT_SHORT_SHA}
+  SHARED_RUNNER_TAG: oit-shared-unprivileged
+  build_tag: ${CI_REGISTRY_IMAGE}/app:${OKD_IMAGE_TAG}
+
+#
+# Jobs
+#
+build:
+  extends: .build
+  script:
+    - ./build.sh
+    - docker push $build_tag
+
+#
+# Test jobs
+#
+test:
+  extends: .test
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - if: $CI_COMMIT_MESSAGE =~ /--skip-tests/
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+bundler-audit:
+  stage: test
+  tags:
+    - $SHARED_RUNNER_TAG
+  allow_failure: false
+  image: $build_tag
+  variables:
+    HOME: /tmp
+  before_script:
+    - gem install bundler-audit --no-doc
+  script:
+    - bundle-audit check --update
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - if: $CI_COMMIT_MESSAGE =~ /--skip-audit/
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+yarn-audit:
+  tags:
+    - $SHARED_RUNNER_TAG
+  allow_failure: true
+  image: $build_tag
+  script:
+    - yarn audit
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - if: $CI_COMMIT_MESSAGE =~ /--skip-audit/
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+rubocop:
+  tags:
+    - $SHARED_RUNNER_TAG
+  allow_failure: true
+  image: $build_tag
+  script:
+    - bundle exec rubocop
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - if: $CI_COMMIT_MESSAGE =~ /--skip-rubocop/
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+accessibility:
+  extends: .test
+  script:
+    - make accessibility
+  allow_failure: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - if: $CI_COMMIT_MESSAGE =~ /--skip-tests/
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+#
+# Helm chart deployment
+#
+.deploy-okd:
+  image: $OCI_HELPERS_IMAGE
+  tags:
+    - $SHARED_RUNNER_TAG
+  stage: deploy
+  variables:
+    XDG_CONFIG_HOME: /tmp
+    XDG_CACHE_HOME: /tmp
+  rules:
+    - if: $CI_COMMIT_BRANCH == $DEPLOY_REF_NAME
+      when: on_success
+  before_script:
+    - helm registry login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - helm repo add oauth2-proxy https://oauth2-proxy.github.io/manifests
+    - helm dependency build chart
+    - helm lint chart --with-subcharts
+  script:
+    - >-
+      helm upgrade dul-arclight chart --install
+      --version $(awk '/^version/ {print $2}' chart/Chart.yaml)
+      --values $HELM_CHART_VALUES
+      --set image.tag=${OKD_IMAGE_TAG}
+      --set apache.image.repository=${HELM_NAMESPACE}/apache
+
+deploy-okd-dev:
+  extends: .deploy-okd
+  environment:
+    name: okd-dev
+    url: https://archives-dev.lib.duke.edu
+  variables:
+    HELM_NAMESPACE: dul-arclight-dev
+
+
+deploy-okd-test:
+  extends: .deploy-okd
+  environment:
+    name: okd-test
+    url: https://archives-test.lib.duke.edu
+  variables:
+    HELM_NAMESPACE: dul-arclight-test
+
+deploy-okd-prod:
+  extends: .deploy-okd
+  environment:
+    name: okd-prod
+    url: https://archives.lib.duke.edu
+  variables:
+    DEPLOY_REF_NAME: main
+    HELM_NAMESPACE: dul-arclight-prod

@@ -1,0 +1,19 @@
+.blacklight-bookmarks-index {
+  // Hide the Group vs. List toggle on the bookmarks page. Seems to be
+  // no easy way to remove it from the config from the BookmarksController
+  // so this should be OK for now.
+  .search-widgets {
+    .result-type-group {
+      display: none;
+    }
+  }
+
+  // Hide the extra bookmark button that gets rendered by the
+  // config.add_show_tools_partial ... this needs to be present for the real bookmark email
+  // button to work (the one added by config.add_results_collection_tool)
+  .bookmarksTools {
+    #emailLink {
+      display: none;
+    }
+  }
+}

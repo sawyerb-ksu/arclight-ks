@@ -1,0 +1,49 @@
+/* DUL CUSTOMIZATION: This block of facet style variables had to be created to    */
+/* fix a bug introduced in BL8.4.0 which refactored facet styles to use CSS vars  */
+/* but assumed incorrectly that facets only appear in the sidenav. This block     */
+/* ensures the facets render correctly on the native Advanced Search page. Remove */
+/* when patched in BL core. */
+:root {
+  --bl-facet-active-bg: #{$facet-active-bg};
+  --bl-facet-active-item-color: #{$facet-active-item-color};
+  --bl-facet-margin-bottom: #{$spacer};
+  --bl-facet-remove-color: var(--bs-secondary-color);
+  --bl-facet-limit-body-padding: #{$spacer};
+  --bl-facets-smallish-padding: 0.25rem;
+  --bl-facets-smallish-border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.facet-limit-active {
+  .card-header .btn {
+    @include fw-semibold;
+  }
+  a.remove .remove-icon {
+    &:hover {
+      color: $copper;
+    }
+  }
+}
+
+.facet-values li .selected {
+  color: shade-color($success, 31%) !important;
+  @include fw-semibold;
+}
+
+/* Blacklight Hierarchy Facets -- make consistent with contextual tree nav */
+
+.facet-hierarchy {
+  .twiddle > .toggle-handle .toggle-icon {
+    transition: transform 0.2s;
+    min-height: 1rem;
+    min-width: 1rem;
+    background-size: contain;
+
+    &.closed {
+      background-image: escape-svg(var(--dul-hierarchy-view-expand-icon));
+    }
+    &.opened {
+      background-image: escape-svg(var(--dul-hierarchy-view-expand-icon));
+      transform: rotate(90deg);
+    }
+  }
+}

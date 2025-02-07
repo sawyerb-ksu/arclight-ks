@@ -1,0 +1,54 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: sidekiq
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.sidekiq.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sidekiq
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sidekiq
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      terminationGracePeriodSeconds: 120
+      volumes:
+        - name: finding-aid-data
+          persistentVolumeClaim:
+            claimName: finding-aid-data
+      containers:
+        - name: sidekiq
+          image: >-
+            {{ include "dul-arclight.appImage" . }}
+          imagePullPolicy: IfNotPresent
+          {{- with .Values.sidekiq.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          envFrom:
+            - configMapRef:
+                name: app-config
+            - secretRef:
+                name: app-secret
+          command:
+            - bundle
+            - exec
+            - sidekiq
+          volumeMounts:
+            - name: finding-aid-data
+              mountPath: /data
+          lifecycle:
+            preStop:
+              exec:
+                # Send TSTP signal to sidekiq to stop processing new jobs
+                # in advance of the pod being terminated.
+                # https://github.com/sidekiq/sidekiq/wiki/Signals#tstp
+                command:
+                  - /bin/sh
+                  - '-c'
+                  - 'kill -TSTP 1'

@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: expire-rails-cache
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": post-upgrade
+spec:
+  template:
+    spec:
+      containers:
+        - name: expire-rails-cache
+          image: 'app:latest'
+          command:
+            - memcflush
+            - '--servers'
+            - rails-cache
+      restartPolicy: Never

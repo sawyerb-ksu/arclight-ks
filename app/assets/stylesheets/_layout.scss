@@ -1,0 +1,142 @@
+body {
+  background-color: $whisper-gray;
+}
+
+#skip-link {
+  z-index: 1200;
+  background-color: $whisper-gray;
+}
+
+#main-container {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+#sidebar {
+  background: white;
+  padding-top: 0 !important;
+  border-right: 0;
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 95px;
+    padding-right: 1.5rem !important;
+    box-shadow: 1px 0 1px -1px rgba(0, 0, 0, 0.06),
+    2px 0 2px -2px rgba(0, 0, 0, 0.06),
+    4px 0 4px -4px rgba(0, 0, 0, 0.06),
+    8px 0 8px -8px rgba(0, 0, 0, 0.06),
+    16px 0 16px -16px rgba(0, 0, 0, 0.06);
+  }
+  .sticky-nav {
+    @include media-breakpoint-up(lg) {
+      position: sticky;
+      top: 0;
+    }
+  }
+  .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+
+  .al-show-actions-box {
+    padding-top: 1.5rem;
+    background-color: $duke-navy-blue;
+    border: 0;
+    border-bottom: 8px solid $dandelion;
+    color: white;
+    margin: 0 -25px 0 0;
+    .sidebar-collection-name a {
+      color: $dandelion;
+      font-size: 1.3rem;
+    }
+  }
+
+  #sidebar-scroll-wrapper {
+    @include media-breakpoint-up(lg) {
+      height: calc(100vh - 270px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-bottom: 15px;
+    }
+  }
+  .al-sidebar-navigation-context {
+    .nav-link {
+      @include fw-semibold;
+      color: $gray-800;
+      &:hover {
+        color: $link-hover-color;
+      }
+      &.active {
+        background-color: tint-color($dandelion, 40%);
+      }
+    }
+  }
+
+}
+
+.card-header {
+  background-color: $light;
+  &:has(button.collapsed) {
+    border-radius: var(--bs-card-inner-border-radius);
+  }
+}
+
+.table {
+  --bs-table-striped-bg: #{$gray-100};
+  --bs-border-color: #{$gray-200};
+  &:not(.table-striped) {
+    --bs-border-color: #{$gray-300};
+  }
+}
+
+.collection-sidebar {
+  margin-top: -1.5rem;
+  padding-right: 0;
+  border-right: none;
+}
+
+.sidebar-section {
+  margin-left: 0;
+}
+
+.al-sidebar-navigation-context {
+  // Hide the menu link to the collection alert banner
+  a.nav-link[href$="#collection-restrictions-alert"] {
+    display: none;
+  }
+}
+
+#content {
+  @include media-breakpoint-up(lg) {
+    padding-left: 1.5rem;
+  }
+}
+
+.harmful-language-statement {
+  font-size: 14px;
+}
+
+/* Contact Us link */
+
+.contact-wrapper {
+  bottom: 0;
+  right: 15px;
+  z-index: 1000;
+  margin-bottom: -6px;
+
+  &:hover {
+    margin-bottom: -3px;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .125em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: .2rem .2rem 0 0;
+    border: 3px solid white;
+    padding: .5rem .7rem .7rem .7rem;
+  }
+
+  @include media-breakpoint-only(xs) {
+    display: none;
+  }
+}

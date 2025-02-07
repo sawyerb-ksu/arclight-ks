@@ -1,0 +1,47 @@
+apiVersion: v2
+name: dul-arclight
+description: A Helm chart for dul-arclight
+type: application
+version: 2.14.0
+
+# DO NOT set appVersion explicitly here.
+# appVersion: "0.0.0"
+
+dependencies:
+  - name: postgresql
+    repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+    version: "15.x.x"
+
+  - name: apache
+    repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+    version: "11.x.x"
+
+  - name: valkey
+    repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+    version: "0.x.x"
+
+  - name: solr
+    repository: oci://gitlab-registry.oit.duke.edu/devops/solr-chart
+    version: "1.x.x"
+
+  - name: locksmith-issuer
+    repository: oci://gitlab-registry.oit.duke.edu/devops/locksmith-issuer
+    version: "1.x.x"
+
+  - name: zabbix
+    repository: oci://gitlab-registry.oit.duke.edu/devops/zabbix-chart
+    version: "~0.2.1"
+
+  - name: memcached
+    repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+    version: "7.x.x"
+    alias: rails-cache
+
+  - name: memcached
+    repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+    version: "7.x.x"
+    alias: rack-attack-cache
+
+  - name: oauth2-proxy
+    repository: https://oauth2-proxy.github.io/manifests
+    version: "7.x.x"

@@ -1,0 +1,5 @@
+<div class="al-digital-object">
+  <%= link_to @object.href, class: @object.role, target: '_blank' do %>
+    <strong>View <%= number_with_delimiter(ddr_query_hit_count) || 'All' %> Items</strong>
+  <% end %> <span class="text-muted">(Duke Digital Repository)</span>
+</div>

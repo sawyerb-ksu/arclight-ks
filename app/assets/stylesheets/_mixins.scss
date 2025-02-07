@@ -1,0 +1,12 @@
+@mixin fw-semibold {
+  font-weight: 600;
+}
+
+/* Accessibility: for use in cases where inline linked text has   */
+/* insufficient contrast (< 3:1) with its surrounding text; links */
+/* must be distinguishable by more than color.                    */
+
+@mixin underlined-link {
+  text-decoration: underline;
+  text-decoration-color: #aaa;
+}

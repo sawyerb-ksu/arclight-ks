@@ -1,0 +1,81 @@
+<%# DUL CUSTOM view of ArcLight component, see: %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/collection_info_component.html.erb %>
+<div class='al-show-actions-box-info'>
+  <div class="dropdown">
+    <button class="dropdown-toggle btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= info_icon %> <%= t('.more_info') %>
+    </button>
+    <div class="dropdown-menu shadow-lg p-3" style="min-width: 300px;" >
+      <table style="width: 100%">
+        <tr>
+          <th scope="row"><%= t('.collection_id') %></th>
+          <td><%= collection_unitid %></td>
+        </tr>
+        <%# DUL CUSTOMIZATION: EAD %>
+        <tr>
+          <th scope="row">EAD ID (XML)</th>
+          <td>
+            <%= link_to collection_id,
+                  [solr_document_path(collection_id), 'xml'].join('/'),
+                  target: '_blank',
+                  rel: 'nofollow',
+                  aria: { label: 'EAD XML file' } %>
+          </td>
+        </tr>
+        <%# DUL CUSTOMIZATION: Permalink %>
+        <% if ark.present? %>
+          <tr>
+            <th scope="row">ARK</th>
+            <td><%= ark %></td>
+          </tr>
+        <% end %>
+        <%# DUL CUSTOMIZATION: Catalog record links %>
+        <% if bibnums.present? %>
+        <tr>
+          <th scope="row">Catalog record</th>
+          <td>
+            <% bibnums.each do |bibnum| %>
+              <div>
+                <%= link_to bibnum, catalog_item_url(bibnum), target: '_blank',
+                      aria: { label: 'catalog link' },
+                      data: { ga_label: 'catalog link'} %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+        <tr>
+          <th scope="row"><%= t('.total_components') %></th>
+          <td><%= total_component_count %></td>
+        </tr>
+        <%# DUL CUSTOMIZATION: Link the online item count indicator to a faceted %>
+        <%# result of online items from this collection; only display if we have %>
+        <%# online items. %>
+        <% if online_item_count.to_i.positive? %>
+          <tr>
+            <th scope="row">Digital items</th>
+            <td>
+              <%= tag.span blacklight_icon(:online), class: 'al-online-content-icon' %>
+              <%= link_to number_with_delimiter(online_item_count),
+                      helpers.search_action_path(f: { collection: collection_title,
+                                          access: ["online"] }),
+                      aria: { label: 'limit to components with online access' },
+                      data: { ga_label: 'filter to online access' } %>
+            </td>
+          </tr>
+        <% end %>
+        <%# DUL CUSTOMIZATION: Permalink %>
+        <% if permalink.present? %>
+          <tr>
+            <th scope="row">Permalink</th>
+            <td><%= link_to permalink, permalink %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <th scope="row"><%= t('.last_indexed') %></th>
+          <td><%= last_indexed.strftime('%F') %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

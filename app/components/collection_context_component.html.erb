@@ -1,0 +1,16 @@
+<%# DUL CUSTOM view of ArcLight component. We add our request button. See: %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/collection_context_component.html.erb %>
+
+<div class='al-show-actions-box mb-3'>
+  <div class="al-actions-box-container">
+    <button type="button" class="btn-close d-lg-none float-end mt-1 me-1" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
+    <h2 class="h3 text-uppercase fw-semibold"><i class="fas fa-archive me-1"></i> Collection</h2>
+    <h3 class="mb-3 sidebar-collection-name"><%= helpers.link_to_document(collection, title, { class: 'fw-semibold' }) %></h3>
+
+    <div class="al-collection-context-actions my-2 d-flex flex-wrap gap-2">
+      <%= document_download %>
+      <%= duke_request %>
+      <%= collection_info %>
+    </div>
+  </div>
+</div>

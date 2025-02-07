@@ -1,0 +1,30 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: apache
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  output:
+    to:
+      name: 'apache:dul-arclight'
+      kind: ImageStreamTag
+  source:
+    type: Dockerfile
+    dockerfile: |
+      FROM bitnami/apache
+      USER 0
+      RUN install_packages curl libapache2-mod-auth-openidc
+      USER 1001
+  strategy:
+    type: DockerStrategy
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'apache:upstream'
+  triggers:
+    - type: ImageChange
+      imageChange:
+        from:
+          kind: ImageStreamTag
+          name: 'apache:upstream'

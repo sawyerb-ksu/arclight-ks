@@ -1,0 +1,21 @@
+require:
+  - rubocop-rspec
+  - rubocop-rspec_rails
+  - rubocop-rails
+  - rubocop-capybara
+
+inherit_from:
+  - .rubocop_todo.yml
+
+AllCops:
+  # Don't set TargetRubyVersion here. It's set in .ruby-version.
+  # https://docs.rubocop.org/rubocop/configuration.html#setting-the-target-ruby-version
+  # TargetRubyVersion: x.x.x
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'sample-ead/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+  NewCops: enable

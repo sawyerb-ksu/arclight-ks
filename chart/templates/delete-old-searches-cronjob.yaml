@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: delete-old-searches
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  schedule: "0 3 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: delete-old-searches
+              image: 'app:latest'
+              imagePullPolicy: IfNotPresent
+              command:
+                - ./bin/rails
+                - 'blacklight:delete_old_searches[1]'
+              envFrom:
+                - configMapRef:
+                    name: app-config
+                - secretRef:
+                    name: app-secret

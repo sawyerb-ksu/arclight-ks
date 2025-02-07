@@ -1,0 +1,16 @@
+/* Bootstrap 5's base is 1rem (16px) */
+
+:root {
+  --bs-body-font-size: 1.05rem;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.underlined-link {
+  @include underlined-link;
+}

@@ -1,0 +1,93 @@
+#component-restrictions {
+  background: tint-color($warning, 20%);
+  border-bottom: 6px solid $warning;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  dl {
+    margin-bottom: 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  dt {
+    @include fw-semibold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    &:before {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      content: '\f071';
+      margin-right: 0.35rem;
+      background: tint-color($warning, 80%);
+      color: shade-color($warning, 80%);
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      vertical-align: bottom;
+      display: inline-block;
+    }
+    /* Hide the header for the pseudo-field that exists only to link */
+    /* down to the full restrictions section. */
+    &.blacklight-view-more-restrictions {
+      display: none;
+    }
+  }
+  dd {
+    margin-bottom: 1rem;
+  }
+}
+
+// Global special alert banner that displays throughout collection
+#collection-restrictions-alert {
+  background: tint-color($ironweed, 85%);
+  color: shade-color($ironweed, 70%);
+  border-bottom: 6px solid $ironweed;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  .al-show-sub-heading {
+    display: none;
+  }
+  dl {
+    margin-bottom: 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  dt {
+    @include fw-semibold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    &:before {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      content: '\f071';
+      margin-right: 0.35rem;
+      background: tint-color($ironweed, 95%);
+      color: shade-color($ironweed, 70%);
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      vertical-align: bottom;
+      display: inline-block;
+    }
+  }
+  dd {
+    margin-bottom: 1rem;
+  }
+}
+
+.al-restricted-status-icon {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  vertical-align: bottom;
+  display: inline-block;
+  .blacklight-icons svg {
+    fill: $warning !important;
+    margin-bottom: 6px;
+  }
+}

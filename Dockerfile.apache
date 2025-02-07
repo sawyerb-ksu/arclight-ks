@@ -1,0 +1,4 @@
+FROM bitnami/apache:2.4-debian-12
+USER 0
+RUN install_packages curl libapache2-mod-auth-openidc
+USER 1001

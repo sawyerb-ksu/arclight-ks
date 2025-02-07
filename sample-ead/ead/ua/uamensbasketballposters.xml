@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" findaidstatus="published"
+    langencoding="iso639-2b" repositoryencoding="iso15511">
+    <eadid countrycode="US" mainagencycode="US-NcD" url="https://idn.duke.edu/ark:/87924/m1p70w"
+      >uamensbasketballposters</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Guide to the Men's Basketball Poster Collection, 1959-2013
+            <num>UA.01.15.0015</num></titleproper>
+        <author>Tracy M. Jackson</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>David M. Rubenstein Rare Book &amp; Manuscript Library</publisher>
+        <p><date>February 2015</date></p>
+        <address>
+          <addressline>411 Chapel Drive</addressline>
+          <addressline>Duke University</addressline>
+          <addressline>Durham 27708</addressline>
+          <addressline>askRL@duke.edu</addressline>
+          <addressline>URL: <extptr xlink:href="https://library.duke.edu/rubenstein/"
+              xlink:show="new" xlink:title="https://library.duke.edu/rubenstein/"
+              xlink:type="simple"/></addressline>
+        </address>
+      </publicationstmt>
+      <notestmt>
+        <note>
+          <p>Aleph Number: <num type="aleph">006296494</num></p>
+        </note>
+      </notestmt>
+    </filedesc>
+    <profiledesc>
+      <creation>This finding aid was produced using ArchivesSpace on <date>2021-12-10 13:10:58
+          -0500</date>.</creation>
+      <langusage>English</langusage>
+      <descrules>Describing Archives: A Content Standard</descrules>
+    </profiledesc>
+    <revisiondesc>
+      <change>
+        <date>2021</date>
+        <item>Added accession UA2021-0053.</item>
+      </change>
+    </revisiondesc>
+  </eadheader>
+  <archdesc level="collection">
+    <did>
+      <repository>
+        <corpname>David M. Rubenstein Rare Book &amp; Manuscript Library</corpname>
+      </repository>
+      <unittitle>Men's Basketball poster collection</unittitle>
+      <origination label="source">
+        <corpname source="naf">Duke University. University Archives</corpname>
+      </origination>
+      <origination label="Creator">
+        <corpname source="naf">Duke Blue Devils (Basketball team)</corpname>
+      </origination>
+      <unitid>UA.01.15.0015</unitid>
+      <physdesc altrender="whole">
+        <extent altrender="materialtype spaceoccupied">5 Linear Feet</extent>
+      </physdesc>
+      <unitdate datechar="creation" normal="1959/2013" type="inclusive">1959-2013</unitdate>
+      <abstract id="aspace_765d8115683f182365f2a6e93c2b1b03">Basketball team posters are usually
+        produced at the start of a new basketball season, depicting the season's team player lineup
+        and sometimes the game schedule. The Men's Basketball Poster Collection is comprised of
+        posters featuring the Duke Blue Devils Men's Basketball Team.</abstract>
+      <langmaterial id="aspace_b2a3a187adea034089758d78610290c1">Materials in
+        English.</langmaterial>
+    </did>
+    <accessrestrict id="aspace_39a04541c61037cadea3f28fad0823aa">
+      <head>Access Restrictions</head>
+      <p>Collection is open for research.</p>
+    </accessrestrict>
+    <acqinfo id="aspace_c929f62ce47b4698432074765356c219">
+      <head>Provenance</head>
+      <p>The Men's Basketball Poster Collection was received by the University Archives from several
+        sources: Jim Jarvis in 2015, multiple other sources.</p>
+    </acqinfo>
+    <prefercite id="aspace_22e9f7e2f2b32ae3094523e887d05854">
+      <head>Preferred Citation</head>
+      <p>[Identification of item], Men's Basketball Poster Collection, University Archives, David M.
+        Rubenstein Rare Book &amp; Manuscript Library, Duke University.</p>
+    </prefercite>
+    <processinfo id="aspace_b05ba24b5dd00adff12d71980f1e4413">
+      <head>Processing Information</head>
+      <p>Processed by: Tracy M. Jackson, February 2015.</p>
+      <p>Accession UA2021-0053 added by Leah Tams, December 2021.</p>
+      <p>Accessions described in this finding aid: UA2015.0009, multiple other accessions.</p>
+    </processinfo>
+    <arrangement id="aspace_da7f47fd5dcb7fb034192f759425c47e">
+      <head>Arrangement</head>
+      <p>The posters are arranged chronologically.</p>
+    </arrangement>
+    <scopecontent id="aspace_4b31fbd25507f45d2dd673991bd61448">
+      <head>Collection Overview</head>
+      <p>The Men's Basketball Poster Collection is comprised of posters featuring the Duke Blue
+        Devils Men's Basketball Team. These posters typically depict the entire team posing for a
+        photograph, sometimes with the team coach; several posters commemorate championship wins or
+        the game results for the season, while a few feature only the Blue Devil or an illustration
+        of some team members. Posters range in size from 12"x18" to 36"x48" with considerable
+        individual variation in size. Posters collected by University Archives from a variety of
+        sources are generally unsigned. Most posters donated by Jim Jarvis were autographed by the
+        entire team and/or Coach Mike Krzyzewski and are mounted on foam core board.</p>
+    </scopecontent>
+    <relatedmaterial id="aspace_fc7313c12c0db02e66764c57209b8d73">
+      <head>Related Materials</head>
+      <p><extref xlink:href="http://library.duke.edu/rubenstein/findingaids/uaposter/">University
+          Archives Poster Collection</extref>, Duke University Archives, David M. Rubenstein Rare
+        Book &amp; Manuscript Library, Duke University.</p>
+      <p><extref xlink:href="http://library.duke.edu/rubenstein/findingaids/uabball/">Men's
+          Basketball Records</extref>, Duke University Archives, David M. Rubenstein Rare Book &amp;
+        Manuscript Library, Duke University.</p>
+      <p><extref xlink:href="http://library.duke.edu/rubenstein/findingaids/uaarcol/">Athletics
+          Reference Collection</extref>, Duke University Archives, David M. Rubenstein Rare Book
+        &amp; Manuscript Library, Duke University.</p>
+      <p><extref xlink:href="http://library.duke.edu/rubenstein/findingaids/uasportsinfo/">Sports
+          Information Office Records</extref>, Duke University Archives, David M. Rubenstein Rare
+        Book &amp; Manuscript Library, Duke University.</p>
+    </relatedmaterial>
+    <bioghist id="aspace_7935ba67df2b906f7013c150632452a9">
+      <head>Historical note</head>
+      <p>Basketball was first played at Trinity College in 1906, introduced by then-Athletic
+        Director Wilbur Wade Card. Since then, men's basketball has been played each year at Trinity
+        College and later Duke University, appearing in the NCAA Tournament dozens of times, winning
+        the national championship four times (in 1991, 1992, 2001, and 2010).</p>
+      <p>Prior to 1980, team posters depicting the Duke Blue Devils men's basketball team in uniform
+        and listing the season's games were often created, as were special publicity and
+        commemorative posters for tournaments, championships, and rivalry games. In 1980, Mike
+        Krzyzewski (Coach K) became head coach of the team, taking over for Bill Foster. Shortly
+        after his arrival, Coach K's wife, Carol "Mickie" Krzyzewski, began a traditional of
+        creating a thematic poster for each season's team. Mrs. Krzyzewski, and later their daughter
+        Debbie Krzyzewski, collaborated with graphic designer Jim Jarvis and others (including
+        photographer Chris Hildreth) to create a new poster every year, using a variety of themes
+        and styles. Basketball team posters are usually produced at the start of a new basketball
+        season, depicting the season's team player lineup and sometimes the game schedule.</p>
+    </bioghist>
+    <userestrict id="aspace_db6bfca30bed4e76b807f8f7f6aba89c">
+      <head>Use Restrictions</head>
+      <p>Copyright for Official University records is held by Duke University; all other copyright
+        is retained by the authors of items in these papers, or their descendants, as stipulated by
+        United States copyright law.</p>
+    </userestrict>
+    <controlaccess>
+      <genreform source="aat">Posters</genreform>
+      <persname source="naf">Krzyzewski, Debbie</persname>
+      <persname source="naf">Krzyzewski, Carol "Mickie"</persname>
+      <persname source="naf">Jarvis, Jim</persname>
+      <corpname source="ingest">Duke University -- Basketball</corpname>
+      <corpname source="naf">Duke Blue Devils (Basketball team)</corpname>
+      <persname source="naf">Hildreth, Chris</persname>
+      <corpname role="fmo" source="naf">Duke University. University Archives</corpname>
+    </controlaccess>
+    <dsc>
+      <c01 id="aspace_ref49_b3e" level="file">
+        <did>
+          <unittitle>Duke University "Blue Devils"</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1959/1960"
+            type="inclusive">1959-1960</unitdate>
+          <container id="aspace_6e632147e1cd85a843d7fcc2a1bdc28e" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_70c6caf2ff6fccc7e681b292379de721"
+            parent="aspace_6e632147e1cd85a843d7fcc2a1bdc28e" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_5dfb3a6686e36a7bee45a421d32c5469">
+          <head>Scope and Contents</head>
+          <p>Includes season schedule and advertisement for Pepsi-Cola.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref51_ur0" level="file">
+        <did>
+          <unittitle>Duke Basketball</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" type="inclusive"
+            >undated</unitdate>
+          <container id="aspace_43262783970a7ed28c380fc5f34b3c56" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d1635bfc686e21c7e14ef90664d8acad"
+            parent="aspace_43262783970a7ed28c380fc5f34b3c56" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_e765868be06bc4246152dcfc02a47ad3">
+          <head>Scope and Contents</head>
+          <p>Illustration of Blue Devil mascot dunking ball.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref53_009" level="file">
+        <did>
+          <unittitle>Off and Running</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1977/1978"
+            type="inclusive">1977-1978</unitdate>
+          <container id="aspace_9ca5d0b9a7a96d90fdc5edb71e539b3c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_8f7372253ac0cfc352e2bbac974d5173"
+            parent="aspace_9ca5d0b9a7a96d90fdc5edb71e539b3c" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_ce028bc17e53c3d3dc87f6128496dd58">
+          <head>Scope and Contents</head>
+          <p>Illustration of Blue Devil mascot dunking ball.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref55_vjk" level="file">
+        <did>
+          <unittitle>"The Spirit Lives On..."</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1978/1979"
+            type="inclusive">1978-1979</unitdate>
+          <container id="aspace_c6f68d2a63ef2d9b2e71c2c83440ef89" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_63a8cb505bf3cc6ae9d6efacd53e7daa"
+            parent="aspace_c6f68d2a63ef2d9b2e71c2c83440ef89" type="folder">1</container>
+        </did>
+      </c01>
+      <c01 id="aspace_9084a5c728cafeb9efc471b4ac25d5fd" level="file">
+        <did>
+          <unittitle>A Team to Remember</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1978/1979"
+            type="inclusive">1978-1979</unitdate>
+          <container id="aspace_2ac81b1fdf00ff2f8891516cc0f21db0" label="Mixed Materials"
+            type="oversize-folder">5</container>
+        </did>
+        <scopecontent id="aspace_e20fedaf29ffe326a5d09ec574a56b40">
+          <head>Scope and Contents</head>
+          <p>Print #80/100 signed by artist Lamar Sparkman.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref22_tki" level="file">
+        <did>
+          <unittitle>Duke Basketball Show</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1979/1979"
+            type="inclusive">1979</unitdate>
+          <container id="aspace_0c5d5341a5d6c6f313825e6724969ae5" label="Mixed Materials"
+            type="map-case">OC:IX Top</container>
+          <container id="aspace_73cf95d6039582ba8b951013ac822ae3"
+            parent="aspace_0c5d5341a5d6c6f313825e6724969ae5" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_7937ba23a9dfa285cc6eb4de4665d968">
+          <head>Scope and Contents</head>
+          <p>Created by WRAL-TV.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref56_neu" level="file">
+        <did>
+          <unittitle>1979-1980 ACC Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1980/1980"
+            type="inclusive">1980</unitdate>
+          <container id="aspace_9ef407f40f049d162e90cbb133726d20" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d7470b57b3551753dc1289de08cefd03"
+            parent="aspace_9ef407f40f049d162e90cbb133726d20" type="folder">1</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref58_ll4" level="file">
+        <did>
+          <unittitle>A Portrait of Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1980/1981"
+            type="inclusive">1980-1981</unitdate>
+          <container id="aspace_beccdcfa09b491ec23e6958ef09215ed" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_71cc0835cab1c99fb8a2f79a758bcafd"
+            parent="aspace_beccdcfa09b491ec23e6958ef09215ed" type="folder">1</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4nv9fg14"
+            xlink:role="image-service" xlink:show="new" xlink:title="A Portrait of Champions"
+            xpointer="ark:/87924/r4nv9fg14"/>
+        </did>
+        <scopecontent id="aspace_fa8f87dc8b7d0d60aa16503a088f13bb">
+          <head>Scope and Contents</head>
+          <p>Includes season schedule.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref147_nt5" level="file">
+        <did>
+          <unittitle>A Portrait of Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1980/1981"
+            type="inclusive">1980-1981</unitdate>
+          <container id="aspace_95d83275bba53a53f2a66b7a502ceb57" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_75bd5bd66e270a4f2d004203de744389"
+            parent="aspace_95d83275bba53a53f2a66b7a502ceb57" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref60_txg" level="file">
+        <did>
+          <unittitle>Gene Says Goodbye</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1981/1981"
+            type="inclusive">1981</unitdate>
+          <container id="aspace_35fe35c3368df3cb3d2e60e920c72b4e" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d962c1e6481c9057191ca74da56f2f04"
+            parent="aspace_35fe35c3368df3cb3d2e60e920c72b4e" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_f03d27de8ddee934c5385628cd53f2a4">
+          <head>Scope and Contents</head>
+          <p>Image of Gene "Tinkerbell" Banks and description of his final Blue Devils basketball
+            game against UNC.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref62_pnw" level="file">
+        <did>
+          <unittitle>The Defense Never Rests</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1981/1982"
+            type="inclusive">1981-1982</unitdate>
+          <container id="aspace_bc1e44a17b1cef451e922d31ac480b72" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_2915e5e25abd113ed96c6eab8b8d4699"
+            parent="aspace_bc1e44a17b1cef451e922d31ac480b72" type="folder">1</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r46w9b41q"
+            xlink:role="image-service" xlink:show="new" xlink:title="The Defense Never Rests"
+            xpointer="ark:/87924/r46w9b41q"/>
+        </did>
+        <scopecontent id="aspace_36ced52f209f276a6091b66c7555d950">
+          <head>Scope and Contents</head>
+          <p>Includes season schedule.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref148_ne2" level="file">
+        <did>
+          <unittitle>The Defense Never Rests</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1981/1982"
+            type="inclusive">1981-1982</unitdate>
+          <container id="aspace_64545bce0d6d33fb30d40ff9937e22f7" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_5c87a4bd8c626295c3b09a0a6e72cf1b"
+            parent="aspace_64545bce0d6d33fb30d40ff9937e22f7" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_133f83cf1d3388972116251cc2f380e8" level="file">
+        <did>
+          <unittitle>The "Sixth Man"</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">1
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="other" era="ce" normal="1982/1983"
+            type="inclusive">1982-1983</unitdate>
+          <langmaterial><language langcode="eng">English</language>.</langmaterial>
+          <container id="aspace_d79758507afd0854877c08374bffd1b0" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_e4f9c3997f89b23531d4f27ba0903492"
+            parent="aspace_d79758507afd0854877c08374bffd1b0" type="folder">1</container>
+        </did>
+        <scopecontent id="aspace_7ff2b71d862b2215cbb9cfe453bcf7e2">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster with Adidas logo, and cartoon of man saying "Be One!"</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref63_7wf" level="file">
+        <did>
+          <unittitle>World Class</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1983/1984"
+            type="inclusive">1983-1984</unitdate>
+          <container id="aspace_70e4ae14e460fbadc90d2f9495552be7" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_93d4eafc455d931f7f4e87b377e9a4db"
+            parent="aspace_70e4ae14e460fbadc90d2f9495552be7" type="folder">1</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4wd3v58v"
+            xlink:role="image-service" xlink:show="new" xlink:title="World Class"
+            xpointer="ark:/87924/r4wd3v58v"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref149_fir" level="file">
+        <did>
+          <unittitle>World Class</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1983/1984"
+            type="inclusive">1983-1984</unitdate>
+          <container id="aspace_c4dae183131550212773888f4fee5c7f" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_0b03f6bdaed65113cc6ae01f197cb2f8"
+            parent="aspace_c4dae183131550212773888f4fee5c7f" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref64_og9" level="file">
+        <did>
+          <unittitle>The Right Stuff</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1984/1985"
+            type="inclusive">1984-1985</unitdate>
+          <container id="aspace_982996a1230fe04ca1ff1ec6ff1db6a2" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d711f0f6d88a27af8219a61b7441d7cd"
+            parent="aspace_982996a1230fe04ca1ff1ec6ff1db6a2" type="folder">1</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4x925p5r"
+            xlink:role="image-service" xlink:show="new" xlink:title="The Right Stuff"
+            xpointer="ark:/87924/r4x925p5r"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref119_5y1" level="file">
+        <did>
+          <unittitle>The Right Stuff</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1984/1985"
+            type="inclusive">1984-1985</unitdate>
+          <container id="aspace_23cc52b9c6f75ea8a622ce0d20a643c0" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_c0589bb62698d7aab5db9e9eff0f9bea"
+            parent="aspace_23cc52b9c6f75ea8a622ce0d20a643c0" type="folder">4</container>
+        </did>
+        <scopecontent id="aspace_0cc92aefee9fbe261bedb61c646aeb08">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref66_s56" level="file">
+        <did>
+          <unittitle>Formula for Success</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1985/1986"
+            type="inclusive">1985-1986</unitdate>
+          <container id="aspace_49a197a31d30e15a4d835e10f0cc920c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_b6b6764166c9e5cf0b219fd8716546cc"
+            parent="aspace_49a197a31d30e15a4d835e10f0cc920c" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r48s4pt4z"
+            xlink:role="image-service" xlink:show="new" xlink:title="Formula for Success"
+            xpointer="ark:/87924/r48s4pt4z"/>
+        </did>
+        <scopecontent id="aspace_63d41cc1c26ae70862ab2b1081e949d0">
+          <head>Scope and Contents</head>
+          <p>Includes season schedule.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref150_4pq" level="file">
+        <did>
+          <unittitle>Formula for Success</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1985/1986"
+            type="inclusive">1985-1986</unitdate>
+          <container id="aspace_3700b9fd7f0cc47d8e13b7e521ea83e7" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d2bb9881f44981b13587ec02eeee9866"
+            parent="aspace_3700b9fd7f0cc47d8e13b7e521ea83e7" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref67_bd4" level="file">
+        <did>
+          <unittitle>ACC Champions</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1985/1986"
+            type="inclusive">1985-1986</unitdate>
+          <container id="aspace_0688d91ec0b26791b37a0c00f1ffd492" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_f0af4977daeedd49076c9703da4cdff1"
+            parent="aspace_0688d91ec0b26791b37a0c00f1ffd492" type="folder">2</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref69_z0d" level="file">
+        <did>
+          <unittitle>A Banner Year</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1985/1986"
+            type="inclusive">1985-1986</unitdate>
+          <container id="aspace_1350cdacada00cd170e204d28e60a8a0" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_2424ba154b556d0b419ca65b2083ec82"
+            parent="aspace_1350cdacada00cd170e204d28e60a8a0" type="folder">2</container>
+        </did>
+        <scopecontent id="aspace_5dcd030f15a0573561e3855ede0a95d0">
+          <head>Scope and Contents</head>
+          <p>Includes season results, honors, and awards.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref71_8p8" level="file">
+        <did>
+          <unittitle>Taking Care of Business</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">3
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1986/1987"
+            type="inclusive">1986-1987</unitdate>
+          <container id="aspace_25aea66af6aca5ba7a7adac30ae1da0b" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_8611d438ba34d667e919963df237f47f"
+            parent="aspace_25aea66af6aca5ba7a7adac30ae1da0b" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r43t9jb4q"
+            xlink:role="image-service" xlink:show="new" xlink:title="Taking Care of Business"
+            xpointer="ark:/87924/r43t9jb4q"/>
+        </did>
+        <scopecontent id="aspace_887027cccc90af910abcb198714666a1">
+          <head>Scope and Contents</head>
+          <p>Includes one copy autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref151_j1g" level="file">
+        <did>
+          <unittitle>Taking Care of Business</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1986/1987"
+            type="inclusive">1986-1987</unitdate>
+          <container id="aspace_b435588cf2aa75fe04981e2c3cfd917b" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_a302589eb80ef2c37b6b164c08aeacf5"
+            parent="aspace_b435588cf2aa75fe04981e2c3cfd917b" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref72_x1p" level="file">
+        <did>
+          <unittitle>ACC Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1986/1987"
+            type="inclusive">1986-1987</unitdate>
+          <container id="aspace_5f6f6376969561994be2b732677fcffb" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_75f70f82b82f35f94f766de0e8ad0f28"
+            parent="aspace_5f6f6376969561994be2b732677fcffb" type="folder">2</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref74_d4p" level="file">
+        <did>
+          <unittitle>Duke 1987</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1986/1987"
+            type="inclusive">1986-1987</unitdate>
+          <container id="aspace_043403950cc7353df9797cbaf5ed5eef" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_0584a5050346f57a6093a6dfc1b3a072"
+            parent="aspace_043403950cc7353df9797cbaf5ed5eef" type="folder">2</container>
+        </did>
+        <scopecontent id="aspace_be7cd3255b0c7e7f9db76791eb0964fa">
+          <head>Scope and Contents</head>
+          <p>Includes season results and player awards.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref75_dk7" level="file">
+        <did>
+          <unittitle>Tradition</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1987/1988"
+            type="inclusive">1987-1988</unitdate>
+          <container id="aspace_d48ee92d9b2fd86fd99c6fb2e7f5adb5" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_ac472d050479a89f940471d8d74233ff"
+            parent="aspace_d48ee92d9b2fd86fd99c6fb2e7f5adb5" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4z896k4z"
+            xlink:role="image-service" xlink:show="new" xlink:title="Tradition"
+            xpointer="ark:/87924/r4z896k4z"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref152_dff" level="file">
+        <did>
+          <unittitle>Tradition</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1987/1988"
+            type="inclusive">1987-1988</unitdate>
+          <container id="aspace_dba00edd0ce395f20495aa6b3d6abb89" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_4771d5ddf4dbc8538b781e0a89b645df"
+            parent="aspace_dba00edd0ce395f20495aa6b3d6abb89" type="folder">4</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref76_p3j" level="file">
+        <did>
+          <unittitle>ACC Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1987/1988"
+            type="inclusive">1987-1988</unitdate>
+          <container id="aspace_2940970e889e7ffd5ef6777d31b25340" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_a267012ad6a2ecb818f4e31f38d30edd"
+            parent="aspace_2940970e889e7ffd5ef6777d31b25340" type="folder">2</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref78_s4p" level="file">
+        <did>
+          <unittitle>Championship Crowns</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1988/1988"
+            type="inclusive">1988</unitdate>
+          <container id="aspace_d47a0d349ed285159a7dc99e5f5a6b6c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_a3fb493b8da5da5ac504fe57bc4980f1"
+            parent="aspace_d47a0d349ed285159a7dc99e5f5a6b6c" type="folder">2</container>
+        </did>
+        <scopecontent id="aspace_af79b0f1373df91fcd747d8c2dd68163">
+          <head>Scope and Contents</head>
+          <p>Includes season results and awards.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref79_3do" level="file">
+        <did>
+          <unittitle>Encore</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1988/1989"
+            type="inclusive">1988-1989</unitdate>
+          <container id="aspace_da594bcfaefa7bd5ace6f23661c1c002" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_b21ee8c58d90944cf5fbe5d6df68e2a7"
+            parent="aspace_da594bcfaefa7bd5ace6f23661c1c002" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r45q4wr1g"
+            xlink:role="image-service" xlink:show="new" xlink:title="Encore"
+            xpointer="ark:/87924/r45q4wr1g"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref121_p6u" level="file">
+        <did>
+          <unittitle>Encore</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1988/1989"
+            type="inclusive">1988-1989</unitdate>
+          <container id="aspace_15fcd8ca9708327263060666a7d680fb" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_9d5f1f01ee99d6b4493acc29ffb3c0f6"
+            parent="aspace_15fcd8ca9708327263060666a7d680fb" type="folder">4</container>
+        </did>
+        <scopecontent id="aspace_85589556cb8592cc6f7229fac6717325">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref80_s45" level="file">
+        <did>
+          <unittitle>East Regional Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1988/1989"
+            type="inclusive">1988-1989</unitdate>
+          <container id="aspace_c8e65be3e791978d6a5e01915eadd25a" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_11a367155c4fe6a9cf7ca7992ca79d59"
+            parent="aspace_c8e65be3e791978d6a5e01915eadd25a" type="folder">2</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref82_9x7" level="file">
+        <did>
+          <unittitle>Heroes</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1988/1989"
+            type="inclusive">1988-1989</unitdate>
+          <container id="aspace_e68cc6377ffb8947a1581c4a69f534f2" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_a7096316a947855d22355a4611a0c8f8"
+            parent="aspace_e68cc6377ffb8947a1581c4a69f534f2" type="folder">2</container>
+        </did>
+        <scopecontent id="aspace_3d502c65ad7f1fd364a6431e84c858f8">
+          <head>Scope and Contents</head>
+          <p>Includes season results and awards.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref83_94j" level="file">
+        <did>
+          <unittitle>Red, White, and True Blue</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1989/1990"
+            type="inclusive">1989-1990</unitdate>
+          <container id="aspace_276068db9896b229b4324be6ae359a5b" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_41be1f5232fe888a56070859ca5d9151"
+            parent="aspace_276068db9896b229b4324be6ae359a5b" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4183869m"
+            xlink:role="image-service" xlink:show="new" xlink:title="Red, White, and True Blue"
+            xpointer="ark:/87924/r4183869m"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref123_xxq" level="file">
+        <did>
+          <unittitle>Red, White, and True Blue</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1989/1990"
+            type="inclusive">1989-1990</unitdate>
+          <container id="aspace_76f3f428628829563e794483f82da241" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_1d2b6440e6962a49b03b81caf97d3472"
+            parent="aspace_76f3f428628829563e794483f82da241" type="folder">4</container>
+        </did>
+        <scopecontent id="aspace_71fe526ec18279642f93944ddae73ac4">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref85_505" level="file">
+        <did>
+          <unittitle>A Special Team</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1989/1990"
+            type="inclusive">1989-1990</unitdate>
+          <container id="aspace_dac69b934031c2658a0fa02cb1eba5e5" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_f17e6b4e5c8db28f8cb48bd911c5b70a"
+            parent="aspace_dac69b934031c2658a0fa02cb1eba5e5" type="folder">2</container>
+        </did>
+        <scopecontent id="aspace_0f6eba26152aabf350ba3763e0fe0bc5">
+          <head>Scope and Contents</head>
+          <p>Includes season results and awards.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref86_490" level="file">
+        <did>
+          <unittitle>Duke's Young Guns</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1990/1991"
+            type="inclusive">1990-1991</unitdate>
+          <container id="aspace_886496014c87c8ada65ce599a7dfd53b" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_31b0c0e6e30b5fe2e85eb3df41b0f078"
+            parent="aspace_886496014c87c8ada65ce599a7dfd53b" type="folder">2</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4qv3gz34"
+            xlink:role="image-service" xlink:show="new" xlink:title="Duke's Young Guns"
+            xpointer="ark:/87924/r4qv3gz34"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref125_31x" level="file">
+        <did>
+          <unittitle>Duke's Young Guns</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1990/1991"
+            type="inclusive">1990-1991</unitdate>
+          <container id="aspace_ac99094636bb6662453a5d79df693dca" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_c74d8edaa87a09ced844e2ee51b9a09b"
+            parent="aspace_ac99094636bb6662453a5d79df693dca" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_fb695fab9bf63ffa4270b7e2bc9a2761">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref88_um2" level="file">
+        <did>
+          <unittitle>National Basketball Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991/1991"
+            type="inclusive">1991</unitdate>
+          <container id="aspace_0c6b9bc7ce481c8e249e508b50aca066" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_bba8197805cb93467faff304a7acae57"
+            parent="aspace_0c6b9bc7ce481c8e249e508b50aca066" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_963511d258345129927ff38fc2e74cf7">
+          <head>Scope and Contents</head>
+          <p>Illustration of players and coaches created by Coca-Cola.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref153_191" level="file">
+        <did>
+          <unittitle>National Basketball Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991/1991"
+            type="inclusive">1991</unitdate>
+          <container id="aspace_bef50814a19a47cf2e8971667c19a4ff" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_f3b0c393a39aa414ba1dd69600fa537f"
+            parent="aspace_bef50814a19a47cf2e8971667c19a4ff" type="folder">5</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref90_9fk" level="file">
+        <did>
+          <unittitle>Champions! Herald-Sun front page poster</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991-04-02/1991-04-02"
+            type="inclusive">April 2, 1991</unitdate>
+          <container id="aspace_1e3d2ce02fb19381d7d118f3950ba22d" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_1e2f93fb8a791e7522106623ff1d68b2"
+            parent="aspace_1e3d2ce02fb19381d7d118f3950ba22d" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_1b728ee2372ff90af05a09afd664ae7b">
+          <head>Scope and Contents</head>
+          <p>Poster version of the front page of the Durham Herald-Sun newspaper with photos and
+            article "Devils bring it home!"</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref92_88l" level="file">
+        <did>
+          <unittitle>Duke's All-American Candidates</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" type="inclusive"
+            >undated</unitdate>
+          <container id="aspace_fb7dfebddedc1eaf182f6af91a35a960" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d79c3c92350c81af8d1add9c836079c1"
+            parent="aspace_fb7dfebddedc1eaf182f6af91a35a960" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_e7f2f7976284dd3d053d31bfba2217d4">
+          <head>Scope and Contents</head>
+          <p>3H poster featuring Thomas Hill, Bobby Hurley, and Grant Hill.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref94_rio" level="file">
+        <did>
+          <unittitle>NCAA Champions</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991/1991"
+            type="inclusive">1991</unitdate>
+          <container id="aspace_fbf287bbc99165615777816924e1a2bc" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_b2529835bf9a5693f8a9248444827dbf"
+            parent="aspace_fbf287bbc99165615777816924e1a2bc" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_251a08027c548f16ac37b8720838da62">
+          <head>Scope and Contents</head>
+          <p>Includes season results and awards</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref95_lc9" level="file">
+        <did>
+          <unittitle>Where Dreams Begin</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991/1992"
+            type="inclusive">1991-1992</unitdate>
+          <container id="aspace_3d00f2d9ad6c3c5440502df3ee405553" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_73afd994ded8fbfee0ad6996af248c42"
+            parent="aspace_3d00f2d9ad6c3c5440502df3ee405553" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4td9sd1f"
+            xlink:role="image-service" xlink:show="new" xlink:title="Where Dreams Begin"
+            xpointer="ark:/87924/r4td9sd1f"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref127_zal" level="file">
+        <did>
+          <unittitle>Where Dreams Begin</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1991/1992"
+            type="inclusive">1991-1992</unitdate>
+          <container id="aspace_99c6e4749363b040beb4b9a0d855985d" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_e7c0f15c9bed0307c3dbd471f8c78093"
+            parent="aspace_99c6e4749363b040beb4b9a0d855985d" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_9feb472736c2ca5beedc632c4ba2b2f6">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref96_bfz" level="file">
+        <did>
+          <unittitle>1992 NCAA Champions</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">0
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1992/1992"
+            type="inclusive">1992</unitdate>
+          <container id="aspace_75e2564d8e231688a98eb02355b7254c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_598a58230f372c6c02758935e918d19e"
+            parent="aspace_75e2564d8e231688a98eb02355b7254c" type="folder">3</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref129_w5d" level="file">
+        <did>
+          <unittitle>1992 NCAA Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1992/1992"
+            type="inclusive">1992</unitdate>
+          <container id="aspace_75d08b0a7ca7732d99248d39abacef97" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_637d4807a858ff2130e71586c3b09a34"
+            parent="aspace_75d08b0a7ca7732d99248d39abacef97" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_ed7d5588e8ceaa5162f5b276a40ed8ca">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref97_qcn" level="file">
+        <did>
+          <unittitle>Simply the Best</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1992/1993"
+            type="inclusive">1992-1993</unitdate>
+          <container id="aspace_eb501e14e5b53ecbf7cab5854e8a3d00" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_e2b8f9c8da4b8fa0adb6ef08116fd3d3"
+            parent="aspace_eb501e14e5b53ecbf7cab5854e8a3d00" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4vd6t893"
+            xlink:role="image-service" xlink:show="new" xlink:title="Simply the Best"
+            xpointer="ark:/87924/r4vd6t893"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref131_tjg" level="file">
+        <did>
+          <unittitle>Simply the Best</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1992/1993"
+            type="inclusive">1992-1993</unitdate>
+          <container id="aspace_35bcde190010c88e9c7e50ca520fe3fd" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_94916c5b50f7a3e47e3dcafd23c18f50"
+            parent="aspace_35bcde190010c88e9c7e50ca520fe3fd" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_80dd563079df524fdae4aac96bac9fe7">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref98_ngq" level="file">
+        <did>
+          <unittitle>Defining Duke Basketball</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1993/1994"
+            type="inclusive">1993-1994</unitdate>
+          <container id="aspace_66db196414194f8aa824c92f7dff6b26" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_979b5248f54180a223e095e4994c13b9"
+            parent="aspace_66db196414194f8aa824c92f7dff6b26" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4zc7wp4v"
+            xlink:role="image-service" xlink:show="new" xlink:title="Defining Duke Basketball"
+            xpointer="ark:/87924/r4zc7wp4v"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref133_77k" level="file">
+        <did>
+          <unittitle>Defining Duke Basketball</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1993/1994"
+            type="inclusive">1993-1994</unitdate>
+          <container id="aspace_648d6841f79547f515c34e6a8ca2f95d" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_d8c27b24b29c851cc2a1225764ec6e28"
+            parent="aspace_648d6841f79547f515c34e6a8ca2f95d" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_1d23a9ba23a833281edc68e7457ca73f">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref99_067" level="file">
+        <did>
+          <unittitle>History in the Making</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1994/1995"
+            type="inclusive">1994-1995</unitdate>
+          <container id="aspace_36ff4bd5cf2d6866cce661bfddd0d14c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_ab54d83d7c70d7aed65992724c7ede01"
+            parent="aspace_36ff4bd5cf2d6866cce661bfddd0d14c" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r42z16t8t"
+            xlink:role="image-service" xlink:show="new" xlink:title="History in the Making"
+            xpointer="ark:/87924/r42z16t8t"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref135_pm1" level="file">
+        <did>
+          <unittitle>History in the Making</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1994/1995"
+            type="inclusive">1994-1995</unitdate>
+          <container id="aspace_f1e29fbfb8e30f419a1daf9df4767324" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_771fa051c60e3ff7948deae3d558016a"
+            parent="aspace_f1e29fbfb8e30f419a1daf9df4767324" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_be0b282f8265f5347fe6c55db0086cf0">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref100_059" level="file">
+        <did>
+          <unittitle>Networking</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1995/1996"
+            type="inclusive">1995-1996</unitdate>
+          <container id="aspace_a7da8777cda6a73b0b173c84aa7aa740" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_e18dfc24b83cb2f0729b87db902e9b61"
+            parent="aspace_a7da8777cda6a73b0b173c84aa7aa740" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r48k7919k"
+            xlink:role="image-service" xlink:show="new" xlink:title="Networking"
+            xpointer="ark:/87924/r48k7919k"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref137_40h" level="file">
+        <did>
+          <unittitle>Networking</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1995/1996"
+            type="inclusive">1995-1996</unitdate>
+          <container id="aspace_3bba384961bf66829951420a904ffdaf" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_76b1ade3d1c42564b747cf7077576ba1"
+            parent="aspace_3bba384961bf66829951420a904ffdaf" type="folder">5</container>
+        </did>
+        <scopecontent id="aspace_c2b55cc0c988a495ab29bc4fd9bcf878">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref101_mu6" level="file">
+        <did>
+          <unittitle>Back in Black</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1996/1997"
+            type="inclusive">1996-1997</unitdate>
+          <container id="aspace_5e6f73922fb13ea2f3bd058263cbd2fd" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_cbe79f8b7e035671c1f3e2517b6a4093"
+            parent="aspace_5e6f73922fb13ea2f3bd058263cbd2fd" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r40z7521t"
+            xlink:role="image-service" xlink:show="new" xlink:title="Back in Black"
+            xpointer="ark:/87924/r40z7521t"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref139_0wh" level="file">
+        <did>
+          <unittitle>Back in Black</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1996/1997"
+            type="inclusive">1996-1997</unitdate>
+          <container id="aspace_c4f1594a86b536c9a3e28e0a43c3fffa" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_7aaef9d62a595a3eb49d4a3af4726b9f"
+            parent="aspace_c4f1594a86b536c9a3e28e0a43c3fffa" type="folder">6</container>
+        </did>
+        <scopecontent id="aspace_c33162ffee3d10e9ec61a153297455f5">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref102_xqp" level="file">
+        <did>
+          <unittitle>Blue Planet</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1997/1998"
+            type="inclusive">1997-1998</unitdate>
+          <container id="aspace_ac3c5be67347d89ac601ca6e31749f24" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_878f35ae1df5cf3bdb112a9db6f59528"
+            parent="aspace_ac3c5be67347d89ac601ca6e31749f24" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4pv6gb9s"
+            xlink:role="image-service" xlink:show="new" xlink:title="Blue Planet"
+            xpointer="ark:/87924/r4pv6gb9s"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref141_i1h" level="file">
+        <did>
+          <unittitle>Blue Planet</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1997/1998"
+            type="inclusive">1997-1998</unitdate>
+          <container id="aspace_69e8b608f39ef25a4e2b14d0a12c40b3" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_f044984fc1afaef048319c64cbbb9256"
+            parent="aspace_69e8b608f39ef25a4e2b14d0a12c40b3" type="folder">6</container>
+        </did>
+        <scopecontent id="aspace_3db908fd973bf3bc088083dadbbf7acc">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref103_tk6" level="file">
+        <did>
+          <unittitle>Championship Vision</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1998/1999"
+            type="inclusive">1998-1999</unitdate>
+          <container id="aspace_16027036201e63624125cdbdb818b73b" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_70cd438b834ca36a8b0e644eec21ffe0"
+            parent="aspace_16027036201e63624125cdbdb818b73b" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4sf2rh1r"
+            xlink:role="image-service" xlink:show="new" xlink:title="Championship Vision"
+            xpointer="ark:/87924/r4sf2rh1r"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref143_or7" level="file">
+        <did>
+          <unittitle>Championship Vision</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1998/1999"
+            type="inclusive">1998-1999</unitdate>
+          <container id="aspace_7309ab72aa31855e6937dc41100c959f" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_499c1546b675fe745d7d867cb9e5c03d"
+            parent="aspace_7309ab72aa31855e6937dc41100c959f" type="folder">6</container>
+        </did>
+        <scopecontent id="aspace_97004a868b25801c6245fdb5eef54ae8">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref104_a4r" level="file">
+        <did>
+          <unittitle>Forever Duke</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1999/2000"
+            type="inclusive">1999-2000</unitdate>
+          <container id="aspace_3fb3fa28b460f88c939638e50c343a6e" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_adbcc4a9c1c5d93dfb29832adc33ce16"
+            parent="aspace_3fb3fa28b460f88c939638e50c343a6e" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r48g8kn6v"
+            xlink:role="image-service" xlink:show="new" xlink:title="Forever Duke"
+            xpointer="ark:/87924/r48g8kn6v"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref145_6dj" level="file">
+        <did>
+          <unittitle>Forever Duke</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1999/2000"
+            type="inclusive">1999-2000</unitdate>
+          <container id="aspace_33c2442e97685c6794b144c4a4745cbd" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_aa01105764d348644c8ccedfb3c95289"
+            parent="aspace_33c2442e97685c6794b144c4a4745cbd" type="folder">6</container>
+        </did>
+        <scopecontent id="aspace_262459d4b5f6e875b0ae7386ce6d6316">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref23_k7j" level="file">
+        <did>
+          <unittitle>The Big Dance</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">3
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2000/2001"
+            type="inclusive">2000-2001</unitdate>
+          <container id="aspace_bbdf6a9e6cdd2e47cbda53e3ed68b57c" label="Mixed Materials"
+            type="oversize-folder">1</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4qr4sv88"
+            xlink:role="image-service" xlink:show="new" xlink:title="The Big Dance"
+            xpointer="ark:/87924/r4qr4sv88"/>
+        </did>
+        <scopecontent id="aspace_e38fbc413df661ed6f6437c3ba896ec9">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref106_tbk" level="file">
+        <did>
+          <unittitle>Vote Coach Krzyzewski Mayor of Bracketville</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" type="inclusive"
+            >undated</unitdate>
+          <container id="aspace_ca87e49646e6fa8f28e8dcc1fdb1a6a5" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_7079368eda4dc5c57461977282584312"
+            parent="aspace_ca87e49646e6fa8f28e8dcc1fdb1a6a5" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_cbe51de9bfd3b262470ff9cb6b9029a7">
+          <head>Scope and Contents</head>
+          <p>Nike promotional poster.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref108_zjs" level="file">
+        <did>
+          <unittitle>Champs! Duke Blue Devils Sports Illustrated cover</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2000/2001"
+            type="inclusive">2000-2001</unitdate>
+          <container id="aspace_a5906e82004425e3be9ed5c111d3c67f" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_250c6b329c9a2e3fc099937ffbd5ecc2"
+            parent="aspace_a5906e82004425e3be9ed5c111d3c67f" type="folder">3</container>
+        </did>
+        <scopecontent id="aspace_dbee7c3e23a9ce284351ebd4b7e519d5">
+          <head>Scope and Contents</head>
+          <p>Poster of Sports Illustrated cover featuring Shane Battier.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref109_rsw" level="file">
+        <did>
+          <unittitle>2001 National Champions</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">2
+              items</extent></physdesc>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2001/2001"
+            type="inclusive">2001</unitdate>
+          <container id="aspace_0d9b084fb2ce30bcae4eea07489f831a" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_44c15bd4404cfb1f4ffe228f1dbb9c12"
+            parent="aspace_0d9b084fb2ce30bcae4eea07489f831a" type="folder">3</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref24_ybm" level="file">
+        <did>
+          <unittitle>2001 National Champions</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2001/2001"
+            type="inclusive">2001</unitdate>
+          <container id="aspace_7841dbd968bb749ade3cc896d5acf527" label="Mixed Materials"
+            type="oversize-folder">1</container>
+        </did>
+        <scopecontent id="aspace_8fa14656c8c087c317534757b885e560">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref110_3j5" level="file">
+        <did>
+          <unittitle>Deja Blue</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2001/2002"
+            type="inclusive">2001-2002</unitdate>
+          <container id="aspace_f28cd3dddb2a5ccd8c22a2a2037b8d6c" label="Mixed Materials" type="box"
+            >1</container>
+          <container id="aspace_c15c601a2e3c5da489c2a1aab9dc5c50"
+            parent="aspace_f28cd3dddb2a5ccd8c22a2a2037b8d6c" type="folder">3</container>
+          <dao xlink:actuate="onRequest" xlink:href="https://idn.duke.edu/ark:/87924/r4086798w"
+            xlink:role="image-service" xlink:show="new" xlink:title="Deja Blue"
+            xpointer="ark:/87924/r4086798w"/>
+        </did>
+      </c01>
+      <c01 id="aspace_ref30_ei5" level="file">
+        <did>
+          <unittitle>Deja Blue</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2001/2002"
+            type="inclusive">2001-2002</unitdate>
+          <container id="aspace_3fab948e55ef5ed85f789cf7db5df61a" label="Mixed Materials"
+            type="oversize-folder">1</container>
+        </did>
+        <scopecontent id="aspace_f90dfe5bb356b159a54f286cad4dc5dc">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref32_u29" level="file">
+        <did>
+          <unittitle>Duke Rocks</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2002/2003"
+            type="inclusive">2002-2003</unitdate>
+          <container id="aspace_6bb720525547ec9429564b6434db7f06" label="Mixed Materials"
+            type="oversize-folder">2</container>
+        </did>
+        <scopecontent id="aspace_bcfe0b5b026c56e1f06ae17e0ea0184e">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref34_gn8" level="file">
+        <did>
+          <unittitle>Lights! Cameron! Action!</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2003/2004"
+            type="inclusive">2003-2004</unitdate>
+          <container id="aspace_7507e1d77c5432760940c7b86bdc2785" label="Mixed Materials"
+            type="oversize-folder">2</container>
+        </did>
+        <scopecontent id="aspace_4800a4d5595d6e153b72b80ae2f502ba">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref36_mke" level="file">
+        <did>
+          <unittitle>Vintage</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2004/2005"
+            type="inclusive">2004-2005</unitdate>
+          <container id="aspace_d6a5f5ac5e0cbaae464d3df317656982" label="Mixed Materials"
+            type="oversize-folder">2</container>
+        </did>
+        <scopecontent id="aspace_5909dcd1d3dfc66ce1145fe8936c9c8c">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref37_5w7" level="file">
+        <did>
+          <unittitle>100 Seasons</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2004/2004"
+            type="inclusive">2004</unitdate>
+          <container id="aspace_7492ed28255872711cacb4f52f7a1a4d" label="Mixed Materials"
+            type="oversize-folder">2</container>
+        </did>
+      </c01>
+      <c01 id="aspace_ref39_gnw" level="file">
+        <did>
+          <unittitle>Believe</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2006/2007"
+            type="inclusive">2006-2007</unitdate>
+          <container id="aspace_75f26f566315e774cdc08d8b53b3caf2" label="Mixed Materials"
+            type="oversize-folder">3</container>
+        </did>
+        <scopecontent id="aspace_57958117cba55aa60e61e3a8c3cf4023">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref41_5dh" level="file">
+        <did>
+          <unittitle>Goodfellas</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2009/2010"
+            type="inclusive">2009-2010</unitdate>
+          <container id="aspace_6ba196c945a1aad1b5f2c99769932b7a" label="Mixed Materials"
+            type="oversize-folder">3</container>
+        </did>
+        <scopecontent id="aspace_b4a5d5127b93ab3d597abeda73295095">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref43_swx" level="file">
+        <did>
+          <unittitle>One</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2010/2011"
+            type="inclusive">2010-2011</unitdate>
+          <container id="aspace_568b65a5c6d57cf665b1ba781765599c" label="Mixed Materials"
+            type="oversize-folder">3</container>
+        </did>
+        <scopecontent id="aspace_e450a0188e457b5a1f98f4a6f9d45d3e">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref45_3h4" level="file">
+        <did>
+          <unittitle>First Class</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2011/2012"
+            type="inclusive">2011-2012</unitdate>
+          <container id="aspace_2ac98495c0582bf81f39edae27b5d27a" label="Mixed Materials"
+            type="oversize-folder">4</container>
+        </did>
+        <scopecontent id="aspace_3f88dd7c19585df7fa46e808fb3cecc0">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+      <c01 id="aspace_ref47_iz8" level="file">
+        <did>
+          <unittitle>Fight</unittitle>
+          <unitdate calendar="gregorian" datechar="creation" era="ce" normal="2012/2013"
+            type="inclusive">2012-2013</unitdate>
+          <container id="aspace_2334b57a5276062bdf4a4b00e84c3e5a" label="Mixed Materials"
+            type="oversize-folder">4</container>
+        </did>
+        <scopecontent id="aspace_ecfbef0e2faa08b4704aad9a8acd8c39">
+          <head>Scope and Contents</head>
+          <p>Includes mounted poster autographed by team and Coach K to Jim Jarvis.</p>
+        </scopecontent>
+      </c01>
+    </dsc>
+  </archdesc>
+</ead>

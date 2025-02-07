@@ -1,0 +1,53 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=arclight
+      - POSTGRES_PASSWORD=arclight
+    volumes:
+      - ../pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - ../redis_data:/data
+
+
+  solr:
+    image: solr:8-slim
+    user: "8983:8983"
+    volumes:
+      - ../solr/arclight/conf:/solr_config:ro
+      - ../solr/arclight/data:/var/solr/data/
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - arclight
+      - /solr_config
+    ports:
+      - "8983:8983"
+
+  app:
+    image: ksul-arclight
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - solr
+    volumes:
+      - ../my-ead/atom-export-ead:/opt/app-root/finding-aid-data
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=development
+      # - FINDING_AID_DATA=./sample-ead
+      - DATABASE_URL=postgresql://postgres:arclight@db/arclight
+      - MATOMO_ANALYTICS_DEBUG=true
+      - MATOMO_ANALYTICS_HOST=analytics.lib.duke.edu
+      - MATOMO_ANALYTICS_SITE_ID=3
+      - REDIS_URL=redis://redis:6379
+      - SOLR_URL=http://solr:8983/solr/arclight

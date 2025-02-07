@@ -1,0 +1,23 @@
+<%# DUL CUSTOMIZATION: Override upstream arclight in order to remove  %>
+<%# the columnized layout for metadata definition lists. See:         %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/metadata_section_component.rb %>
+
+<%= tag.div id: t("arclight.views.show.sections.#{@section}").parameterize do %>
+  <% if @heading %>
+    <h3 class='al-show-sub-heading'>
+      <%= t("arclight.views.show.sections.#{@section}", level: @presenter.document.level) %>
+    </h3>
+  <% end %>
+
+  <%# DUL CUSTOMIZATION: Optionally add boilerplate text to a field group %>
+  <%# using an i18n key. %>
+  <% if I18n.exists?("dul_arclight.views.show.field_group_note.#{@section}") %>
+    <p><%= t("dul_arclight.views.show.field_group_note.#{@section}").html_safe %></p>
+  <% end %>
+
+  <%= tag.dl class: @classes do %>
+    <% @presenter.field_presenters.each do |field_presenter| %>
+      <%= render (field_presenter.component || Blacklight::MetadataFieldComponent).new(field: field_presenter, show: true, **@metadata_attr) %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,36 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: root
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+    {{- if (or .Values.externalRoute .Values.routes.root.external) }}
+    cloud.duke.edu/route-type: external
+    {{- end }}
+  annotations:
+    cert-manager.io/issuer-kind: Issuer
+    {{- if (or .Values.externalRoute .Values.routes.root.external) }}
+    cert-manager.io/issuer-name: locksmith-issuer-external
+    {{- else }}
+    cert-manager.io/issuer-name: locksmith-issuer-internal
+    {{- end }}
+    haproxy.router.openshift.io/timeout: {{ .Values.routes.root.timeout | quote }}
+    haproxy.router.openshift.io/rate-limit-connections: {{ .Values.routes.root.rateLimit.enabled | quote }}
+    haproxy.router.openshift.io/rate-limit-connections.rate-http: {{ .Values.routes.root.rateLimit.http | quote }}
+spec:
+  host: {{ .Values.applicationHostname }}
+  port:
+    targetPort: http
+  path: /
+  to:
+    kind: Service
+    {{- if (or .Values.externalRoute .Values.routes.root.external) }}
+    name: front-end
+    {{- else }}
+    name: oauth2-proxy
+    {{- end }}
+    weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

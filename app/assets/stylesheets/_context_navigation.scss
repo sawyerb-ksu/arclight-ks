@@ -1,0 +1,52 @@
+/* See https://github.com/projectblacklight/arclight/blob/main/app/assets/stylesheets/arclight/modules/hierarchy_and_online_contents.scss */
+
+:root {
+  --al-toggle-icon-color: #{$gray-600};
+
+  // Chevron instead of default +/-
+  --dul-hierarchy-view-expand-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/></svg>");
+}
+
+// Collapse +/- indicators
+
+.al-toggle-view-children {
+  mask: var(--dul-hierarchy-view-expand-icon);
+  mask-repeat: no-repeat !important;
+  transition: transform 0.2s;
+  max-width: 0.7rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+
+  /* NOTE: an SVG masked element loses its ability to have a border or outline */
+  /* so the focus state can only be indicated by changing the background color */
+  /* This changed in arclight v1.3.0. */
+  &:focus {
+    background-color: $info;
+  }
+
+  &:not(.collapsed) {
+    mask: var(--dul-hierarchy-view-expand-icon);
+    transform: rotate(90deg);
+  }
+}
+
+.al-number-of-children-badge {
+  background-color: $whisper-gray !important;
+  color: $dark;
+  border-radius: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+#collection-context {
+  .al-hierarchy-highlight > .documentHeader {
+    @include fw-semibold;
+    background-color: tint-color($dandelion, 40%);
+    padding: 4px 6px;
+    margin-left: -6px;
+  }
+
+  // Show more
+  .btn {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,40 @@
+en:
+  blacklight:
+    application_name: Archives & Manuscripts at Duke University Libraries
+    bookmarks:
+      disclaimer_html: '<strong>Please note:</strong> saved bookmarks will expire within 30 days'
+      per_page_warning: |
+        <strong>You have %{bookmark_count} items bookmarked, so they don't all appear on this
+        page</strong>. Emailing or exporting them will only include this current page of
+        bookmarks. You can email each page separately and/or increase the number shown per
+        page <em>(up to 100)</em>.
+      export_csv: Export CSV
+    branding:
+          library_name: Duke University Libraries
+          primary: Archives & Manuscripts
+          secondary_html: Collection Guides
+    email:
+      text:
+        subject:
+          one: Saved Bookmark from Collection Guides
+          other: Saved Bookmarks from Collection Guides
+        message: '%{message}'
+      views:
+        note: |
+          This message was sent from the Rubenstein Library Collection Guides system. For
+          research assistance, see: https://rubenstein.libanswers.com/index
+    header_links:
+      ask: Ask
+      ask_long: Ask a Question
+      my_account: My Accounts
+      menu: Menu
+      menu_long: Expand/Collapse Menu
+    search:
+      bookmarks:
+        label: "Bookmark:"
+    skip_links:
+      back_to_top: Back to top
+      collection_nav: Skip to collection navigation
+      facets: Skip to limit your search
+    tools:
+      email: Email Bookmarks

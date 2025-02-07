@@ -1,0 +1,242 @@
+#
+# Values for dul-arclight Helm chart
+#
+replicaCount: 1
+
+image:
+  tag: "" # REQUIRED
+
+# Curl image used for cron jobs
+curl:
+  registry: pull-through.cloud.duke.edu
+  repository: curlimages/curl
+  tag: "8.5.0"
+
+nameOverride: app
+fullnameOverride: app
+
+resources:
+  requests:
+    memory: 400Mi
+
+service:
+  type: ClusterIP
+  port: 3000
+
+livenessProbe:
+  enabled: true
+  tcpSocket:
+    port: http
+  initialDelaySeconds: 5
+  timeoutSeconds: 5
+  periodSeconds: 15
+  # successThreshold: 1
+  # failureThreshold: 3
+  # terminationGracePeriodSeconds: 30
+
+readinessProbe:
+  enabled: true
+  httpGet:
+    path: /up
+    port: http
+  initialDelaySeconds: 15
+  timeoutSeconds: 15
+  periodSeconds: 15
+  # successThreshold: 1
+  failureThreshold: 5
+  # terminationGracePeriodSeconds: 30
+
+cronJobs:
+  deleteOldGuestUsers:
+    daysOld: 30
+
+sidekiq:
+  replicaCount: 1
+  resources:
+    requests:
+      memory: 200Mi
+
+apacheCacheEnabled: false
+applicationHostname: "" # REQUIRED
+authorizedUsers: []  # access control list for Solr admin and Sidekiq web
+externalRoute: false # whether the "public" route(s) should be mapped to the external router
+matomoAnalyticsDebug: false
+matomoAnalyticsHost: analytics.lib.duke.edu
+matomoAnalyticsSiteId: "" # REQUIRED
+# oidcAllowedGroup - group access control when app is retricted (externalRoute: false)
+oidcAllowedGroup: ""      # REQUIRED
+oidcClientId: ""          # REQUIRED
+oidcClientSecret: ""      # REQUIRED
+oidcCookieSecret: ""      # REQUIRED
+oidcCryptoPassphrase: ""  # REQUIRED
+oidcRemoteUserClaim: dukeNetID
+oidcScope: openid email profile groups
+railsServeStaticFiles: true
+railsStaticFilePaths:
+  - /assets
+  - /favicon
+  - /favicon.ico
+  - /robots.txt
+
+routes:
+  root:
+    external: false
+    timeout: 60s
+    rateLimit:
+      enabled: false
+      http: 100
+
+secretKeyBase: "" # REQUIRED
+solrPersistentStorage: 8Gi
+
+# Rack Attack settings
+rackAttackEnabled: true
+rackAttackCache: 'rack-attack-cache:11211'
+blocklistEnabled: true
+blocklistIP: []
+safelistEnabled: true
+safelistIP:
+  - 152.3.0.0/16
+  - 152.16.0.0/16
+  - 67.159.64.0/18
+  - 10.0.0.0/8
+throttleRequestsEnabled: true
+throttleRequestsByIP: '10,5'
+throttleRequestsSubnet1: '100,10'
+throttleRequestsSubnet2: '1000,20'
+throttleRequestsTotal: '1000,5'
+
+findingAidData:
+  deployToken:
+    username: ""   # REQUIRED - deploy token username
+    password: ""   # REQUIRED - deploy token value
+  webhookToken: "" # REQUIRED
+  repository: gitlab.oit.duke.edu/dul-its/finding-aid-data.git
+  branch: master
+
+#
+# Global values
+#
+global:
+  compatibility:
+    openshift:
+      adaptSecurityContext: auto
+  # imageRegistry: pull-through.cloud.duke.edu
+  postgresql:
+    auth:
+      username: arclight
+      password: "" # REQUIRED
+      database: arclight
+  security:
+    allowInsecureImages: true # https://github.com/bitnami/charts/issues/30850
+  volumes:
+    railsAssets:
+      mountPath: /opt/rails-assets
+      claimName: app-assets
+      size: 1Gi
+
+#
+# Dependent chart values
+#
+solr:
+  nameOverride: solr
+  fullnameOverride: solr
+  image:
+    tag: "8.11.2"
+  heapSize: 1g
+  resources:
+    requests:
+      memory: 2Gi
+  stopWaitSeconds: 180
+  commandArgs:
+    - solr-precreate
+    - arclight
+  persistence:
+    existingClaim: solr-data
+
+# Bitnami/PostgreSQL
+postgresql:
+  nameOverride: app-db
+  fullnameOverride: app-db
+  image:
+    registry: pull-through.cloud.duke.edu
+    tag: 15-debian-12
+  primary:
+    resources:
+      requests:
+        memory: 1Gi
+        cpu: 1.0
+      limits:
+        memory: 2Gi
+        cpu: 2.0
+    terminationGracePeriodSeconds: 120
+    updateStrategy:
+      type: OnDelete
+      rollingUpdate: null
+
+# Bitnami/Redis
+valkey:
+  nameOverride: redis
+  fullnameOverride: redis
+  architecture: standalone
+  auth:
+    enabled: false
+  image:
+    registry: pull-through.cloud.duke.edu
+    tag: 7.2-debian-12
+  master:
+    kind: Deployment
+    updateStrategy:
+      type: Recreate
+      rollingUpdate: null
+
+# Bitnami/Apache
+apache:
+  service:
+    type: ClusterIP
+  image:
+    registry: image-registry.openshift-image-registry.svc:5000
+    # repository: {{ .Release.Namespace }}/apache - set in CI config
+    tag: dul-arclight
+  resources:
+    requests:
+      memory: 1Gi
+  nameOverride: front-end
+  fullnameOverride: front-end
+  vhostsConfigMap: front-end-vhosts
+  livenessProbe:
+    enabled: false
+  readinessProbe:
+    enabled: false
+  extraVolumes:
+    - name: rails-assets
+      persistentVolumeClaim:
+        claimName: "{{ .Values.global.volumes.railsAssets.claimName }}"
+  extraVolumeMounts:
+    - name: rails-assets
+      mountPath:  "{{ .Values.global.volumes.railsAssets.mountPath }}"
+      readOnly: true
+
+# Bitnami/Memcached
+rails-cache:
+  nameOverride: rails-cache
+  fullnameOverride: rails-cache
+  image:
+    registry: pull-through.cloud.duke.edu
+    tag: 1-debian-12
+
+rack-attack-cache:
+  nameOverride: rack-attack-cache
+  fullnameOverride: rack-attack-cache
+  image:
+    registry: pull-through.cloud.duke.edu
+    tag: 1-debian-12
+
+oauth2-proxy:
+  nameOverride: oauth2-proxy
+  fullnameOverride: oauth2-proxy
+  securityContext:
+    enabled: false
+  config:
+    existingConfig: oauth2-proxy-config
+    existingSecret: oauth2-proxy-secret

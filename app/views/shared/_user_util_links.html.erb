@@ -1,0 +1,27 @@
+<%# Overrides Blacklight core partial %>
+<%# https://github.com/projectblacklight/blacklight/blob/main/app/views/shared/_user_util_links.html.erb %>
+
+<ul class="navbar-nav">
+    <%#  my account %>
+    <li class="nav-item">
+      <a href="https://library.duke.edu/my-accounts" class="nav-link" title ="<%= t('blacklight.header_links.my_account') %>">
+        <span class="nav-icon"><i class="fas fa-user"></i></span><span class="nav-label"><%= t('blacklight.header_links.my_account') %></span>
+      </a>
+    </li>
+
+
+    <%#  ask a question %>
+    <li class="nav-item">
+      <a href="<%= ask_rubenstein_url %>" class="nav-link" title="Ask a Librarian">
+        <span class="nav-icon"><i class="fas fa-comment"></i></span><span class="nav-label">Ask</span>
+      </a>
+    </li>
+
+
+    <%#  trigger dul mast %>
+    <li class="nav-item full-menu-toggle-wrapper">
+      <a href="#" id="full-menu-toggle" class="nav-link full-menu" title="<%= t('blacklight.header_links.menu_long')%>" data-bs-toggle="collapse" data-bs-target="#mobile-only-menu" aria-controls="mobile-only-menu" aria-expanded="false"">
+        <span class="nav-icon"><i class="fas fa-bars"></i></span><span class="nav-label">Menu<%#= t('blacklight.header_links.menu') %></span>
+      </a>
+    </li>
+</ul>

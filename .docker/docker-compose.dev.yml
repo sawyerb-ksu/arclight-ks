@@ -1,0 +1,51 @@
+version: '3.7'
+
+volumes:
+  pg_data:
+
+services:
+  solr:
+    ports:
+      - "8983:8983"
+    volumes:
+      - ../solr/arclight:/var/solr/data/arclight
+
+  db:
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  app:
+    volumes:
+      - ..:/opt/app-root
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=development
+      - FINDING_AID_DATA=./sample-ead
+    restart: on-failure
+
+  cache:
+    image: memcached:1-alpine
+
+  redis:
+    image: redis:7-alpine
+
+  sidekiq:
+    image: "${build_tag:-dul-arclight}"
+    depends_on:
+      - db
+      - redis
+      - solr
+    volumes:
+      - ..:/opt/app-root
+    environment:
+      - DATABASE_URL=postgresql://postgres:arclight@db/arclight
+      - FINDING_AID_DATA=../../finding-aid-data
+      - RAILS_ENV=development
+      - REDIS_URL=redis://redis:6379
+      - SOLR_URL=http://solr:8983/solr/arclight
+    restart: on-failure
+    command:
+      - bundle
+      - exec
+      - sidekiq

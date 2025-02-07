@@ -1,0 +1,61 @@
+/* ---------------------- */
+/* SEARCH BOX             */
+/* ---------------------- */
+// Search box gets rendered in a few places (masthead, homepage, modal)
+// Most styles are shared but there are some subtle differences here.
+
+form.search-query-form {
+  #homepage-search-box & {
+    margin-bottom: 1rem;
+  }
+
+  select[id^="within_collection"] {
+    min-width: 10rem;
+    background-color: $gray-200;
+    #homepage-search-box & {
+      display: none;
+    }
+  }
+
+  // We only render the field selector in our modal search form
+  select[id^="search_field"] {
+    display: none;
+    min-width: 10rem;
+    background-color: $gray-200;
+    #advanced-modal & {
+      display: block;
+    }
+  }
+
+  #autocomplete-popup {
+    max-width: 100%;
+    li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:not(:has(li)) {
+      display: none;
+    }
+  }
+
+  input.search-q {
+    #homepage-search-box & {
+      font-size: 22px;
+    }
+  }
+
+  .twitter-typeahead input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &.search-q {
+      background-color: white !important;
+    }
+
+  }
+
+  // BS5 mixin to make the btn-primary here look like btn-success
+  .search-btn {
+    @include button-variant(tint-color($success, 20%), tint-color($success, 20%), $black);
+  }
+  }

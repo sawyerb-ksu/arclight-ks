@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: build-suggest
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  schedule: "0 2 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: build-suggest
+              image: >-
+                {{ .Values.curl.registry }}/{{ .Values.curl.repository }}:{{ .Values.curl.tag }}
+              imagePullPolicy: IfNotPresent
+              args:
+                - '-sf'
+                - '-G'
+                - '-H'
+                - 'accept: application/json'
+                - 'http://solr:8983/solr/arclight/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester'

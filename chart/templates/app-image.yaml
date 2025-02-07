@@ -1,0 +1,19 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: app
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: {{ .Values.image.tag }}
+      from:
+        kind: DockerImage
+        name: >-
+          gitlab-registry.oit.duke.edu/dul-its/dul-arclight/app:{{ .Values.image.tag }}
+    - name: latest
+      from:
+        kind: ImageStreamTag
+        name: {{ .Values.image.tag }}

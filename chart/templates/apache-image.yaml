@@ -1,0 +1,16 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: apache
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: upstream
+      importPolicy:
+        scheduled: true
+      from:
+        kind: DockerImage
+        name: pull-through.cloud.duke.edu/bitnami/apache:2.4-debian-12

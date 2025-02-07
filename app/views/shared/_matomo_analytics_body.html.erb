@@ -1,0 +1,51 @@
+<%# Matomo Analytics code that lives in the <body>.              -%>
+<%# Note we cannot put the Matomo-supplied tracking code in      -%>
+<%# the <head> because of Hotwire/Turbo, which doesn't reload    -%>
+<%# the contents of the <head> when transitioning between pages. -%>
+
+<div id="matomo-analytics-configs"
+  data-matomo-analytics-host="<%= DulArclight.matomo_analytics_host %>"
+  data-matomo-analytics-site-id="<%= DulArclight.matomo_analytics_site_id %>"
+  data-matomo-analytics-debug="<%= DulArclight.matomo_analytics_debug %>">
+</div>
+
+<%# https://developer.matomo.org/guides/tracking-javascript-guide %>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+
+  <%# Custom Dimensions -%>
+  <%# https://developer.matomo.org/guides/tracking-javascript-guide#custom-dimensions -%>
+  _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = '<%= matomo_collection_id %>']);
+  _paq.push(['setCustomDimension', customDimensionId = 2, customDimensionValue = '<%= matomo_page_type %>']);
+
+  <%# Turbo makes this necessary... we need to explicitly   -%>
+  <%# set the page title and URL sent to Google for each    -%>
+  <%# pageview, else it would not update between pages as a -%>
+  <%# user navigates. %>
+  _paq.push(['setDocumentTitle', document.title]);
+  _paq.push(['setCustomUrl', window.location.href]);
+
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+
+  (function() {
+    var u="//<%= DulArclight.matomo_analytics_host %>/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '<%= DulArclight.matomo_analytics_site_id %>']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+
+  <% if DulArclight.matomo_analytics_debug == 'true' %>
+  console.log(
+    [
+      'Matomo Collection ID: <%= matomo_collection_id %>',
+      'Matomo Page Type: <%= matomo_page_type %>',
+      'Matomo Site ID: <%= DulArclight.matomo_analytics_site_id %>',
+      'Matomo Host: <%= DulArclight.matomo_analytics_host %>'
+    ].join(' --- '));
+  <% end %>
+
+</script>
+<!-- End Matomo Code -->

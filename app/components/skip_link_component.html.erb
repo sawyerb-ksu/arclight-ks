@@ -1,0 +1,11 @@
+<%# Local override for BL component that broke in v8.4.0; it can't use
+<%# sr-only else it isn't keyboard navigable. See: -%>
+<%# https://github.com/projectblacklight/blacklight/blob/release-8.x/app/components/blacklight/skip_link_component.html.erb -%>
+
+<nav id="skip-link" role="navigation" class="visually-hidden-focusable" aria-label="<%= t('blacklight.skip_links.label') %>">
+  <div class="container-xl">
+    <%= link_to_search %>
+    <%= link_to_main %>
+    <%= content %>
+  </div>
+</nav>

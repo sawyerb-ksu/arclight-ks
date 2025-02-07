@@ -1,0 +1,31 @@
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+Sitemap: https://archives.lib.duke.edu/sitemap
+
+# Rules for all agents:
+# Block crawling the raw EAD XML files or raw JSON
+# Add 5 second crawl delay; block crawling of most facet URLs
+User-agent: *
+Disallow: /*/xml$
+Disallow: /*/raw$
+Disallow: /catalog/facet/*
+Disallow: *f[*][]*
+Disallow: *f%5B*%5D%5B%5D*
+Disallow: /bookmarks
+Crawl-delay: 5
+
+# Throttle crawl rate for some bots without blocking them outright
+# Crawl-delay is number of seconds the bot must wait after a crawl action
+User-agent: Baiduspider
+User-agent: Baiduspider-image
+User-agent: Sogou blog
+User-agent: Sogou inst spider
+User-agent: Sogou News Spider
+User-agent: Sogou Orion spider
+User-agent: Sogou spider2
+User-agent: Sogou web spider
+Crawl-delay: 10
+
+# Block some specific bots from crawling anything
+User-agent: SemrushBot
+User-agent: PetalBot
+Disallow: /

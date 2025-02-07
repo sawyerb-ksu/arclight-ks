@@ -1,0 +1,14 @@
+<%# Advanced search link and bookmarks button %>
+
+<div class="search-extra-controls mt-2">
+
+    <%= link_to t('dul_arclight.advanced_search.title'), '#',
+          class: 'advanced-search-link',
+          data: { bs_toggle: 'modal', bs_target: '#advanced-modal' } %>
+
+    <%= link_to bookmarks_path, id:'bookmarks_nav' do %>
+      <i class="fas fa-bookmark"></i> <span class="bookmarks-label"><%= t('blacklight.header_links.bookmarks') %></span>
+      <span class="open-paren">(</span><span data-role='bookmark-counter' data-bookmark-count="<%= current_or_guest_user.bookmarks.count %>"><%= current_or_guest_user.bookmarks.count %></span><span class="close-paren">)</span>
+    <% end %>
+
+</div>

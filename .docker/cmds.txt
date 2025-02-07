@@ -1,0 +1,1000 @@
+  223  docker compose logs app
+  224  app-1
+  225  docker inspect app-1
+  226  docker compose up --build
+  227  docker compose up
+  228  docker compose logs app
+  229  docker compose up
+  230  docker build -t arcimagetwo .
+  231  docker compose build
+  232  docker compose up --build
+  233  DOCKER PS
+  234  docker ps
+  235  docker compose up --build
+  236  docker compose up -d
+  237  docker 336ffd529044
+  238  docker stop 336ffd529044
+  239  docker stop c383060ada5f
+  240  docker ps
+  241  curl http://localhost:3000
+  242  curl http://0.0.0.0:3000
+  243  curl http://0.0.0.0:3000
+  244  docker-compose down
+  245  docker-compose up --build
+  246  docker compose down
+  247  docker-compose up --build
+  248  docker com
+  249  docker-compose up --build
+  250  docker compose up --build
+  251  docker-compose build --no-cache
+  252  docker compose build --no-cache
+  253  docker system prune -a
+  254  docker compose up --build
+  255  docker compose build --no-cache
+  256  docker compose up
+  257  docker compose build 
+  258  bundle install
+  259  docker compose build --no-cache
+  260  docker ps
+  261  RUN bundle exec engine_cart:generate
+  262  bundle install
+  263  cd ..
+  264  ll
+  265  cd projects
+  266  ll
+  267  cd arclight/
+  268  bundle install
+  269  RUN bundle exec engine_cart:generate
+  270  docker compose up
+  271  docker compose logs app-1
+  272  docker compose logs app-1
+  273  docker compose logs app
+  274  docker ps -a
+  275  docker compose run app bash
+  276  bundle exec rails server -b 0.0.0.0
+  277  wsl --version
+  278  wsl -version
+  279  exit
+  280  cd ..
+  281  ll
+  282  cd projects/
+  283  mkdir Tutor
+  284  rmdir Tutor
+  285  mkdir tutor
+  286  cd tutor
+  287  docker -v
+  288  docker compose -v
+  289  bundle
+  290  cd arclight/
+  291  bundle
+  292  gem install arclight
+  293  bundle exec rake arclight:server
+  294  docker compose up
+  295  bundle exec rake arclight:server
+  296  gem 'mutex_m'
+  297  gem install 'mutex_m'
+  298  bundle exec rake arclight:server
+  299  mutex_m
+  300  bundle install
+  301  bundle exec rake arclight:server
+  302  ll
+  303  cd projects
+  304  git clone https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+  305  ll
+  306  docker ps
+  307  docker stop 5e28abb785f6
+  308  docker ps
+  309  docker stop all
+  310  docker stop all -a
+  311  docker rm $(docker ps -a -q)
+  312  docke ps
+  313  docker ps
+  314  docker rm -f $(docker ps -aq)
+  315  docker ps
+  316  ./dev.sh exec app bash
+  317  docker ps
+  318  ./dev.sh exec dul-arclight-dev-app-1 bash
+  319  docker ecec -t dul-arclight-dev-app-1 bash
+  320  docker ecec -it dul-arclight-dev-app-1 bash
+  321  docker exec -it dul-arclight-dev-app-1 bash
+  322  docker ps
+  323  docker logs dul-arclight-dev-app-1
+  324  docker rm -f $(docker ps -aq)
+  325  docker ps
+  326  docker logs dul-arclight-dev-app-1
+  327  docker exec -it dul-arclight-dev-app-1 bash
+  328  chmod -R 777 /opt/app-root/tmp
+  329  exit
+  330  .docker/dev.sh exec app bundle exec rake dul_arclight:reindex_everything
+  331  make
+  332  .docker/dev.sh up
+  333  .docker/dev.sh exec app ./bin/rails db:prepare
+  334  .docker/dev.sh up -d
+  335  ./dev.sh exec app bash
+  336  docker ps
+  337  .docker/dev.sh up
+  338  .docker/dev.sh up -d
+  339  docker ps
+  340  docker restart dul-arclight-dev-app-1
+  341  docker ps
+  342  docker logs dul-arclight-dev-app-1
+  343  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  344  docker stop dul-arclight-dev-app-1
+  345  docker start dul-arclight-dev-app-1
+  346  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  347  docker stop dul-arclight-dev-app-1
+  348  docker update --restart=no dul-arclight-dev-app-1
+  349  docker start dul-arclight-dev-app-1
+  350  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  351  docker start dul-arclight-dev-app-1
+  352  docker logs dul-arclight-dev-app-1
+  353  docker rm -f $(docker ps -aq)
+  354  ./dev.sh exec app bash
+  355  app-user@d9988b05920c:/opt/app-root$ bundle exec rails c
+  356  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  357  docker stop dul-arclight-dev-app-1
+  358  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  359  docker start dul-arclight-dev-app-1
+  360  docker exec -it dul-arclight-dev-app-1 /bin/bash
+  361  docker stop dul-arclight-dev-app-1
+  362  docker run -it --entrypoint /bin/bash dul-arclight-dev-app-1
+  363  docker ps
+  364  docker run -it --entrypoint /bin/bash dul-arclight
+  365  docker ps
+  366  docker rm -f $(docker ps -aq)
+  367  docker ps
+  368  docker run -it --entrypoint /bin/bash dul-arclight-dev-app-1
+  369  docker stop dul-arclight-dev-app-1
+  370  docker run -it --entrypoint /bin/bash dul-arclight-dev-app-1
+  371  docker start dul-arclight-dev-app-1
+  372  docker run -it --entrypoint /bin/bash dul-arclight-dev-app-1
+  373  docker run -it --entrypoint /bin/bash dul-arclight
+  374  docker ps
+  375  docker start dul-arclight-dev-app-1
+  376  docker rm -f $(docker ps -aq)
+  377  docker update --restart=no dul-arclight-dev-app-1
+  378  docker start -ai dul-arclight-dev-app-1
+  379  docker run -it --entrypoint bash dul-arclight-dev-app-1
+  380  docker ps
+  381  docker stop dul-arclight-dev-app-1
+  382  docker ps
+  383  docker kill dul-arclight-dev-app-1
+  384  docker start -ai dul-arclight-dev-app-1
+  385  docker run -it --entrypoint bash dul-arclight
+  386  docker stop dul-arclight-dev-app-1
+  387  docker ps
+  388  docker start dul-arclight-dev-app-1
+  389  docker ps
+  390  docker rm -f $(docker ps -aq)
+  391  docker ps
+  392  docker rm -f $(docker ps -aq)
+  393  ruby -v
+  394  rails -v
+  395  switch out "my-app" for the location you want to install the application to
+  396  rails new my-app -m https://raw.githubusercontent.com/projectblacklight/arclight/main/template.rb
+  397  cd projects/
+  398  cd arclight/
+  399  cd ../..
+  400  ll
+  401  cd my-app
+  402  bundle install
+  403  ll
+  404  cd app
+  405  ll
+  406  cd ../
+  407  docker compose up
+  408  gem install solr_wrapper
+  409  solr_wrapper
+  410  Starting Solr 6.5.1 on port 8983 ... http://127.0.0.1:8983/solr/
+  411  rails s
+  412  docker compose up
+  413  cd ..
+  414  rm -rf my-app
+  415  ll
+  416  cd projects
+  417  rm -rf arclight
+  418  ll
+  419  cd my app
+  420  cd my-app
+  421  ll
+  422  cd ..
+  423  rm -rf my-app
+  424  ll
+  425  bundle exec gem uninstall arclight engine_cart blacklight 
+  426  gem uninstall --all
+  427  gem uninstall --all -y
+  428  gem uninstall --all
+  429  y
+  430  yy
+  431  gem uninstall --all
+  432  gem uninstall -y --all
+  433  gem uninstall --all -y
+  434  gem uninstall
+  435  gem uninstall --all
+  436  y
+  437  gem uninstall --all
+  438  bundle clean --force
+  439  git clone https://github.com/projectblacklight/arclight.git
+  440  ll
+  441  cd my-app/
+  442  nano gemfile
+  443  nan0 Gemfile
+  444  nano Gemfile
+  445  cd ..
+  446  rm -rf my-app
+  447  rails new my-app -m https://raw.githubusercontent.com/projectblacklight/arclight/main/template.rb
+  448  cd my-app
+  449  bundle install
+  450  rails s
+  451  ll
+  452  nan Gemfile
+  453  nano Gemfile
+  454  bundle install
+  455  rails s
+  456  ll
+  457  cd app
+  458  ll
+  459  docker ps
+  460  docker stop c383060ada5f
+  461  docker ps
+  462  docker compose up
+  463  cd ..
+  464  cd..
+  465  cd ..
+  466  ll
+  467  cd arclight/
+  468  docker compose
+  469  docker compose up
+  470  exit
+  471  ll
+  472  cd projects/
+  473  ;;
+  474  ll
+  475  cd arclight/
+  476  ll
+  477  bundle exec rake arclight:server
+  478  bundle exec rake
+  479  bundle install
+  480  bundle exec rake arclight:server
+  481  docker ps
+  482  docker exec f62e7f959616 sh
+  483  docker ps
+  484  docker stop 300b2b8b844d
+  485  docker stop 994e297efabe
+  486  docker ps
+  487  docker stop 994e297efabe
+  488  docker ps
+  489  docker compose up --build
+  490  ll
+  491  exit
+  492  docker ps
+  493  .docker/dev.sh up -d
+  494  docker ps -a
+  495  .docker/dev.sh up -d
+  496  grep puma
+  497  ps aux | grep puma
+  498  docker ps -a
+  499  ls -l .docker/dev.sh
+  500  .docker/dev.sh up -d
+  501  .docker/dev.sh exec app ./bin/rails db:prepare
+  502  .docker/dev.sh up -d
+  503  .docker/dev.sh exec app ./bin/rails db:prepare
+  504  docker ps
+  505  docker exec -it dul-arclight-dev-db-1 psql -U postgres -d arclight
+  506  .docker/dev.sh exec app ./bin/rails db:schema:load
+  507  docker ps
+  508  docker exec -it dul-arclight-dev-db-1 psql -U postgres -d arclight
+  509  script -f my_log.txt
+  510  history > command_history.txt
+  511  docker exec -it dul-arclight-dev-solr-1 
+  512  docker exec -it dul-arclight-dev-solr-1 solr
+  513  .docker/dev.sh up -d
+  514  .docker/dev.sh exec app ./bin/rails db:prepare
+  515  .docker/dev.sh exec app ./bin/rails db:schema:load
+  516  .docker/dev.sh up -d
+  517  .docker/dev.sh exec app ./bin/rails db:prepare
+  518  .docker/dev.sh exec app ./bin/rails db:schema:load
+  519  .docker/dev.sh up -d
+  520  .docker/dev.sh exec app ./bin/rails db:schema:load
+  521  docker exec -it <dul-arclight-dev-solr-1> /bin/bash
+  522  docker exec -it dul-arclight-dev-solr-1 /bin/bash
+  523  ./docker dev.sh restart solr
+  524  ./dev.sh restart solr
+  525  docker-compose restart solr
+  526  docker exec -it dul-arclight-dev-solr-1 /bin/bash
+  527  docker compose down
+  528  docker compose up --build
+  529  ./dev.sh up
+  530  ll
+  531  docker compose up
+  532  ll
+  533  dev.sh up
+  534  ./dev.sh up
+  535  .\dev.sh
+  536  .docker/dev.sh up -d
+  537  docker exec -it dul-arclight-dev-solr-1 /bin/bash
+  538  .docker/dev.sh down
+  539  .docker/dev.sh up
+  540  .docker/dev.sh up -d
+  541  docker ps
+  542  docker exec -it dul-arclight-dev-solr-1 /bin/bash
+  543  docker exec -u 0 -it dul-arclight-dev-solr-1 /bin/bash
+  544  .docker/dev.sh down
+  545  docker system df
+  546  docker stop $(docker ps -q)
+  547  docker stop $(docker ps -aq)
+  548  docker rm -f $(docker ps -aq)
+  549  docker container prune
+  550  .docker/dev.sh up -d
+  551  sudo chown -R 8983:8983 ./solr/data
+  552  sudo chmod -R 755 ./solr/data
+  553  sudo chown -R 8983:8983 ./solr/data
+  554  mkdir -p ./solr/data/arclight/data
+  555  sudo chown -R 8983:8983 ./solr/data
+  556  sudo chmod -R 755 ./solr/data
+  557  .docker/dev.sh down 
+  558  .docker/dev.sh up 
+  559  docker rm -f $(docker ps -aq)
+  560  docker ps
+  561  .docker/dev.sh
+  562  .docker/dev.sh up
+  563  .docker/dev.sh up -d
+  564  .docker/dev.sh exec app ./bin/rails db:prepare
+  565  history > Term2_history
+  566  ps aux | grep puma
+  567  rm -f /opt/app-root/tmp/pids/server.pid
+  568  ps aux | grep puma
+  569  docker ps
+  570  docker exec -it <af6f37bc0598> /bin/sh
+  571  docker exec -it af6f37bc0598 /bin/sh
+  572  docker exec -it af6f37bc0598 /bin/bash
+  573  docker stop dul-arclight-dev-app-1
+  574  docker   dul-arclight-dev-app-1
+  575  docker stop af6f37bc0598
+  576  docker ps
+  577  docker stop bc9d1321ca45
+  578  docker start bc9d1321ca45
+  579  docker run --rm -it dul-arclight /bin/sh
+  580  docker ps
+  581  docker stop af6f37bc0598
+  582  docker run --rm -it --entrypoint /bin/sh dul-arclight
+  583  docker stop 6aa450246749
+  584  docker run --rm -it --entrypoint /bin/sh dul-arclight
+  585  docker ps
+  586  docker rm -f $(docker ps -aq)
+  587  $ .docker/dev.sh exec app ./bin/rails db:prepare
+  588  .docker/dev.sh exec app ./bin/rails db:prepare
+  589  docker rm -f $(docker ps -aq)
+  590  sudo ls -l /path/to/solr/data
+  591  docker ps
+  592  docker ps -a
+  593  docker rm -f $(docker ps -aq)
+  594  docker ps
+  595  history > Term2_history
+  596  docker ps
+  597  docker rm -f $(docker ps -aq)
+  598  docker ps
+  599  ll
+  600  cd dul-arclight/
+  601  ll
+  602  .docker/dev.sh up
+  603  .docker/dev.sh up -d
+  604  docker ps
+  605  docker rm -f $(docker ps -aq)
+  606  .docker/dev.sh up -d
+  607  ./dev.sh exec app bash
+  608  .docker/dev.sh exec app bash
+  609  docker rm -f $(docker ps -aq)
+  610  .docker/dev.sh up -d
+  611  docker rm -f $(docker ps -aq)
+  612  docker ps
+  613  cd dul-arclight/
+  614  cd .docker/
+  615  docker-compose-new.yml exec app ./bin/rails db:prepare
+  616  docker ps
+  617  docker compose -f docker-compose-new.yml exec app bundle exec rails ksul_arclight:reindex_everything
+  618  docker compose -f docker-compose-new.yml exec app bundle exec rails ksul-arclight:reindex_everything
+  619  docker compose -f docker-compose-new.yml exec app bundle exec rails dul-arclight:reindex_everything
+  620  docker ps
+  621  docker compose -f docker-compose-new.yml up --build -d
+  622  docker compose -f docker-compose-new.yml exec app ./bin/rails db:prepare
+  623  docker compose -f docker-compose-new.yml exec app ./bin/rails db:drop db:create db:schema:load
+  624  docker compose -f docker-compose-new.yml exec app bundle exec rails dul-arclight:reindex_everything
+  625  docker compose -f docker-compose-new.yml exec app bundle exec rake --tasks
+  626  docker compose -f docker-compose-new.yml exec app bundle exec rake dul_arclight:reindex_everything
+  627  docker rm -f $(docker ps -aq)
+  628  docker compose -f docker-compose-new.yml up --build -d
+  629  docker ps
+  630  docker compose -f docker-compose-new.yml exec app ./bin/rails db:prepare
+  631  docker compose -f docker-compose-new.yml exec app ./bin/rails db:migrate
+  632  docker compose -f docker-compose-new.yml exec app ./bin/rails db:drop db:create db:schema:load
+  633  docker compose -f docker-compose-new.yml exec app bundle exec rake dul_arclight:reindex_everything
+  634  docker ps
+  635  git clone https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+  636  mkdir ksul-arclight
+  637  cd ksul-arclight
+  638  https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+  639  git clone https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+  640  cd dul-arclight/
+  641  make
+  642  cd dul-arclight/
+  643  .dcoker dev.sh up
+  644  .docker dev.sh up
+  645  .docker/dev.sh up
+  646  .docker/dev.sh up -d
+  647  docker rm -f $(docker ps -aq)
+  648  .docker/dev.sh up -d
+  649  docker ps
+  650  docker exec -it 8836097d60b1 whoami
+  651  docker exec -it 8836097d60b1 id
+  652  sudo chown -R 8983/8983 ~/projects/dul-arclight/solr-data
+  653  sudo chown -R 8983:8983 ~/projects/dul-arclight/solr-data
+  654  docker rm -f $(docker ps -aq)
+  655  docker ps
+  656  .docker/dev.sh up -d
+  657  docker ps
+  658  docker rm -f $(docker ps -aq)
+  659  .docker/dev.sh up -d
+  660  docker rm -f $(docker ps -aq)
+  661  .docker/dev.sh up -d
+  662  docker exec -it fd7a9960f204 /bin/bash
+  663  ls -ld ~/projects/dul-arclight/solr-data
+  664  ls -lR ~/projects/dul-arclight/solr-data
+  665  ls -ld ~/projects/dul-arclight/solr-data
+  666  ls -ld ~/projects/dul-arclight/solr/data
+  667  ls -lR ~/projects/dul-arclight/solr/data
+  668  sudo chown -R 8983:8983 ~/projects/dul-arclight/solr/data
+  669  docker ps
+  670  docker exec -it fd7a9960f204 id solr
+  671  pwd
+  672  whoami
+  673  ls -lR ~/projects/dul-arclight/solr/data
+  674  sudo chown -R 8983:8983 ~/projects/dul-arclight/solr/data
+  675  .docker/dev.sh down -d
+  676  .docker/dev.sh down
+  677  .docker/dev.sh up -d
+  678  docker run --user root -it --rm --entrypoint /bin/bash solr
+  679  docker rm -f $(docker ps -aq)
+  680  .docker/dev.sh up -d
+  681  cd ../
+  682  ll
+  683  cd tutor
+  684  .docker/dev.sh up -d
+  685  cd ../..
+  686  cd projects/
+  687  cd dul-arclight/
+  688  .docker/dev.sh up -d
+  689  docker rm -f $(docker ps -aq)
+  690  docker system prune
+  691  docker ps
+  692  .docker/dev.sh up -d
+  693  ll
+  694  cd .dockeer
+  695  cd .docker
+  696  cd solr/arclight/
+  697  ll
+  698  cd data
+  699  ls -lf
+  700  ls -lR ~/projects/dul-arclight/solr/data
+  701  docker ps
+  702  docker rm -f $(docker ps -aq)
+  703  docker compose up -d
+  704  .docker/dev.sh exec app ./bin/rails db:prepare
+  705  .docker compose exec app ./bin/rails db:prepare
+  706  docker compose exec app ./bin/rails db:prepare
+  707  docker ps
+  708  docker compose up -d
+  709  DOCKER PS
+  710  docker ps
+  711  docker compose up -d
+  712  docker rm -f $(docker ps -aq)
+  713  docker prune 
+  714  docker prune --help
+  715  docker system prune
+  716  docker compose up -d
+  717  docker compose up -d --build
+  718  docker compose up -d
+  719  docker compose up exec app ./bin/rails db:prepare
+  720  docker compose up -d
+  721  docker compose exec app ./bin/rails db:prepare
+  722  docker compose logs app
+  723  docker compose up -d
+  724  docker compose build --no-cache
+  725  docker ps
+  726  docker rm -f $(docker ps -aq_
+  727  exit
+  728  docker rm -f $(docker ps -aq)
+  729  docker compose build --no-cache
+  730  ls -lf pg_data
+  731  ls -l pg_data
+  732  ls -lr pg_data
+  733  ls -lr 
+  734  cd ../../../
+  735  ls -lr pg_data
+  736  ll
+  737  cd pg_data/
+  738  cd .docker/
+  739  ll
+  740  docker compose up
+  741  sudo mkdir -p ../solr/arclight/data
+  742  sudo chown -R 8983:8983 ../solr/arclight/data
+  743  sudo chmod -R 755 ../solr/arclight/data
+  744  docker compose up
+  745  docker compose up --build
+  746  git stash
+  747  git status
+  748  docker compose -f docker-compose-new up --build
+  749  docker compose -f docker-compose-new.yml up --build
+  750  sudo mkdir -p /home/kgiridhar/projects/dul-arclight/pg_data
+  751  docker compose -f docker-compose-new up --build
+  752  docker compose -f docker-compose-new.yml up --build
+  753  whoami
+  754  groups
+  755  sudo rm-rf pg_data
+  756  cd ..
+  757  $ .docker/dev.sh exec app bundle exec rails dul_arclight:reindex_everything
+  758  ll
+  759  sudo 0rm-rf pg_data
+  760  sudo rm-rf pg_data
+  761  sudo rm rf pg_data
+  762  sudo rm -rf pg_data
+  763  cd .docker
+  764  docker compose -f docker-compose-new.yml up --build
+  765  docker compose -f docker-compose-new.yml up -d
+  766  docker compose -f docker-compose-new.yml exec app ./bin/rails db:prepare
+  767  docker compose -f docker-compose-new.yml exec app ./bin/rails db:migrate
+  768  docker compose -f docker-compose-new.yml exec app ./bin/rails db:schema
+  769  docker compose -f docker-compose-new.yml exec app ./bin/rails db:schema.rb
+  770  docker compose -f docker-compose-new.yml exec app ./bin/rails db:drop db:create db:schema:load
+  771  docker compose up -d
+  772  cd dul-arclight/
+  773  docker compose up -d
+  774  ll
+  775  .docker/docker compose up -d
+  776  .docker/docker compose up
+  777  docker compose up -d
+  778  docker ps
+  779  docker compose up -d
+  780  docker ps
+  781  docker compose up -d
+  782  docker compose down
+  783  docker compose up -d --build
+  784  bin/rails credentials:edit
+  785  bin/rails secret
+  786  ll
+  787  docker-compose up
+  788  $ ./dev.sh up
+  789  cd .docker/
+  790  ./dev.sh up
+  791  docker rm -f $(docker ps -aq)
+  792  docker compose up
+  793  docker compose up -d
+  794  docker compose doen
+  795  docker compose down
+  796  docker compose up -d
+  797  docker compose down
+  798  docker compose up -d
+  799  docker rm -f $(docker ps -aq)
+  800  docker compose up -d
+  801  docker compose down
+  802  docker compose up -d
+  803  sudo chown -R 8983:8983 ../solr/arclight/data
+  804  sudo chmod -R 775 ../solr/arclight/data
+  805  docker compose down 
+  806  docker compose up -d
+  807  docker compose down 
+  808  docker compose up -d
+  809  docker compose exec app ./bin/rails db:prepare
+  810  docker compose exec app ./bin/rails db:migrate
+  811  docker compose exec app ./bin/rails db:schema
+  812  docker compose exec app ./bin/rails db:drop db:create db:schema:load
+  813  docker compose exec app ./bin/rails db:reindex_everything
+  814  docker ps
+  815  docker rm -f $(docker ps -aq)
+  816  ./dev.sh up
+  817  cd .docker/
+  818  ./dev.sh up
+  819  docker rm -f $(docker ps -aq)
+  820  docker ps
+  821  docker rm -f $(docker ps -aq)
+  822  docker compose up -d
+  823  cd .d
+  824  ll
+  825  cd dul-arclight/
+  826  ll
+  827  cd .docker/
+  828  docker compose up -d
+  829  docker compose exec app ./bin/rails db:prepare
+  830  docker compose exec app ./bin/rails db:migrate
+  831  docker compose exec app ./bin/rails db:schema
+  832  docker compose exec app ./bin/rails db:drop db:create db:schema:load
+  833  docker compose exec app ./bin/rails db:reindex_everything
+  834  docker compose exec app ./bin/rails -T
+  835  docker compose exec app ./bin/rails ksul-arclight:reindex_everything
+  836  docker compose exec app ./bin/rails dul-arclight:reindex_everything
+  837  docker compose exec app ./bin/rails -T
+  838  docker compose exec app ./bin/rails dul-arclight:reindex_everything
+  839  docker compose exec app ./bin/rake dul-arclight:reindex_everything
+  840  docker compose exec app bin/rails dul_arclight:reindex_everything 
+  841  docker compose down
+  842  docker compose up
+  843  docker compose up -d
+  844  docker ps
+  845  docker compose exec app ./bin/rails db:prepare
+  846  docker compose exec app ./bin/rails db:schema
+  847  docker compose exec app bin/rails dul_arclight:reindex_everything 
+  848  docker compose down
+  849  docker compose up -d
+  850  docker compose down
+  851  docker compose up -d
+  852  docker ps
+  853  docker compose down
+  854  docker stop $(docker ps -aq)
+  855  docker rm -f $(docker ps -aq)
+  856  cd ..
+  857  docker ps
+  858  docker compose up
+  859  cd .docker
+  860  docker compose up
+  861  docker compose up -d
+  862  docker compose down
+  863  docker compose up -d
+  864  docker compose exec app ./bin/rails db:prepare
+  865  docker compose exec app ./bin/rails db:migrate
+  866  docker compose exec app ./bin/rails db:schema
+  867  docker compose exec app ./bin/rails db:schema.rb
+  868  docker compose exec app ./bin/rails db:schema
+  869  docker compose exec app ./bin/rails db:schema:load
+  870  docker compose exec app ./bin/rails db:migrate:status
+  871  docker compose exec app ./bin/rails db:migrate
+  872  docker compose exec app ./bin/rails db:migrate:status
+  873  docker compose up -d
+  874  docker compose down
+  875  docker compose exec app ./bin/rails db:seed
+  876  docker compose up -d
+  877  docker compose exec app ./bin/rails db:migrate:status
+  878  docker compose exec app ./bin/rails db:seed
+  879  docker compose restart app
+  880  docker compose exec app bin/rails dul_arclight:reindex_everything
+  881  docker compose restart app
+  882  docker compose exec app bundle exec rake dul_arclight:index FILE=./sample-ead/ead/rubenstein/rushbenjaminandjulia.xml REPOSITORY_ID=rubenstein
+  883  docker compose restart app
+  884  cd dul-arclight/
+  885  cd .docker/
+  886  docker compose up -d
+  887  docker rm -f  $(docker ps -aq)
+  888  docker compose -f docker-compose-new.yml up --build -d
+  889  docker compose -f docker-compose-new.yml exec app ./bin/rails db:prepare
+  890  docker compose -f docker-compose-new.yml exec app ./bin/rails db:drop db:create db:schema:load
+  891  docker compose -f docker-compose-new.yml exec app ./bin/rails dul_arclight:reindex_everything
+  892  docker ps
+  893  docker compose up -d
+  894  curl http://localhost:8983/solr/arclight/admin/ping
+  895  netstat -tulnp | grep LISTEN
+  896  sudo apt install net-tools
+  897  netstat -tulnp | grep LISTEN
+  898  whoami
+  899  docker ps | grep sidekiq
+  900  docker ps
+  901  docker compose down
+  902  ll
+  903  cd dul-arclight/
+  904  cd .docker/
+  905  docker compose up -d
+  906  docker compose exec app ./bin/rails db:prepare
+  907  docker compose exec app ./bin/rails dul_arclight:reindex_everything
+  908  docker ps
+  909  docker compose down
+  910  whoami
+  911  docker stop ksul-arclight
+  912  docker stop 5073928e55f5, 671770f95362
+  913  docker stop 671770f95362
+  914  docker stop 5073928e55f5
+  915  docker ps
+  916  docker remove dcoker-sidekiq-1
+  917  docer rm $(docker ps -a -q)
+  918  docker rm $(docker ps -a -q)
+  919  docker compose up -d
+  920  cd .docker/
+  921  docker compose up -d
+  922  docker compose exec app ./bin/rails db:prepare
+  923  docker compose exec app ./bin/rails db:drop db:create db:schema:load
+  924  docker compose exec app ./bin/rails db:drop db:create db:schema:load
+  925  docker compose exec app ./bin/rails dul_arclight:reindex_everything
+  926  docker compose down
+  927  docker images
+  928  docker compose up
+  929  docker compose down
+  930  docker image
+  931  docker images
+  932  docker system prune -af
+  933  docker compose up -d
+  934  docker compose exec app ./bin/rails db:prepare
+  935  docker compose exec app ./bin/rails db:drop db:create db:schema:load
+  936  docker compose exec app ./bin/rails dul_arclight:reindex_everything
+  937  docker ps
+  938  docker exec -it b21b4d361f06 bash
+  939  docker compose down
+  940  docker compose up
+  941  docker compose down && docker compose up -d
+  942  docker-compose exec app bash
+  943  docker compose exec app bash
+  944  curl "http://localhost:8983/solr/arclight/select?q=*:*&wt=json&rows=10"
+  945  docker ps
+  946  docker compose exec solr bash
+  947  docker compose down && docker compose up -d
+  948  curl "http://localhost:8983/solr/arclight/select?q=*:*&wt=json&rows=10"
+  949  docker-compose exec solr bash
+  950  docker compose exec solr bash
+  951  docker compose down && docker compose up -d
+  952  docker compose down
+  953  docker system prune -af
+  954  whoami
+  955  docker compose up --build -d
+  956  ls -l /home/kgiridhar/projects/ksul-arclight/dul-arclight/
+  957  docker compose up --build -d
+  958  docker-compose exec app bundle exec rails arclight:destroy_index_docs
+  959  docker compose exec app bundle exec rails arclight:destroy_index_docs
+  960  docker-compose exec app ls -l /opt/app-root/finding-aid-data/
+  961  docker compose exec app ls -l /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml
+  962  docker-compose exec app xmllint --noout /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml --schema data/xsd/ead2002.xsd
+  963  docker compose exec app xmllint --noout /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml --schema data/xsd/ead2002.xsd
+  964  docker-compose exec app which xmllint
+  965  docker compose exec app which xmllint
+  966  docker compose exec app bash
+  967  docker compose exec -u root app bash
+  968  docker compose exec app xmllint --noout /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml --schema data/xsd/ead2002.xsd
+  969  docker compose down && docker compose up -d
+  970  docker-compose exec app bundle exec rails arclight:destroy_index_docs
+  971  docker compose exec app bundle exec rails arclight:destroy_index_docs
+  972  docker-compose exec app ls -l /opt/app-root/finding-aid-data/
+  973  docker compose exec app xmllint --noout /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml --schema data/xsd/ead2002.xsd
+  974  docker compose exec -u root app bash
+  975  docker compose exec app xmllint --noout /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml --schema data/xsd/ead2002.xsd
+  976  docker compose exec app cat /opt/app-root/finding-aid-data/ead_0000005994_arthur-w-hershberger-papers.xml
+  977  docker compose exec app cat data/xsd/ead2002.xsd
+  978  history >> file.txt
+  979  docker system prune -af
+  980  docker compose up -d
+  981  docker compose down
+  982  docker images
+  983  docker system prune -af
+  984  docker compose up -d
+  985  docker compose down
+  986  docker system prune -af
+  987  docker compose up -d
+  988  docker compose exec app ./bin/rails db:prepare
+  989  docker compose -it  exec app
+  990  docker compose -it exec app bash
+  991  docker compose exec -it app bash
+  992  docker compoes exwec app bundle exec rails db:version
+  993  docker compose exwec app bundle exec rails db:version
+  994  docker compose exec app bundle exec rails db:version
+  995  docker compose exec app bundle exec rails db:migrate:status
+  996  docker compose exec app rake dul_arclight:index_dir DIR=./my-ead/atom-export-ead
+  997  curl "http://localhost:8983/solr/arclight/select?q=*:*&rows=0"
+  998  docker compose ps
+  999  docker compose down
+ 1000  docker compose up -d
+ 1001  docker compose down
+ 1002  docker compose up -d
+ 1003  docker compose exec app bash
+ 1004  docker compose exec solr bash
+ 1005  docker compose restart app
+ 1006  script >> trail.txt
+ 1007  mkdir mvp-arclight
+ 1008  cd mvp-arclight/
+ 1009  git clone https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+ 1010  docker login
+ 1011  curl "http://localhost:8983/solr/arclight/select?q=*:*&wt=json&rows=10"
+ 1012  docker-compose exec solr bash
+ 1013  docker compose exec solr bash
+ 1014  docker-compose exec solr bash
+ 1015  docker compose exec solr bash
+ 1016  docker compose logs solr | tail -20
+ 1017  docker compose exec solr bash
+ 1018  ls -l
+ 1019  history >> file1.txt
+ 1020  docker compose down
+ 1021  cd .docker/
+ 1022  docker compose down
+ 1023  docker compose up -d
+ 1024  docker compose down
+ 1025  history >> cmds.txt
+ 1026  docker ps
+ 1027  docker compose dwon
+ 1028  docker compose down
+ 1029  htop
+ 1030  to[
+ 1031  top
+ 1032  history >>local.txt
+ 1033  ps aux | grep script
+ 1034  cd .docker/
+ 1035  docker compose -f docker-compose-new.yml up --build -d
+ 1036  docker compose -f docker-compose-new.yml exec app ./bin/rails db:prepare
+ 1037  docker ps
+ 1038  docker compose down -d
+ 1039  docker compose down
+ 1040  docker ps
+ 1041  docker compose up -d
+ 1042  cd dul-arclight/.docker/
+ 1043  docker ps
+ 1044  docker compose up -d
+ 1045  docker compose down
+ 1046  docker system prune -af
+ 1047  docker compose up -d
+ 1048  docker image prune
+ 1049  docker images
+ 1050  docker images prune
+ 1051  docker images prune -a
+ 1052  docker image prune -a
+ 1053  docker images
+ 1054  docker ps
+ 1055  docker compose stop
+ 1056  docker image prune -a
+ 1057  docker images 
+ 1058  docker image prune
+ 1059  docker compose up -d
+ 1060  docker compose down
+ 1061  docker system prune -af
+ 1062  docker images
+ 1063  docker compose up -d
+ 1064  docker compose down
+ 1065  docker system prune -af
+ 1066  docker images
+ 1067  docker ps -a
+ 1068  docker image prune
+ 1069  docker compose up -d
+ 1070  curl "localhost:8983"
+ 1071  docker ps
+ 1072  docker images
+ 1073  curl "localhost:3000"
+ 1074  docker ps
+ 1075  docker rm $(docker ps -aq)
+ 1076  docker rm $(docker ps -a)
+ 1077  docker rm $(docker ps -aq)
+ 1078  docker compose stop
+ 1079  docker rm $(docker ps -aq)
+ 1080  docker rmi $(docker images -aq)
+ 1081  docker rmi -f 
+ 1082  docker rmi -f $(docker images -q)
+ 1083  docker rmi -f solr
+ 1084  docker images
+ 1085  docker compose up -d
+ 1086  docker compose down
+ 1087  docker images
+ 1088  docker rmi -f $(docker images -q)
+ 1089  ls ../finding-aid-paths
+ 1090  ls /home/kgiridhar/projects/mvp-arclight/dul-arclight/my-ead/atom-export-ead
+ 1091  docker ps
+ 1092  docker images
+ 1093  docker images 
+ 1094  docker compose up
+ 1095  docker-compose build --no-cache
+ 1096  docker compose build --no-cache
+ 1097  docker ps
+ 1098  docker compose up -d
+ 1099  docker compose down
+ 1100  docker images
+ 1101  docker compose up -d
+ 1102  docker-compose exec app rake arclight:destroy_index_docs
+ 1103  docker compose exec app rake arclight:destroy_index_docs
+ 1104  docker compose restart -d
+ 1105  docker compose restart
+ 1106  docker compose build --no-cache
+ 1107  docker compose up -d
+ 1108  docker compose build --no-cache
+ 1109  docker compose down
+ 1110  docker compose build --no-cache
+ 1111  docker compose up -d
+ 1112  docker compose exec app rake arclight:destroy_index_docs
+ 1113  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1114  docker compose exec app ls -l /opt/app-root/finding-aid-data
+ 1115  docker compose build --no-cache
+ 1116  docker compose up -d
+ 1117  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1118  docker compose build --no-cache
+ 1119  docker compose exec app rake arclight:destroy_index_docs
+ 1120  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1121  docker compose exec app rake arclight:destroy_index_docs
+ 1122  docker compose build -f  --no-cache
+ 1123  docker compose build -f --no-cache
+ 1124  docker compose docker-compose.yml  build -f --no-cache
+ 1125  docker compose build --no-cache
+ 1126  docker compose exec app rake arclight:destroy_index_docs
+ 1127  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1128  docker compose exec app rake arclight:destroy_index_docs
+ 1129  docker system prune -d 
+ 1130  docker compose down
+ 1131  docker system prune -f
+ 1132  docker compose build --no-cache
+ 1133  docker compose up -d
+ 1134  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1135  docker ps
+ 1136  cd ..
+ 1137  cd redis_data/
+ 1138  ls -l
+ 1139  sudo chmod 777 
+ 1140  chmod --help
+ 1141  sudo chmod 777 -r dump.rdb
+ 1142  whoami
+ 1143  sudo chmod 777 kgiridhar -r dump.rdb
+ 1144  cd ..
+ 1145  sudo chmod 777 redis_data -r dump.rdb
+ 1146  sudo chmod 777 -r redis_data
+ 1147  docker compose stop 
+ 1148  cd ./docker
+ 1149  cd .docker/
+ 1150  docker compose down
+ 1151  cd ..
+ 1152  cd dul-arclight/
+ 1153  git remote -v
+ 1154  git remote remove origin
+ 1155  git remote add origin https://github.com/giridhar-se/arclight-ks.git
+ 1156  git remote -v
+ 1157  git push -u origin main
+ 1158  git checkout "new-branch"
+ 1159  git pull origin main --rebase
+ 1160  git config --global user.name "giridhar-se"
+ 1161  git config --global user.email "giridharreddykatasani545@gmail.com"
+ 1162  git config --list
+ 1163  git add .
+ 1164  git rm -r --cached redis_data/
+ 1165  git rm -r --cached pg_data/
+ 1166  git pull origin main --rebase
+ 1167  docker images
+ 1168  ls
+ 1169  cd dul-arclight/
+ 1170  ls -l
+ 1171  sudo chown -R kgiridhar:kgiridhar pg_data/
+ 1172  sudo chown -R kgiridhar:kgiridhar redis_data/
+ 1173  sudo chown -R kgiridhar:kgiridhar /redis_data
+ 1174  sudo chown -R kgiridhar:kgiridhar redis_data
+ 1175  git remote remove origin
+ 1176  git remote origin
+ 1177  git remote -v
+ 1178  git init
+ 1179  git remote add origin https://github.com/giridhar-se/arclight-ks.git
+ 1180  git clone --depth https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+ 1181  git clone --depth 1 https://gitlab.oit.duke.edu/dul-its/dul-arclight.git
+ 1182  git remote -v
+ 1183  docker compose up -d
+ 1184  cd dul-arclight/.docker/
+ 1185  docker compose up -d
+ 1186  docker compose down
+ 1187  docker compose up
+ 1188  docker compose down
+ 1189  docker ps
+ 1190  docker stop aa8085c281c1 
+ 1191  docker ps
+ 1192  docker compose up -d
+ 1193  docker system prune
+ 1194  docker compose up -d
+ 1195  docker compose down
+ 1196  docker compose build --no-cache
+ 1197  docker compose up -d
+ 1198  docker compose down 
+ 1199  sudo rm -rf ../solr/arclight/data/*
+ 1200  sudo chown -R 8983:8983 ../solr/arclight/data
+ 1201  sudo chmod -R 755 ../solr/arclight/data
+ 1202  docker compose down 
+ 1203  docker compose down
+ 1204  docker compose up -d
+ 1205  docker-compose exec app bundle exec rails db:prepare
+ 1206  docker compose exec app bundle exec rails db:prepare
+ 1207  docker compose exec app bundle exec rails db:schema
+ 1208* opt/app-root/finding-aid-data
+ 1209  cd ..
+ 1210  sudo chown -R kgiridhar:kgiridhar pg_data/
+ 1211  sudo chown -R kgiridhar:kgiridhar redis_data/
+ 1212  sudo chown -R kgiridhar:kgiridhar my-ead
+ 1213  docker compose down 
+ 1214  cd ./docker
+ 1215  cd .docker/
+ 1216  docker compose down 
+ 1217  docker compose build --no-cache
+ 1218  docker compose up -d
+ 1219  docker compose exec app bundle exec rails db:migrate
+ 1220  docker compose exec app bundle exec rails db:schema:load
+ 1221  docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+ 1222  history >> cmds.txt

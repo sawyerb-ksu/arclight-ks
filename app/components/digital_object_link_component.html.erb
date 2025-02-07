@@ -1,0 +1,7 @@
+<div class="al-digital-object">
+  <%= link_to @object.href, target: '_blank' do %>
+    <strong>View<%= ' Web Archive' if @object.role == 'web-archive' %></strong>
+  <% end %>
+  <%= content_tag(:span, ['&mdash; ', @object.label].join.html_safe,
+        { class: 'text-muted' }) if @object.label.present? %>
+</div>

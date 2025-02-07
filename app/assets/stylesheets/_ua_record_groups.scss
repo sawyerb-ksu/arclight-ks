@@ -1,0 +1,55 @@
+ul.record-group-nav {
+  li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.record-group-link {
+  margin-right: 0.3em;
+}
+
+.collection-count-badge {
+  @include extent-badge; /* mixin from arclight */
+  font-weight: bold;
+  font-size: 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+ul.subgroup-list {
+  column-count: 2;
+  column-gap: 2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @include media-breakpoint-up(xl) {
+    column-count: 3;
+  }
+  @include media-breakpoint-down(sm) {
+    column-count: 1;
+  }
+  li {
+    break-inside: avoid-column;
+  }
+}
+
+/* Nest the subgroup in the collection metadata display */
+dd.blacklight-ua_record_group_ssim {
+  a:nth-of-type(2) {
+    &:before {
+      content: escape-svg(url($bent-arrow)); // from arclight breadcrumbs
+    }
+  }
+}
+
+/* Fixup the remove button in the blacklight-hierarchy facet to be consistent */
+/* with regular facet remove buttons. */
+.facet-hierarchy .remove {
+  font-weight: bold;
+  padding-left: 0.5rem;
+  text-decoration: none;
+}

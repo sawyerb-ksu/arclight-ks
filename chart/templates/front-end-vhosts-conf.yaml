@@ -1,0 +1,121 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: front-end-vhosts
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+data:
+  vhost-8080.conf: |
+    <VirtualHost *:8080>
+      ServerName {{ required "applicationHostname" .Values.applicationHostname }}
+      UseCanonicalName On
+      ProxyRequests Off
+      RewriteEngine On
+      LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" custom
+      CustomLog "logs/access_log" custom
+
+      # OpenID Connect
+      LoadModule auth_openidc_module /usr/lib/apache2/modules/mod_auth_openidc.so
+      OIDCProviderMetadataURL https://oauth.oit.duke.edu/oidc/.well-known/openid-configuration
+      OIDCClientID {{ .Values.oidcClientId }}
+      OIDCClientSecret {{ required "Values.oidcClientSecret" .Values.oidcClientSecret }}
+      OIDCScope {{ .Values.oidcScope | quote }}
+      OIDCRedirectURI https://{{ required "applicationHostname" .Values.applicationHostname }}/solr/zyzzyx
+      OIDCCryptoPassphrase {{ required "Values.oidcCryptoPassphrase" .Values.oidcCryptoPassphrase }}
+      OIDCRemoteUserClaim {{ .Values.oidcRemoteUserClaim }}
+      OIDCXForwardedHeaders X-Forwarded-Proto
+
+      {{- if .Values.apacheCacheEnabled }}
+      # Caching with memcached
+      LoadModule cache_module modules/mod_cache.so
+      LoadModule cache_socache_module modules/mod_cache_socache.so
+      LoadModule socache_memcache_module modules/mod_socache_memcache.so
+      CacheSocache memcache:cache:11211
+      CacheEnable socache /
+      CacheHeader on
+      CacheDisable /server-status
+      {{- end }}
+
+      ProxyPass /server-status !
+      <Location "/server-status">
+        SetHandler server-status
+
+        <RequireAny>
+          Require local
+          Require ip 10.128.0.0/16 10.138.5.0/24
+        </RequireAny>
+      </Location>
+
+      # Bots
+      BrowserMatch PetalBot bot=block
+      BrowserMatch SemrushBot bot=block
+      BrowserMatch Bytespider bot=block
+      # BrowserMatch ClaudeBot bot=block
+
+      # Block bad bots
+      RewriteCond %{ENV:bot} =block
+      RewriteRule ^ - [F]
+
+      # Block bad actors
+      # RewriteCond %{HTTP:X-Forwarded-For} "^8\.(219|222)\."
+      # RewriteRule ^ - [R=429,L]
+
+      {{- with .Values.authorizedUsers }}
+      # Solr reverse proxy for staff
+      RewriteRule ^/solr$ https://%{SERVER_NAME}/solr/ [R,L]
+      <Location /solr>
+        ProxyPass http://solr:8983/solr
+        ProxyPassReverse http://solr:8983/solr
+
+        AuthType openid-connect
+        AuthName NetID
+        Require user {{ join " " . }}
+      </Location>
+
+      # Sidekiq web
+      <Location /queues>
+        AuthType openid-connect
+        AuthName NetID
+        Require user {{ join " " . }}
+      </Location>
+      {{- end }}
+
+      {{- if not .Values.railsServeStaticFiles }}
+      {{- range .Values.railsStaticFilePaths }}
+      ProxyPass {{ . }} !
+      Alias {{ . }} {{ $.Values.global.volumes.railsAssets.mountPath }}{{ . }}
+      {{- end }}
+      {{- end }}
+
+      <Directory "{{ .Values.global.volumes.railsAssets.mountPath }}">
+        Require all granted
+        Options FollowSymLinks
+        RewriteEngine on
+
+        # See https://httpd.apache.org/docs/2.4/mod/mod_deflate.html#precompressed
+        RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+        RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+        RewriteRule "^(.*)\.(css|js)" "$1\.$2\.gz" [QSA]
+
+        # Serve correct content types, and prevent mod_deflate double gzip.
+        RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1]
+        RewriteRule "\.js\.gz$"  "-" [T=text/javascript,E=no-gzip:1]
+
+        <FilesMatch "(\.js\.gz|\.css\.gz)$">
+          # Serve correct encoding type.
+          Header append Content-Encoding gzip
+
+          # Force proxies to cache gzipped &
+          # non-gzipped css/js files separately.
+          Header append Vary Accept-Encoding
+        </FilesMatch>
+      </Directory>
+
+      # Rails reverse proxy
+      ProxyPass / http://app:3000/
+      ProxyPassReverse / http://app:3000/
+
+      <Proxy "http://app:3000/*">
+        RequestHeader set X-Forwarded-Proto "https"
+      </Proxy>
+    </VirtualHost>

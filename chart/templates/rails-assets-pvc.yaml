@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ .Values.global.volumes.railsAssets.claimName }}
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: {{ .Values.global.volumes.railsAssets.size }}
+  storageClassName: nfs-client
+  volumeMode: Filesystem

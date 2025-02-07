@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" findaidstatus="published"
+    langencoding="iso639-2b" repositoryencoding="iso15511">
+    <eadid countrycode="US" mainagencycode="US-NcD"
+      url="https://library.duke.edu/rubenstein/findingaids/whitewendel/">whitewendel</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Guide to the Wendel White photographs, 2009-2019
+          <num>RL.11065</num></titleproper>
+        <author>Meghan Lyon; updated by Paula Jeannet</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>David M. Rubenstein Rare Book &amp; Manuscript Library</publisher>
+        <p><date>2015</date></p>
+        <address>
+          <addressline>411 Chapel Drive</addressline>
+          <addressline>Duke University</addressline>
+          <addressline>Durham 27708</addressline>
+          <addressline>special-collections@duke.edu</addressline>
+          <addressline>URL: <extptr xlink:href="http://library.duke.edu/rubenstein/"
+              xlink:show="new" xlink:title="http://library.duke.edu/rubenstein/" xlink:type="simple"
+            /></addressline>
+        </address>
+      </publicationstmt>
+      <notestmt>
+        <note>
+          <p>Aleph Number: <num type="aleph">006614446</num></p>
+        </note>
+      </notestmt>
+    </filedesc>
+    <profiledesc>
+      <creation>This finding aid was produced using ArchivesSpace on <date>2020-02-03 15:08:15
+          UTC</date>.</creation>
+      <langusage>English</langusage>
+      <descrules>Describing Archives: A Content Standard</descrules>
+    </profiledesc>
+  </eadheader>
+  <archdesc level="collection">
+    <did>
+      <repository>
+        <corpname>David M. Rubenstein Rare Book &amp; Manuscript Library</corpname>
+      </repository>
+      <unittitle>Wendel White photographs</unittitle>
+      <origination label="Creator">
+        <persname source="naf">White, Wendel A., 1956-</persname>
+      </origination>
+      <origination label="source">
+        <corpname source="naf">Archive of Documentary Arts (Duke University)</corpname>
+      </origination>
+      <unitid>RL.11065</unitid>
+      <physdesc altrender="whole">
+        <extent altrender="materialtype spaceoccupied">4.0 Linear Feet</extent>
+        <extent altrender="carrier">4 boxes</extent>
+        <physfacet>75 photographic prints</physfacet>
+        <dimensions>24x30 and 24x42 inches</dimensions>
+      </physdesc>
+      <unitdate normal="2009/2019" type="inclusive">2009-2019</unitdate>
+      <abstract id="aspace_e195e93acd7952328b6aa92284d8fe89">Wendel White is a photographer and
+        Distinguished Professor of Art at Stockton University in New Jersey. This photograph
+        collection comprises two bodies of work by White that explore aspects of African American
+        history through artifacts, archives, and 21st century landscapes. The first, "Manifest,"
+        comprises 45 24x30 inch color inkjet photographs of single objects relating to African
+        American material culture and history, taken by White in various public and private
+        collections throughout the U.S. Subjects in these stark images include a diary, printed
+        notices, slavery narratives, a lock of Frederick Douglass's hair, a drum, a slave collar, a
+        tobacco pouch, a tintype photograph, and other objects. "Manifest" is the 2015 winner of the
+        Archive of Documentary Arts Collection Award for Documentarians of Color. The second
+        portfolio, "Red Summer," refers to race-related violence against African Americans that took
+        place from 1912 to 1923, with the majority occurring during the summer of 1919. It consists
+        of 30 24x42 inch color photographs, taken by White from 2017 to 2018, at sites across the
+        United States where violence against African Americans - assaults, riots, and lynchings -
+        took place, paired with contemporaneous newspaper accounts of the events. Acquired as part
+        of the Archive of Documentary Arts at Duke University.</abstract>
+      <langmaterial id="aspace_8923d9fc0ed8ecae3fbb75d5d4ae0d3e">Materials in English</langmaterial>
+    </did>
+    <arrangement id="aspace_18d744c754bf9f3739ffe8db26788c40">
+      <head>Arrangement</head>
+      <p>Photographic prints are arranged in original order as assigned by the artist.</p>
+    </arrangement>
+    <bioghist id="aspace_033506314f7f1407bd6c4c423f1cb95f">
+      <head>Biographical Note</head>
+      <p>Wendel A. White was born in Newark, New Jersey, and grew up in New York, Pennsylvania, and
+        New Jersey. He was awarded a BFA in photography from the School of Visual Arts in New York
+        and an MFA in photography from the University of Texas at Austin. White is currently
+        Distinguished Professor of Art at Stockton University in New Jersey.</p>
+      <p>He has received various awards and fellowships including a John Simon Guggenheim Foundation
+        fellowship in photography, three artist fellowships from the New Jersey State Council for
+        the Arts, a photography grant from the Graham Foundation for Advanced Studies in the Fine
+        Arts, and a photography fellowship from En Foco Inc.</p>
+      <p>His work is represented in museum, library, corporate, and private collections. White's
+        work is included in numerous publications including two books about his work, Manifest
+        (published in 2014 by Chroma) and Small Towns, Black Lives (published in 2003 by the Noyes
+        Museum of Art).</p>
+      <p>White has served on the board of directors for the Society for Photographic Education, the
+        Atlantic City Historical Museum, New Jersey Black Culture and Heritage Foundation, and the
+        New Jersey Council for the Humanities.</p>
+      <p>White's "Manifest" porfolio is the 2015 winner of the Archive of Documentary Arts
+        Collection Award for Documentarians of Color. The ADA Collection Awards were established to
+        diversify the ADA's collection in order to better reflect the multitude of viewpoints and
+        communities from which work is being made in the documentary arts today.</p>
+    </bioghist>
+    <accessrestrict id="aspace_22523cdb880a85d2a525ccdea533f4cf">
+      <head>Access Restrictions</head>
+      <p>Collection is open for research. </p>
+      <p>Please exercise caution when using this collection as the digital color prints are easily
+        abraded or scratched. Please refrain from touching the surface and do not flex the
+        prints.</p>
+    </accessrestrict>
+    <userestrict id="aspace_afb787d0b6c85eac3122d7dc93f008ea">
+      <head>Use Restrictions</head>
+      <p>The copyright interests in this collection have not been transferred to Duke University.
+        For more information, consult the copyright section of the Regulations and Procedures of the
+        David M. Rubenstein Rare Book &amp; Manuscript Library.</p>
+      <p>Images are for educational, non-commercial use only.</p>
+    </userestrict>
+    <acqinfo id="aspace_b14cd30e6dc1d07f20bf2c0d9c6aa967">
+      <head>Provenance</head>
+      <p>The Wendel White Photographs were received by the David M. Rubenstein Rare Book &amp;
+        Manuscript Library as a purchase in 2015 and 2019.</p>
+    </acqinfo>
+    <prefercite id="aspace_68fb4ca4d72d50942b932103d839ff2f">
+      <head>Preferred Citation</head>
+      <p>[Identification of item], Wendel White photographs, David M. Rubenstein Rare Book &amp;
+        Manuscript Library, Duke University.</p>
+    </prefercite>
+    <processinfo id="aspace_f473911b407bb768e606a81a37d6fc83">
+      <head>Processing Information</head>
+      <p>"Manifest" was processed by Meghan Lyon and Beth Weiss, September 2015.</p>
+      <p>"Red Summer" and addition to "Manifest" processed and encoded by Paula Jeannet, Holly Ren,
+        and Alanna Styer, January 2020.</p>
+      <p>Accessions described in this collection guide: 2015-0118, 2020-0002.</p>
+    </processinfo>
+    <scopecontent id="aspace_729a7bb37a54f8cc83a438661a0639f1">
+      <head>Collection Overview</head>
+      <p>The Wendel White photographs collection consists of two bodies of work that explore aspects
+        of African American history through images of artifacts, historical printed pieces and
+        manuscripts, and 21st century landscapes. </p>
+      <p>The first, "Manifest," comprises 45 24x30 inch color inkjet photographs of single objects
+        relating to African American material culture and history, taken by White in various public
+        and private collections throughout the U.S. Subjects in these stark images include a diary,
+        printed notices, slavery narratives, a lock of Frederick Douglass's hair, a drum, a slave
+        collar, a tobacco pouch, a tintype photograph, and other objects. "Manifest" is the 2015
+        winner of the Archive of Documentary Arts Collection Award for Documentarians of Color. </p>
+      <p>The second portfolio, "Red Summer," refers to race-related violence against African
+        Americans that took place from 1912 to 1923, with the majority occurring during the summer
+        of 1919. It consists of 30 24x42 inch color photographs, taken from 2017 to 2018, of the
+        sites across the United States where violence against African Americans - assaults, riots,
+        lynchings - took place, paired with contemporaneous newspaper accounts of the events. </p>
+      <p>The photographer notes: "Several projects that have occupied my attention during the past
+        two decades are, in retrospect, part of a broader effort to seek out the ghosts that
+        continue to haunt the remnants of the past." The full artist's statements on "Manifest" and
+        "Red Summer" are included in the series descriptions for those projects.</p>
+      <p>A photobook based on the "Manifest" project was published in 2014 by Chroma (California
+        Institute of Integral Studies) as <title render="italic">Manifest</title>. Images from both
+        projects have been exhibited in institutions across the U.S.</p>
+    </scopecontent>
+    <phystech id="aspace_6f929dd050b59ef796e0328bf5bacb03">
+      <head>Physical Characteristics and Technical Requirements</head>
+      <p>The photographs in this collection were made with a 4x5 inch film-based camera. The prints
+        were produced in 2015 and 2019 and are pigment-based inkjet on paper.</p>
+    </phystech>
+    <accessrestrict id="aspace_52d582890d781f919eaa988d5d257537">
+      <head>Banner</head>
+      <p>Due to their size and vulnerability, "Red Summer" prints are temporarily unavailable
+        pending custom rehousing by Conservation staff.</p>
+    </accessrestrict>
+    <controlaccess>
+      <subject source="lcsh">African American families</subject>
+      <subject source="lcsh">African American photographers -- United States</subject>
+      <subject source="lcsh">African Americans -- Material culture</subject>
+      <subject source="lcsh">Documentary Photography -- United States</subject>
+      <subject source="lcsh">Lynching -- United States -- History</subject>
+      <subject source="lcsh">Photographers -- United States</subject>
+      <subject source="lcsh">Race riots</subject>
+      <subject source="lcsh">Slavery -- United States -- History</subject>
+      <geogname source="lcsh">United States -- Race relations -- History</geogname>
+      <genreform source="lcsh">Color prints (photographs)</genreform>
+      <genreform source="aat">Cultural artifacts.</genreform>
+      <genreform source="aat">Inkjet prints</genreform>
+      <corpname role="fmo" source="naf">Archive of Documentary Arts (Duke University)</corpname>
+      <persname source="lcsh">Douglass, Frederick, 1818-1895</persname>
+    </controlaccess>
+    <dsc>
+      <c01 id="aspace_baa4b2239c83986bc4ae63f0cae05d43" level="series">
+        <did>
+          <unittitle>Manifest</unittitle>
+          <physdesc altrender="whole"><extent altrender="materialtype spaceoccupied">3.0 Linear
+              Feet</extent><extent altrender="carrier">2 boxes</extent><physfacet>45 photographic
+              prints</physfacet><dimensions>24 x 30 inches; 22 x 27 1/2
+            inches</dimensions></physdesc>
+          <unitdate normal="2009/2019" type="inclusive">2009-2019</unitdate>
+        </did>
+        <scopecontent id="aspace_16894bac8c1f2a3663483264c859fca7">
+          <head>Scope and Contents</head>
+          <p>The 45 photographic prints in this series are from Wendel White's project titled
+            "Manifest," initiated in 2009 and continuing into 2019. White included the following
+            abstract about his work:</p>
+          <p>"The Manifest portfolio images are photo-based representations of objects, documents,
+            photographs, and books made in various public and private collections throughout the
+            U.S. These repositories encompass elements of material culture such as diaries, slave
+            collars, human hair, a drum, souvenirs, and other objects, some with great significance
+            and others simply quotidian representations of daily life, from the history of the
+            African American community.</p>
+          <p>This project (Manifest) is an effort to seek out the cultural artifacts of the American
+            concept and representation of race. The histories of slavery, abolition, segregation,
+            the U.S. Civil War, and the Civil Rights Era are a few of the narratives that emerge in
+            these photographs.</p>
+          <p>I am increasingly interested in the residual power of the past to inhabit these
+            material remains. The ability of objects to transcend lives, centuries, and millennia,
+            suggests a remarkable mechanism for folding time, bringing the past and the present into
+            a shared space that is uniquely suited to artistic exploration. While the artifacts are
+            remarkable as visual evidence of lives and events, I also intend the viewer to consider
+            this informal reliquary as a survey of the impulse and motivation to preserve history
+            and memory.</p>
+          <p>Several projects that have occupied my attention during the past two decades are, in
+            retrospect, part of a broader effort to seek out the ghosts that continue to haunt the
+            remnants of the past. I am drawn to the stories that dwell within these objects."</p>
+          <p>"Manifest" received the 2015 Archive of Documentary Arts Award for Documentarians of
+            Color. A recent book based on this work was published by Chroma (California Institute of
+            Integral Studies) as <title render="italic">Manifest</title> and is available through
+            the Chroma website.</p>
+        </scopecontent>
+        <phystech id="aspace_09211cd5f556b5b0be69292f7a143c83">
+          <head>Physical Characteristics and Technical Requirements</head>
+          <p>The photographs were made with a 4x5" film-based camera. They were printed in 2015 and
+            2019, and are pigment-based inkjet on paper.</p>
+        </phystech>
+        <c02 id="aspace_df7fb947d4113931ddf4d9d0e4b2bb01" level="item">
+          <did>
+            <unittitle>Hair, Frederick Douglass, Rush Rhees Library, University of Rochester, New
+              York</unittitle>
+            <unitdate normal="2009/2009">2009</unitdate>
+            <container id="aspace_2068b6eb00bf5fc933732fc9cb32361b" label="Mixed Materials"
+              type="box">1</container>
+            <container id="aspace_6fd9b58d711cc104d4502e3995bfb792"
+              parent="aspace_2068b6eb00bf5fc933732fc9cb32361b" type="image"
+              >RL.11065-P-0001</container>
+          </did>
+        </c02>
+        <c02 id="aspace_3238eb3c22187b3ca49e4cb8b4851114" level="item">
+          <did>
+            <unittitle>First book purchased after slavery, Frederick Douglass, Rush Rhees Library,
+              University of Rochester, New York</unittitle>
+            <unitdate normal="2009/2009">2009</unitdate>
+            <container id="aspace_51e53d65dafad657f49d60b87e6e967c" label="Mixed Materials"
+              type="box">1</container>
+            <container id="aspace_a86fbe9f16d26fd5c7503787eaf1ebda"
+              parent="aspace_51e53d65dafad657f49d60b87e6e967c" type="image"
+              >RL.11065-P-0002</container>
+          </did>
+        </c02>
+      </c01>
+    </dsc>
+  </archdesc>
+</ead>

@@ -1,0 +1,16 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: solr-data
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/resource-policy": keep
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.solrPersistentStorage }}
+  storageClassName: nfs-client
+  volumeMode: Filesystem

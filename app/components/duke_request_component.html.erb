@@ -1,0 +1,39 @@
+  <%# A single Bib ID: link to the Duke Requests system for the bib record. %>
+  <% if one_bibnum? %>
+    <%= link_to t('arclight.request.container'), duke_request_url,
+      target: '_blank',
+      class: request_btn_classes,
+      title: request_tooltip,
+      data: {
+        bs_toggle: 'tooltip',
+        bs_placement: 'bottom',
+        bs_html: true
+      } %>
+
+  <%# Multiple Bib IDs need to link to the catalog search results %>
+  <% elsif multiple_bibnums? %>
+    <%= link_to t('arclight.request.container'), catalog_serp_url,
+      target: '_blank',
+      class: request_btn_classes,
+      title: request_tooltip,
+      data: {
+        bs_toggle: 'tooltip',
+        bs_placement: 'bottom',
+        bs_html: true
+      } %>
+
+  <%# No Bib ID = not requestable; email someone instead %>
+  <% else %>
+      <%= link_to t('arclight.request.container'),
+        ['mailto:', collection&.repository_config&.contact_info].join,
+        target: '_blank',
+        class: request_btn_classes,
+        title: t('dul_arclight.views.show.sidebar.request.email',
+          email: collection&.repository_config&.contact_info),
+        data: {
+          bs_toggle: 'tooltip',
+          bs_placement: 'bottom',
+          bs_container: 'body',
+          bs_html: true
+        } %>
+  <% end %>

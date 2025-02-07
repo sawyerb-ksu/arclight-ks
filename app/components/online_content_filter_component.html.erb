@@ -1,0 +1,40 @@
+<%# DUL CUSTOMIZATION: Copy & revise core ArcLight component. See: %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/online_content_filter_component.html.erb %>
+<%# We style this section a bit differently and add a link to DDR collection objects %>
+<%# if present. %>
+
+<div class="card online-contents border-0">
+  <div class="col-md-12 banner-wrapper rounded-2 banner-online d-flex flex-row">
+    <div class="banner-part banner-heading rounded-start-2">
+      <div class="al-online-content-icon me-2">
+        <%= helpers.blacklight_icon :online %>
+      </div>
+
+      <span class="banner-heading-text d-none d-xl-inline">Digital Materials</span>
+    </div>
+    <div class="banner-part banner-shadow"></div>
+    <div class="banner-part banner-message flex-grow-1">
+      <div class="mb-0 banner-message-text">
+        <%= t('arclight.views.show.online_content.description') %><br/>
+        <div class="dc-links d-flex flex-wrap">
+          <% ddr_collection_objects.each do |object| %>
+            <%= link_to t('dul_arclight.digital_objects.online_banner.dc_html').html_safe,
+                  object.href,
+                  class: 'banner-link banner-link-ddr',
+                  title: [collection_title, 'Duke Digital Repository'].join(' - '),
+                  data: { bs_toggle: 'tooltip' } %><br/>
+          <% end %>
+
+          <%# Bugfix here: collection_name is not the right facet filter so we %>
+          <%# use custom collection_title instead %>
+          <% if online_content? && render_filter_link? %>
+            <%= link_to t('arclight.views.show.online_content.link_text').html_safe,
+                helpers.search_action_path(f: { collection: collection_title,
+                                        access: ["online"] }),
+                    class: 'banner-link banner-link-filter' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app-config
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+data:
+  APPLICATION_HOSTNAME: {{ .Values.applicationHostname | quote }}
+
+  MATOMO_ANALYTICS_DEBUG: {{ .Values.matomoAnalyticsDebug | quote }}
+  MATOMO_ANALYTICS_HOST: {{ .Values.matomoAnalyticsHost | quote }}
+  MATOMO_ANALYTICS_SITE_ID: {{ required "matomoAnalyticsSiteId" .Values.matomoAnalyticsSiteId | quote }}
+
+  MEMCACHE_SERVERS: 'rails-cache:11211'
+
+  {{- if .Values.railsServeStaticFiles }}
+  RAILS_SERVE_STATIC_FILES: "1"
+  {{- end }}
+
+  REDIS_URL: "redis://redis-headless:6379/0"
+
+  SOLR_URL: "http://solr:8983/solr/arclight"
+
+  RACK_ATTACK_CACHE: {{ .Values.rackAttackCache | quote }}
+  RACK_ATTACK_ENABLED: {{ .Values.rackAttackEnabled | quote }}
+  BLOCKLIST_ENABLED: {{ .Values.blocklistEnabled | quote }}
+  BLOCKLIST_IP: {{ join "," .Values.blocklistIP | quote }}
+  SAFELIST_ENABLED: {{ .Values.safelistEnabled | quote }}
+  SAFELIST_IP: {{ join "," .Values.safelistIP | quote }}
+  THROTTLE_REQUESTS_ENABLED: {{ .Values.throttleRequestsEnabled | quote }}
+  THROTTLE_REQUESTS_BY_IP: {{ .Values.throttleRequestsByIP | quote }}
+  THROTTLE_REQUESTS_SUBNET1: {{ .Values.throttleRequestsSubnet1 | quote }}
+  THROTTLE_REQUESTS_SUBNET2: {{ .Values.throttleRequestsSubnet2 | quote }}
+  THROTTLE_REQUESTS_TOTAL: {{ .Values.throttleRequestsTotal | quote }}

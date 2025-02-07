@@ -1,0 +1,19 @@
+/* Custom BS5 Grid Breakpoints */
+/* https://getbootstrap.com/docs/5.0/layout/grid/#sass */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px
+);
+
+$container-max-widths: (
+  sm: 700px,
+  md: 900px,
+  lg: 1100px,
+  xl: 1350px,
+  xxl: 1530px
+);

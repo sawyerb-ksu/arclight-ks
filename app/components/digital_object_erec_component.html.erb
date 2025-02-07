@@ -1,0 +1,12 @@
+<div class="al-digital-object">
+  <div class="d-lg-flex flex-nowrap mb-3">
+    <div>
+      <%= link_to t('dul_arclight.digital_objects.request_this_record'), erec_aeon_link, class: 'btn btn-success btn-sm btn-erec-request me-3 fw-semibold', target: '_blank' %>
+    </div>
+    <div>
+      <strong><%= t(['dul_arclight.digital_objects.', @object.role].join) %></strong>
+      <%= content_tag(:span, ['&mdash; ', @object.label].join.html_safe,
+                      { class: 'text-muted' }) if @object.label.present? %>
+    </div>
+  </div>
+</div>

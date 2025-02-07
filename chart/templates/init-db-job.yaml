@@ -1,0 +1,27 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: init-db-{{ .Values.image.tag | default "latest" }}
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  ttlSecondsAfterFinished: 3600
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: init-db-{{ .Values.image.tag }}
+          image: {{ include "dul-arclight.appImage" . | quote }}
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: app-config
+            - secretRef:
+                name: app-secret
+          command:
+            - 'wait-for-it'
+            - 'app-db:5432'
+            - '--'
+          args:
+            - ./bin/rails
+            - db:prepare

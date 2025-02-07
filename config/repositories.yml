@@ -1,0 +1,70 @@
+rubenstein:
+  name: 'David M. Rubenstein Rare Book & Manuscript Library'
+  visit_note: |
+    Please consult our up-to-date <a href='https://library.duke.edu/rubenstein/about/visit' target='_blank'>
+    information for visitors page</a>, as our services and guidelines periodically change.
+  description: |
+    The holdings of the Rubenstein Rare Book & Manuscript Library range from ancient papyri to
+    records of modern advertising. There are over 10,000 manuscript collections containing more
+    than 20 million individual manuscript items. Only a portion of these collections and items
+    are discoverable on this site. Others may be found in the library catalog.
+  building: 'Rubenstein Library'
+  address1: '411 Chapel Drive'
+  address2: ''
+  city: 'Durham'
+  state: 'NC'
+  zip: '27708'
+  country: 'USA'
+  phone: '919-660-5822'
+  contact_info: 'askRL@duke.edu'
+  thumbnail_url: 'https://library.duke.edu/sites/default/files/rubenstein/arclight/duke-rubenstein.jpg'
+  #request_types:
+
+ua:
+  name: 'Duke University Archives'
+  visit_note: |
+    Please consult our up-to-date <a href='https://library.duke.edu/rubenstein/about/visit' target='_blank'>
+    information for visitors page</a>, as our services and guidelines periodically change.
+  description: |
+    The Duke University Archives is the official repository for records of Duke University and has
+    a charge to make them available for use in accordance with policies approved by Duke University's
+    Board of Trustees, administration and faculty. In addition to the official records of the
+    university, the Duke University Archives holds campus publications; audiovisual materials by and
+    about Duke University; papers and selected publications of Duke University faculty members;
+    records of Duke University student and employee organizations and dissertations, theses, final
+    projects and senior honors papers produced by Duke University students.
+  building: 'Rubenstein Library'
+  address1: '411 Chapel Drive'
+  address2: ''
+  city: 'Durham'
+  state: 'NC'
+  zip: '27708'
+  country: 'USA'
+  phone: '919-660-5822'
+  contact_info: 'askRL@duke.edu'
+  thumbnail_url: 'https://library.duke.edu/sites/default/files/rubenstein/arclight/duke-ua.jpg'
+  #request_types:
+
+adf:
+  name: 'American Dance Festival Archives'
+  visit_note: |
+    Materials from the ADF Archives may be viewed by appointment in the David M. Rubenstein Rare
+    Book & Manuscript Library at Duke University. Visits may be arranged in advance by contacting the
+    ADF archivist at
+    <a href='mailto:adf@americandancefestival.org'>adf@americandancefestival.org</a>.
+    Visitors will need to comply with Duke's registration and security policies.
+  description: |
+    The American Dance Festival Archives serves as the repository for records of enduring historical
+    value created and collected by ADF. The Archives preserves its collections for use by the dance
+    community, including students, scholars, and the general public.
+  building: 'Rubenstein Library'
+  address1: '411 Chapel Drive'
+  address2: ''
+  city: 'Durham'
+  state: 'NC'
+  zip: '27708'
+  country: 'USA'
+  phone: '919-684-6402'
+  contact_info: 'adf@americandancefestival.org'
+  thumbnail_url: 'https://library.duke.edu/sites/default/files/rubenstein/arclight/duke-adf.jpg'
+  #request_types:

@@ -1,0 +1,75 @@
+<% @random_feature = random_feature %>
+
+<div class="row homepage main-feature mb-5">
+  <div class="col-md-12 pe-4 position-relative">
+    <div class="imgback imgback-shadow col-md-5 col-lg-6 col-xl-7 hidden-sm-down"></div>
+    <div class="imgback imgback-image col-md-5 col-lg-6 col-xl-7 hidden-sm-down"
+        data-controller="homepage-feature"
+        style="background-image: url(<%= feature_img_url(@random_feature['image']) %>)">
+      <div class="feature-caption"><%= @random_feature['caption_html'].html_safe %></div>
+    </div>
+
+    <div class="col-md-7 col-lg-6 col-xl-5 rl-menu-title">
+      <h1 class="main-title mt-4 mt-md-5">Find Archival Materials</h1>
+      <p class="lead tagline">Detailed inventories of <span class="collection-count"><%= number_with_delimiter(collection_count) %></span> collections</p>
+
+      <div id="homepage-search-box">
+        <%= render search_bar_component %>
+      </div>
+
+      <div class="intro-buttons mt-2">
+        <div id="browse-links" class="btn-group me-3">
+          <%= link_to t('dul_arclight.home.browse_all'), helpers.arclight_engine.collections_path, { class: 'btn btn-sm btn-warning'} %>
+          <button href="#" type="button" class="btn btn-warning btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <%= link_to t('dul_arclight.home.browse_all'), helpers.arclight_engine.collections_path, { class: 'dropdown-item'} %>
+            <%= link_to t('dul_arclight.home.browse_ua'), ua_record_groups_path, { class: 'dropdown-item'} %>
+          </div>
+        </div>
+        <%= render 'shared/search_extra_controls' %>
+
+      </div>
+      <div class="rl-banner-wrap">
+        <hr class="extended-divider mt-3" />
+        <a class="rl-banner d-inline-flex align-items-center mb-3" href="https://library.duke.edu/rubenstein">
+          <%= image_tag asset_url('dul-logos/rl-logo-white.png'), alt: 'Rubenstein Logo', class: 'rl-logo' %>
+          <div class="rl-fullname">David M. Rubenstein Rare <br class="rl-break"/>Book &amp; Manuscript Library</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+  <%# Configurable alert banner; set via un/commenting dul_arclight.home.alert.* %>
+  <%# keys in config/locales/dul_arclight.en.yml %>
+  <% if I18n.exists?('dul_arclight.home.alert') %>
+    <%= render 'catalog/alerts/homepage_alert' %>
+  <% end %>
+
+  <div id="homepage-text-blocks" class="row mt-4 mb-5">
+    <div class="col-md-7">
+      <h2><%= t('dul_arclight.home.about.heading') %></h2>
+      <p><%= t('dul_arclight.home.about.text_html').html_safe %></p>
+
+      <hr class="mt-5">
+
+      <%= render 'shared/harmful_language' %>
+
+    </div>
+    <div class="col-md-5">
+      <h2><%= t('dul_arclight.home.catalog.heading') %></h2>
+      <p>Not all of the Rubenstein's collections are described on this site. <a href="https://find.library.duke.edu/?f_inclusive%5Blocation_hierarchy_f%5D%5B%5D=duke%3Adukeruby&amp;f_inclusive%5Blocation_hierarchy_f%5D%5B%5D=duke%3Adukeunis&amp;search_field=all_fields&amp;q=&amp;f%5Blocation_hierarchy_f%5D%5B%5D=" class="underlined-link">Search the catalog</a> to find additional manuscripts, rare books, and other items held in the Rubenstein.</p>
+
+      <h2><%= t('dul_arclight.home.ask.heading') %></h2>
+      <p>Need help or have questions? <a href="<%= helpers.ask_rubenstein_url %>" class="underlined-link">Contact a librarian or archivist</a> for more information.</p>
+    </div>
+  </div>
+</div>
+
+<% content_for :twitter_og_meta do %>
+  <meta name="description" content="<%= t('dul_arclight.home.about.text_html') %>" />
+  <meta property="og:description" content="<%= t('dul_arclight.home.about.text_html') %>" />
+<% end %>

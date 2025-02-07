@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- DUL NOTE: changes to this file must also be replicated to
+     the OKD Solr pod. See:
+     https://gitlab.oit.duke.edu/dul-its/dul-arclight/-/blob/main/README.md#okd-notes
+-->
+
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!--
+ This is a stripped down config file used for a simple example...
+ It is *not* a good example to work from.
+-->
+<config>
+
+  <!-- Controls what version of Lucene various components of Solr
+       adhere to.  Generally, you want to use the latest version to
+       get all bug fixes and improvements. It is highly recommended
+       that you fully re-index after changing this setting as it can
+       affect both how text is indexed and queried.
+  -->
+
+  <!-- DUL CUSTOMIZATION: Enable BL built-in Advanced Search by implementing the
+       workaround described here:
+       https://github.com/projectblacklight/blacklight/wiki/Advanced-Search#clause-params
+       There is a Solr bug affecting 7.2 -> 9.3 that prevents BL built-in Advanced Search
+       from working properly.
+       TODO: this bug will be fixed in Solr 9.4 per https://issues.apache.org/jira/browse/SOLR-16916
+       so remove this workaround when we are able to upgrade to/beyond that version.
+  -->
+  <luceneMatchVersion>7.1.0</luceneMatchVersion>
+
+  <lib dir="${solr.install.dir:../../../..}/modules/analysis-extras/lib" />
+  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
+  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
+
+  <directoryFactory name="DirectoryFactory"
+                    class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}">
+  </directoryFactory>
+
+  <codecFactory class="solr.SchemaCodecFactory"/>
+
+  <schemaFactory class="ClassicIndexSchemaFactory"/>
+
+
+  <dataDir>${solr.blacklight-core.data.dir:}</dataDir>
+
+  <requestDispatcher handleSelect="true" >
+    <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" />
+  </requestDispatcher>
+
+  <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
+
+  <!--  DUL CUSTOMIZATION: add hashed IDs for use by dynamic sitemap
+        generator. See documentation at:
+        https://github.com/sul-dlss/blacklight_dynamic_sitemap -->
+
+  <updateRequestProcessorChain name="add_hashed_id" default="true">
+    <processor class="solr.processor.SignatureUpdateProcessorFactory">
+      <bool name="enabled">true</bool>
+      <str name="signatureField">hashed_id_ssi</str>
+      <bool name="overwriteDupes">false</bool>
+      <str name="fields">id</str>
+      <str name="signatureClass">solr.processor.Lookup3Signature</str>
+    </processor>
+
+    <processor class="solr.LogUpdateProcessorFactory" />
+    <processor class="solr.RunUpdateProcessorFactory" />
+  </updateRequestProcessorChain>
+
+  <requestHandler name="/update" class="solr.UpdateRequestHandler">
+    <lst name="defaults">
+      <str name="update.chain">add_hashed_id</str>
+    </lst>
+  </requestHandler>
+
+  <!-- config for the admin interface -->
+  <admin>
+    <defaultQuery>*:*</defaultQuery>
+  </admin>
+
+  <!-- SearchHandler
+
+       http://wiki.apache.org/solr/SearchHandler
+
+       For processing Search Queries, the primary Request Handler
+       provided with Solr is "SearchHandler" It delegates to a sequent
+       of SearchComponents (see below) and supports distributed
+       queries across multiple shards
+    -->
+  <requestHandler name="search" class="solr.SearchHandler" default="true">
+    <!-- default values for query parameters can be specified, these
+         will be overridden by parameters in the request
+      -->
+     <lst name="defaults">
+       <str name="defType">edismax</str>
+       <str name="echoParams">explicit</str>
+       <int name="rows">10</int>
+
+       <str name="q.alt">*:*</str>
+       <!-- Minimum Should Match parameter (mm) -->
+       <str name="mm">4&lt;90%</str>
+       <!-- 1-4 term query, all must match
+            5+ term query, 90% must match; rounded down, so e.g.:
+            * 5-10 term query, all but one must match
+            * 11-20 term query, all but two must match
+            * 21-29 term query, all but three must match, etc.
+       -->
+
+       <!-- this qf and pf are used by default, if not otherwise specified by
+            client. The default blacklight_config will use these for the
+            "keywords" search. See the author_qf/author_pf, title_qf, etc
+            below, which the default blacklight_config will specify for
+            those searches. You may also be interested in:
+            http://wiki.apache.org/solr/LocalParams
+       -->
+
+       <!-- DUL CUSTOMIZATIONS over core, explained:         -->
+       <!-- * Major boosts for identifier fields             -->
+       <!-- * Bigger boosts for nonstemmed (_tenim) matches  -->
+       <!--   over stemmed (_tesim) matches                  -->
+       <!-- * Only boost unstemmed matches for fields like   -->
+       <!--   name, place, subject, format, container        -->
+       <str name="qf">
+         id^250
+         ark_ssi^250
+         bibnum_ssim^250
+         unitid_ssm^250
+         collection_title_tenim^250
+         collection_title_tesim^150
+         abstract_tenim^75
+         name_tenim^75
+         title_tenim^50
+         title_tesim^20
+         ead_ssi^10
+         place_tenim^5
+         parent_unittitles_tenim^5
+         parent_unittitles_tesim^2
+         unitid_identifier_match^2
+         subject_tenim^2
+         format_tenim^2
+         container_tenim
+         ref_ssm
+         text
+       </str>
+       <str name="pf">
+         id^500
+         ark_ssi^500
+         bibnum_ssim^500
+         unitid_ssm^500
+         collection_title_tenim^500
+         collection_title_tesim^300
+         abstract_tenim^150
+         name_tenim^150
+         title_tenim^100
+         title_tesim^40
+         ead_ssi^10
+         place_tenim^10
+         parent_unittitles_tenim^10
+         parent_unittitles_tesim^5
+         unitid_identifier_match^5
+         subject_tenim^5
+         format_tenim^5
+         container_tenim^2
+         ref_ssm^2
+         text^2
+       </str>
+
+       <!-- DUL CUSTOMIZATION: for fielded searches, make non-stemmed matches more     -->
+       <!-- important than stemmed for relevance ranking (use our custom _tenim fields -->
+       <!-- instead of or in addition to core's _teim fields). Also boost phrase field -->
+       <!-- (pf) matches over query field (qf) matches, for better relevance when all  -->
+       <!-- of the terms in the query appear in close proximity. -->
+
+       <str name="qf_container">
+         container_tenim^3
+         container_teim
+       </str>
+       <str name="pf_container">
+         container_tenim^10
+         container_teim^6
+       </str>
+       <str name="qf_identifier">
+         id^100
+         ark_ssi^100
+         bibnum_ssim^50
+         unitid_ssm^50
+         unitid_identifier_match
+         ref_ssm
+       </str>
+       <str name="pf_identifier">
+         id^200
+         ark_ssi^200
+         bibnum_ssim^100
+         unitid_ssm^100
+         unitid_identifier_match^2
+         ref_ssm^2
+       </str>
+
+       <str name="qf_name">
+         name_tenim
+       </str>
+       <str name="pf_name">
+         name_tenim^2
+       </str>
+       <str name="qf_place">
+         place_tenim
+       </str>
+       <str name="pf_place">
+         place_tenim^2
+       </str>
+       <str name="qf_subject">
+         subject_tenim
+       </str>
+       <str name="pf_subject">
+         subject_tenim^2
+       </str>
+       <!-- DUL CUSTOMIZATION: format -->
+       <str name="qf_format">
+         genreform_tenim^3
+         genreform_teim
+       </str>
+       <str name="pf_format">
+         genreform_tenim^10
+         genreform_teim^6
+       </str>
+
+       <!-- DUL CUSTOMIZATION: add collection title for title search -->
+       <str name="qf_title">
+         collection_title_tenim^10
+         collection_title_tesim^5
+         title_tenim^2
+         title_tesim
+         normalized_title_teim
+       </str>
+       <str name="pf_title">
+         collection_title_tenim^20
+         collection_title_tesim^15
+         title_tenim^10
+         title_tesim^5
+         normalized_title_teim
+       </str>
+
+       <int name="ps">3</int>
+       <float name="tie">0.01</float>
+
+       <!-- DUL CUSTOMIZATION:                                                  -->
+       <!-- "fl" here should indicate by default which fields' values           -->
+       <!-- get returned for any given query. However, the arclight engine      -->
+       <!-- specifies in several places the following for fl:                   -->
+       <!-- fl: '*,collection:[subquery]'                                       -->
+
+       <!-- See:                                                                -->
+       <!-- config.default_solr_params                                          -->
+       <!-- config.catalog_controller_group_query_params                        -->
+       <!-- config.default_document_solr_params                                 -->
+
+       <!-- So we just set this default config to * for all fields rather       -->
+       <!-- than try to specify and keep track of individual fields.            -->
+       <str name="fl">*</str>
+
+       <str name="facet">true</str>
+       <str name="facet.mincount">1</str>
+       <str name="facet.field">level_ssim</str>
+       <str name="facet.field">creator_ssim</str>
+       <str name="facet.field">date_range_isim</str>
+       <str name="facet.field">names_ssim</str>
+       <str name="facet.field">geogname_ssim</str>
+       <str name="facet.field">access_subjects_ssim</str>
+       <!-- DUL CUSTOMIZATION: format facet (genreform) -->
+       <str name="facet.field">genreform_ssim</str>
+       <str name="facet.field">repository_ssim</str>
+       <str name="facet.field">collection_ssim</str>
+
+       <str name="spellcheck">true</str>
+       <str name="spellcheck.dictionary">default</str>
+       <str name="spellcheck.onlyMorePopular">true</str>
+       <str name="spellcheck.extendedResults">true</str>
+       <str name="spellcheck.collate">false</str>
+       <str name="spellcheck.count">5</str>
+
+       <!-- DUL CUSTOMIZATION: use <mark> tag instead of <em> for -->
+       <!-- search result hit highlighting. -->
+       <str name="hl.simple.pre">&lt;mark&gt;</str>
+       <str name="hl.simple.post">&lt;/mark&gt;</str>
+
+     </lst>
+    <arr name="last-components">
+      <str>spellcheck</str>
+    </arr>
+  </requestHandler>
+
+  <!-- for requests to get a single document; use id=666 instead of q=id:666 -->
+  <requestHandler name="document" class="solr.SearchHandler" >
+    <lst name="defaults">
+      <str name="echoParams">all</str>
+      <str name="fl">*</str>
+      <str name="rows">1</str>
+      <str name="q">{!term f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
+    </lst>
+  </requestHandler>
+
+<!-- Spell Check
+
+        The spell check component can return a list of alternative spelling
+        suggestions.
+
+        http://wiki.apache.org/solr/SpellCheckComponent
+     -->
+  <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
+
+    <str name="queryAnalyzerFieldType">textSpell</str>
+
+    <!-- Multiple "Spell Checkers" can be declared and used by this
+         component
+      -->
+
+    <!-- a spellchecker built from a field of the main index, and
+         written to disk
+      -->
+    <lst name="spellchecker">
+      <str name="name">default</str>
+      <str name="field">spell</str>
+      <str name="spellcheckIndexDir">./spell</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">author</str>
+      <str name="field">author_spell</str>
+      <str name="spellcheckIndexDir">./spell_author</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">subject</str>
+      <str name="field">subject_spell</str>
+      <str name="spellcheckIndexDir">./spell_subject</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">title</str>
+      <str name="field">title_spell</str>
+      <str name="spellcheckIndexDir">./spell_title</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+
+    <!-- a spellchecker that uses a different distance measure -->
+    <!--
+       <lst name="spellchecker">
+         <str name="name">jarowinkler</str>
+         <str name="field">spell</str>
+         <str name="distanceMeasure">
+           org.apache.lucene.search.spell.JaroWinklerDistance
+         </str>
+         <str name="spellcheckIndexDir">spellcheckerJaro</str>
+       </lst>
+     -->
+
+    <!-- a spellchecker that use an alternate comparator
+
+         comparatorClass be one of:
+          1. score (default)
+          2. freq (Frequency first, then score)
+          3. A fully qualified class name
+      -->
+    <!--
+       <lst name="spellchecker">
+         <str name="name">freq</str>
+         <str name="field">lowerfilt</str>
+         <str name="spellcheckIndexDir">spellcheckerFreq</str>
+         <str name="comparatorClass">freq</str>
+         <str name="buildOnCommit">true</str>
+      -->
+
+    <!-- A spellchecker that reads the list of words from a file -->
+    <!--
+       <lst name="spellchecker">
+         <str name="classname">solr.FileBasedSpellChecker</str>
+         <str name="name">file</str>
+         <str name="sourceLocation">spellings.txt</str>
+         <str name="characterEncoding">UTF-8</str>
+         <str name="spellcheckIndexDir">spellcheckerFile</str>
+       </lst>
+      -->
+  </searchComponent>
+
+  <searchComponent name="suggest" class="solr.SuggestComponent">
+    <lst name="suggester">
+      <str name="name">mySuggester</str>
+      <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+      <str name="indexPath">suggester_infix_dir</str>
+      <str name="highlight">false</str>
+      <str name="suggestAnalyzerFieldType">text</str>
+      <!-- DUL CUSTOMIZATION: Build on optimize instead of commit -->
+      <str name="buildOnOptimize">true</str>
+      <str name="field">suggest</str>
+    </lst>
+  </searchComponent>
+
+  <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+    <lst name="defaults">
+      <str name="suggest">true</str>
+      <str name="suggest.count">5</str>
+      <str name="suggest.dictionary">mySuggester</str>
+    </lst>
+    <arr name="components">
+      <str>suggest</str>
+    </arr>
+  </requestHandler>
+
+
+
+</config>

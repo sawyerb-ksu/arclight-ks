@@ -1,0 +1,25 @@
+<%# We are not using Blacklight::System::ModalComponent or the #blacklight-modal %>
+<%# here because we need to get the current collection scope into the form to    %>
+<%# toggle search within collection, which is difficult to do when the contents  %>
+<%# are loaded via AJAX. %>
+<div class="modal fade" id="advanced-modal" tabindex="-1" aria-label="Advanced Search" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h4">Advanced Search</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%# Suppress autocomplete so it doesn't get mixed up with the non-modal searchbox. %>
+        <%= render SearchBarComponent.new(
+            url: search_action_url,
+            params: search_state.params_for_search.except(:qt),
+            autocomplete_path: ''
+          ) %>
+      </div>
+      <div class="modal-footer">
+        <%= link_to 'More Advanced Search Options', advanced_search_catalog_url, data: { turbo: false } %>
+      </div>
+    </div>
+  </div>
+</div>

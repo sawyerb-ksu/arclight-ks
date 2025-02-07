@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    entrypoint:
+      - wait-for-it
+      - solr:8983
+      - '--'
+    command:
+      - bin/rails
+      - db:prepare
+      - dul_arclight:test:default

@@ -1,0 +1,49 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ include "dul-arclight.fullname" . }}
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "dul-arclight.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "dul-arclight.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: finding-aid-data
+          persistentVolumeClaim:
+            claimName: finding-aid-data
+      containers:
+        - name: app
+          image: >-
+            {{ include "dul-arclight.appImage"  . }}
+          imagePullPolicy: IfNotPresent
+          {{- with .Values.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          envFrom:
+            - configMapRef:
+                name: app-config
+            - secretRef:
+                name: app-secret
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          {{- if .Values.livenessProbe.enabled }}
+          livenessProbe:
+            {{- toYaml (omit .Values.livenessProbe "enabled") | nindent 12 }}
+          {{- end }}
+          {{- if .Values.readinessProbe.enabled }}
+          readinessProbe:
+            {{- toYaml (omit .Values.readinessProbe "enabled") | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - name: finding-aid-data
+              mountPath: /data

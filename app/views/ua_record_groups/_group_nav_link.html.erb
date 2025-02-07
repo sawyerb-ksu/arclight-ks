@@ -1,0 +1,8 @@
+<%# TODO: Refactor this feature into components. %>
+
+<% if collection_count.positive? %>
+  <li>
+    <%= key %>.
+    <%= link_to info.dig('title'), url_for(anchor: key), data: { turbo: 'false' } %>
+  </li>
+<% end %>

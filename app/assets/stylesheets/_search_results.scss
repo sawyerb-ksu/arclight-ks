@@ -1,0 +1,111 @@
+
+#facets {
+  #facet-access-header {
+    display: none;
+  }
+  #facet-access {
+    ul.facet-values li {
+      /* Had to create a green icon rather than fill the existing  */
+      /* one using CSS, as recoloring an icon that is a background */
+      /* image doesn't work */
+      &::before {
+        content: asset-url("icons/online-dark-green.svg");
+        background-color: tint-color($success, 85%);
+        width: 24px;
+        height: 24px;
+        padding: 0px 4px 4px 4px;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.al-search-breadcrumb {
+  display: none;
+}
+
+.blacklight-catalog-index #appliedParams {
+  margin-bottom: 1rem !important;
+}
+
+.page-links {
+  a {
+    @include fw-semibold;
+  }
+}
+
+.al-document-container.text-muted {
+  color: $gray-800 !important;
+}
+
+// Grouped search results
+.al-grouped-results {
+  .al-grouped-title-bar {
+    padding: 1.5rem;
+  }
+
+  .al-grouped-more {
+    a {
+      @include fw-semibold;
+    }
+  }
+
+  // Don't show the scope/abstract for a collection result in grouped view
+  // because it's already shown in the collection group title bar.
+  article.blacklight-collection {
+    dd.al-document-abstract-or-scope {
+      display: none;
+    }
+  }
+}
+
+.al-document-abstract-or-scope {
+  max-width: none !important;
+}
+
+.al-document-extent {
+  margin-left: 0.75rem !important;
+  max-width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap !important;
+  vertical-align: top;
+}
+
+#documents {
+  .document-metadata {
+    margin-bottom: 0;
+    dl {
+      margin-bottom: 0;
+    }
+  }
+  .al-document-highlight {
+    font-style: normal;
+    padding-left: 0;
+    margin-bottom: 0.25rem;
+  }
+  .breadcrumb-links .breadcrumb {
+    .breadcrumb-item {
+      a {
+        color: $link-color;
+        @include underlined-link;
+      }
+      &:first-of-type {
+        display: none; /* don't show the repository */
+      }
+      &:nth-of-type(2){
+        padding-left: 0;
+        &::before {
+          @include fw-semibold;
+          content: "In: "
+
+        }
+      }
+    }
+  }
+}

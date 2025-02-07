@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: commit-expunge-deletes
+  labels:
+    {{- include "dul-arclight.labels" . | nindent 4 }}
+spec:
+  schedule: "0 1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: commit-expunge-deletes
+              image: >-
+                {{ .Values.curl.registry }}/{{ .Values.curl.repository }}:{{ .Values.curl.tag }}
+              imagePullPolicy: IfNotPresent
+              args:
+                - '-sf'
+                - '-X'
+                - POST
+                - '-H'
+                - 'content-type: text/xml'
+                - '-d'
+                - '<commit expungeDeletes="true"/>'
+                - 'http://solr:8983/solr/arclight/update'

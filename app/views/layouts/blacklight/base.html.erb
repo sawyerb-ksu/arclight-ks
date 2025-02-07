@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<%# DUL CUSTOMIZATION: copy of Blacklight layout in order to add       -%>
+<%# regions / partials, e.g., for Analytics, OpenGraph, and more; see: -%>
+<%# https://github.com/projectblacklight/blacklight/blob/main/app/views/layouts/blacklight/base.html.erb -%>
+
+<%= content_tag :html, class: 'no-js', **html_tag_attributes do %>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= render_page_title %></title>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+    </script>
+    <%= opensearch_description_tag application_name, opensearch_catalog_url(format: 'xml') %>
+    <%= favicon_link_tag %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"  %>
+    <% if defined? Importmap %>
+      <%# DUL CUSTOMIZATION: add a polyfill so browsers that don't natively %>
+      <%# support importmaps won't break. This shim was dropped by importmap-rails %>
+      <%# 2.0 in Jan 2024, so has to be re-added. See https://caniuse.com/import-maps %>
+      <%# https://github.com/guybedford/es-module-shims?tab=readme-ov-file#usage %>
+      <script async src="https://ga.jspm.io/npm:es-module-shims@1.9.0/dist/es-module-shims.js"></script>
+      <%= javascript_importmap_tags %>
+    <% elsif defined? Propshaft %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <% else %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+      <%= javascript_include_tag "blacklight/blacklight", type: 'module' %>
+      <script type="module">
+        import githubAutoCompleteElement from 'https://cdn.skypack.dev/@github/auto-complete-element';
+      </script>
+    <% end %>
+
+    <%= csrf_meta_tags %>
+
+    <%# DUL CUSTOMIZATION: add custom favicon tags %>
+    <%# see https://tinyurl.com/favicons-in-2021   %>
+
+    <link rel="icon" href="<%= image_path('/favicon/favicon.ico') %>" sizes="any">
+    <link rel="icon" href="<%= image_path('/favicon/favicon.svg') %>" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path('/favicon/apple-touch-icon.png') %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= image_path('/favicon/favicon-32x32.png') %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= image_path('/favicon/favicon-16x16.png') %>">
+    <link rel="manifest" href="<%= image_path('/favicon/site.webmanifest') %>">
+    <link rel="mask-icon" href="<%= image_path('/favicon/safari-pinned-tab.svg') %>" color="#053482">
+    <meta name="msapplication-TileColor" content="#053482">
+    <meta name="theme-color" content="#ffffff">
+
+    <%# Needed to enable Google Search Console %>
+    <meta name="google-site-verification" content="JuhY7qlmlvIHFXEt0p3Y0yjW617hqz125HaEzj0uWW0" />
+
+    <%# DUL CUSTOMIZATION: Open Graph & Twitter card metadata %>
+    <meta property="og:site_name" content="<%= t('dul_arclight.twitter_og.site_name') %>"/>
+    <meta name="twitter:site" content="<%= t('dul_arclight.twitter_og.twitter_handle') %>"/>
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= render_page_title %>"/>
+    <%= content_for(:twitter_og_meta) %>
+
+    <%= content_for(:head) %>
+  </head>
+  <body class="<%= render_body_class %>">
+    <%= render blacklight_config.skip_link_component.new do %>
+      <%= content_for(:skip_links) %>
+    <% end %>
+
+    <%= render partial: 'shared/header_navbar' %>
+
+    <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+      <%= content_for(:container_header) %>
+
+      <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>
+
+      <%# DUL CUSTOMIZATION: added site alert %>
+      <% if I18n.exists?('dul_arclight.site_alert.message_html') %>
+        <%= render 'shared/site_alert' %>
+      <% end %>
+
+      <div class="row">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </div>
+    </main>
+
+    <%= render partial: 'shared/footer' %>
+    <%= render partial: 'shared/modal' %>
+
+    <%# DUL CUSTOMIZATION: Matomo end-body tags %>
+    <% if DulArclight.matomo_analytics_site_id.present? %>
+      <%= render 'shared/matomo_analytics_body' %>
+    <% end %>
+  </body>
+<% end %>

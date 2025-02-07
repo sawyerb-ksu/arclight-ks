@@ -1,0 +1,40 @@
+<%# Overrides Blacklight core view. We add some alerts and our own modal for emails. See: -%>
+<%# https://github.com/projectblacklight/blacklight/blob/main/app/views/bookmarks/index.html.erb -%>
+
+<% @page_title = t('blacklight.bookmarks.page_title', :application_name => application_name) %>
+
+<div id="content" class="col-md-12">
+  <h1 class='page-heading'><%= t('blacklight.bookmarks.title') %></h1>
+
+  <%- if current_or_guest_user.blank? -%>
+
+    <h2 class='section-heading'><%= t('blacklight.bookmarks.need_login') %></h2>
+
+  <%- elsif @response.documents.blank? -%>
+
+    <h2 class='section-heading'><%= t('blacklight.bookmarks.no_bookmarks') %></h2>
+  <% else %>
+    <%= render 'sort_and_per_page' %>
+
+    <%# DUL CUSTOMIZATION: added alert about bookmark expiration -%>
+    <div class="alert alert-warning" role="alert">
+      <%= t('blacklight.bookmarks.disclaimer_html') %>
+    </div>
+
+    <%= render partial: 'bookmarks/tools', locals: { document_list: @response.documents } %>
+
+    <%# DUL CUSTOMIZATION: added alert about exporting bookmarks being paginated -%>
+    <% if @response.total > @response.documents.count %>
+      <div class="alert alert-warning mb-5" role="alert">
+        <%= t('blacklight.bookmarks.per_page_warning', bookmark_count: number_with_delimiter(@response.total)).html_safe %>
+      </div>
+    <% end %>
+
+    <h2 class='section-heading sr-only visually-hidden'><%= t('blacklight.bookmarks.list_title') %></h2>
+    <%= render_document_index @response.documents %>
+    <%= render 'results_pagination' %>
+  <% end %>
+</div>
+
+<%# DUL CUSTOMIZATION: add a modal for emailing the bookmarks. -%>
+<%= render 'modal_bookmarks_email' %>

@@ -1,0 +1,4 @@
+<%# DUL CUSTOMIZATION: export bookmarks as CSV. %>
+<%# NOTE: html_safe is needed else " appears as &quot; %>
+<%= BookmarksCsvExportComponent.new(response: @response,
+                                    search_state: search_state).bookmarks_csv_export.html_safe %>

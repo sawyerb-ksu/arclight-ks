@@ -1,0 +1,230 @@
+/* Styles for DUL-ArcLight homepage */
+
+.blacklight-pages-home {
+  #main-container {
+    padding-top: 0;
+  }
+  // Style the secondary blurred background image that
+  // matches the randomized featured homepage image
+  background-repeat: no-repeat;
+  background-position: 0px -50px;
+  backdrop-filter: blur(25px);
+  background-size: 100% 650px;
+
+}
+
+
+.homepage {
+
+  /* ---------------------- */
+  /* HORIZONTAL BAR AT TOP  */
+  /* ---------------------- */
+  &.main-feature {
+    background-color: $duke-navy-blue;
+    color: white !important;
+    margin: 0 -1.5rem;
+    padding: 0 0 0 1rem;
+    min-height: 400px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.06),
+                0 2px 2px rgba(0,0,0,0.06),
+                0 4px 4px rgba(0,0,0,0.06),
+                0 8px 8px rgba(0,0,0,0.06),
+                0 16px 16px rgba(0,0,0,0.06);
+    @include media-breakpoint-down(sm) {
+      min-height: 250px;
+    }
+    .main-title {
+      @include fw-semibold;
+      color: $dandelion;
+    }
+  }
+
+  /* ---------------------- */
+  /* FEATURED IMAGES AREA   */
+  /* ---------------------- */
+  .imgback {
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    right: 0;
+    min-height: 400px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    &.imgback-image {
+      background-size: cover;
+      right: 0;
+      background-position: 50% 50%;
+      clip-path: polygon(80px 0,100% 0,100% 100%,0 100%);
+      -webkit-clip-path: polygon(80px 0,100% 0,100% 100%,0 100%);
+      z-index: 90;
+      background-color: #ddd;
+    }
+    &.imgback-shadow { /* transparent diagonal white stripe */
+      -webkit-clip-path: polygon(80px 0, 100px 0, 20px 100%,0 100%);
+      clip-path: polygon(80px 0, 100px 0, 20px 100%,0 100%);
+      z-index: 95;
+      box-shadow: -30px 30px -30px 30px;
+      //background-color: #eee;
+      //opacity: 0.8;
+      background-color: $dandelion;
+      /* Microsoft Edge doesn't support clip-path, so just remove it */
+      @supports (-ms-ime-align:auto) {
+        display: none;
+      }
+      /* IE10+, hide it. No clip-path support. */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: none;
+      }
+    }
+    .feature-caption {
+      color: white;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px 10px 10px 20px;
+      margin-left: 20px;
+      -webkit-clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%);
+      @include media-breakpoint-only(xl) {
+        padding-right: 25px;
+      }
+      a {
+        font-weight: bold;
+        color: white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* ---------------------- */
+  /* MAIN TITLE ON HOMEPAGE */
+  /* ---------------------- */
+
+  h1.main-title {
+    color: black;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+    font-size: 3rem;
+    @include media-breakpoint-only(xs) {
+      font-size: 1.9rem;
+    }
+    @include media-breakpoint-only(sm) {
+      font-size: 3rem;
+    }
+    @include media-breakpoint-only(md) {
+      font-size: 2.4rem;
+    }
+    @include media-breakpoint-only(lg) {
+      font-size: 2.75rem;
+    }
+  }
+
+  .collection-count {
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  #browse-links .dropdown-toggle-split {
+    border-left: 1px solid shade-color($warning, 20%);
+  }
+
+  .search-extra-controls {
+    display: inline;
+    @include media-breakpoint-only(xs) {
+      display: block;
+    }
+    font-size: 0.9rem;
+
+    a {
+      color: $gray-200;
+      &:hover, &:active, &:focus {
+        color: $dandelion;
+      }
+    }
+
+    #bookmarks_nav {
+      margin-left: 1.35rem;
+      .bookmarks-label {
+        padding-left: 0.15rem;
+      }
+      &:has([data-bookmark-count="0"]) {
+        display: none;
+      }
+    }
+    .input-group {
+      display: inline;
+      a {
+        font-size: 15px;
+        &:not(:first-child) {
+          margin-left: 0.6em;
+        }
+      }
+      .bookmarks-label {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* ---------------------- */
+  /*  RL LOGO ON HOMEPAGE   */
+  /* ---------------------- */
+  .rl-banner-wrap {
+    position: absolute;
+    bottom: 0.5rem;
+    min-width: 60%;
+    @include media-breakpoint-down(sm) {
+      position: static;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    .extended-divider {
+      width: calc(100% - 3rem);
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+  .rl-banner {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25em;
+    color: inherit;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $dandelion;
+    }
+
+    @include media-breakpoint-only(xs){
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 16.5px;
+    }
+  }
+
+  br.rl-break {
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  img.rl-logo {
+    height: 40px;
+    width: 50px;
+    float: left;
+    margin-right: 8px;
+    @include media-breakpoint-only(xl) {
+      height: 32px;
+      width: 40px;
+    }
+  }
+}

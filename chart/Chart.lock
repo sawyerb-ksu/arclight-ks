@@ -1,0 +1,30 @@
+dependencies:
+- name: postgresql
+  repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+  version: 15.5.38
+- name: apache
+  repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+  version: 11.3.0
+- name: valkey
+  repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+  version: 0.3.17
+- name: solr
+  repository: oci://gitlab-registry.oit.duke.edu/devops/solr-chart
+  version: 1.0.1
+- name: locksmith-issuer
+  repository: oci://gitlab-registry.oit.duke.edu/devops/locksmith-issuer
+  version: 1.0.0
+- name: zabbix
+  repository: oci://gitlab-registry.oit.duke.edu/devops/zabbix-chart
+  version: 0.2.1
+- name: memcached
+  repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+  version: 7.6.1
+- name: memcached
+  repository: oci://pull-through.cloud.duke.edu/bitnamicharts
+  version: 7.6.1
+- name: oauth2-proxy
+  repository: https://oauth2-proxy.github.io/manifests
+  version: 7.10.0
+digest: sha256:f6c5a97c068c3d2657625218ade89120e6241e69ec9d6a30043113013b489be1
+generated: "2025-01-14T16:01:21.636649-05:00"

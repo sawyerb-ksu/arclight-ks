@@ -1,0 +1,30 @@
+<%# DUL CUSTOMIZATION: Custom component based on ArcLight core EmbedComponent %>
+<%# in order to accommodate DUL-specific digital objects / DAOs. See: %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/embed_component.html.erb %>
+<div id="embed" class="mb-2">
+  <h2 class="al-show-sub-heading"><%= t('arclight.views.show.embedded_content') %></h2>
+
+  <%# If we have multiple DAOs pointing to DDR URLs, we will just consolidate them into %>
+  <%# a link to DDR search results. %>
+  <% if multiple_ddr_daos? %>
+    <%= link_to ddr_dao_search_result_link(@document), target: '_blank' do %>
+      <strong>View <%= ddr_dao_count %> items</strong>
+    <% end %> <span class="text-muted">(Duke Digital Repository)</span>
+  <% end %>
+
+  <% if ddr_embeddable_resources.present? && !multiple_ddr_daos? %>
+      <%= render DigitalObjectDdrEmbedComponent.new(object: ddr_embeddable_resources.first) %>
+  <% end %>
+
+  <% erec_digital_objects.each do |object| %>
+      <%= render DigitalObjectErecComponent.new(object: object, document: @document) %>
+  <% end %>
+
+  <% ddr_lookup_digital_objects.each do |object| %>
+      <%= render DigitalObjectDdrLookupComponent.new(object: object) %>
+  <% end %>
+
+  <% simple_link_digital_objects.each do |object| %>
+      <%= render DigitalObjectLinkComponent.new(object: object) %>
+  <% end %>
+</div>

@@ -1,0 +1,106 @@
+en:
+  arclight:
+    masthead_heading: Archival Collections at Duke
+    truncation:
+      show_more: show more
+      show_less: show less
+    views:
+      home:
+        title: Archival Collections at Duke
+      index:
+        group_results_count:
+          one: "1 result in this collection"
+          other: "%{count} results in this collection"
+          zero: "0 results in this collection"
+        top_group_results:
+          one: "Top %{count} result in this collection"
+          other: "Top %{count} results in this collection — "
+      show:
+        collapse: Collapse
+        expand: Show More ...
+        context: Navigate the Collection
+        embedded_content: Digital Materials
+        has_content: Navigate the collection
+        online_content:
+          description: Some materials from this collection are available online or by request.
+          link_text: <span class='fas fa-filter'></span> Only view items with digital materials
+          title: Digital Materials
+        sections:
+          collection_restrictions_teaser_field: Using These Materials Teaser
+          contents: Contents
+          component_indexed_terms_field: Subjects
+          indexed_terms_field: Subjects
+          indexes_field: Other Indexes
+          access_field: Using These Materials
+          contents_field: Contents
+          component_restrictions_field: Component Restrictions
+          restrictions_banner_field: Collection Restrictions Alert
+          using_field: Using These Materials
+        repositories:
+          browse: Browse
+    within_collection_dropdown:
+      all_collections: All Collections
+      this_collection: This Collection
+
+  blacklight:
+    search:
+      fields:
+        abstract: Abstract
+        creators: Creator
+        extent: Extent
+        language: Language
+        prefercite: Preferred citation
+
+        accessrestrict_collection_banner: Please Note
+        scopecontent: Scope and content
+        bioghist: Biographical / historical
+        acqinfo: Acquisition information
+        appraisal: Appraisal information
+        custodhist: Custodial history
+        processinfo: Processing information
+        arrangement: Arrangement
+        accruals: Accruals
+        phystech: Physical access and technical requirements
+        physloc: Physical location
+        physdesc: Physical description
+        physfacet: Physical facet
+        dimensions: Dimensions
+        indexes: Indexes
+        descrules: Rules or conventions
+
+        relatedmaterial: Related material
+        separatedmaterial: Separated material
+        otherfindaid: Other finding aids
+        altformavail: Alternative form available
+        originalsloc: Location of originals
+        materialspec: Material specific details
+        fileplan: File plan
+        odd: General note
+        note: Note
+
+        access_subjects: Subjects
+        genreform: Formats
+        names_coll: Names
+        places: Places
+
+        containers: Containers
+        names: Names
+
+        restrictions: Restrictions
+        terms: Terms of access
+        parent_restrictions: Collection restrictions
+        parent_terms:  Use & permissions
+        repository_location: Location of this collection
+        before_you_visit: Before you visit
+        repository_contact: Contact
+
+        facet:
+          collection: Collection
+          creator: Creator
+          date_range: Date range
+          level: Level
+          names: Names
+          repository: Repository
+          place: Place
+          subject: Subject
+          access: Digital Materials

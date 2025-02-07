@@ -1,0 +1,22 @@
+<%# DUL CUSTOMIZATION: Copy & revise core ArcLight sidebar component. See: %>
+<%# https://github.com/projectblacklight/arclight/blob/main/app/components/arclight/sidebar_component.html.erb %>
+<%# We add some markup to enable sticky and scroll behavior. %>
+
+  <div class="offcanvas-lg offcanvas-start p-3 p-lg-1" tabindex="-1" id="sidebar">
+    <div class="sticky-nav">
+      <%= collection_context %>
+      <%= render 'show_tools', document: document %>
+      <div id="sidebar-scroll-wrapper">
+        <%= collection_sidebar %>
+
+        <%= render 'shared/harmful_language' %>
+        <hr/>
+
+        <div id="collection-context" class="sidebar-section">
+          <h2 class="h3 text-uppercase mb-3 fw-semibold"><i class="fas fa-map-marker-alt me-1"></i> <%= t('arclight.views.show.has_content') %></h2>
+          <%= turbo_frame_tag "al-hierarchy-#{document.root}", loading: 'lazy', src: hierarchy_solr_document_path(id: document.root, nest_path: @document.nest_path, hierarchy: true) %>
+        </div>
+
+      </div>
+    </div>
+  </div>

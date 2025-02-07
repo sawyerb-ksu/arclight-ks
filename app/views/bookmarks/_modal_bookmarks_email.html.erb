@@ -1,0 +1,14 @@
+<%# We are not using Blacklight::System::ModalComponent or the #blacklight-modal   %>
+<%# here because we need to get the current @response.documents into the form as   %>
+<%# hidden fields, which is difficult to do when the contents are loaded via AJAX. %>
+<div class="modal fade" id="modal-bookmarks-email" tabindex="-1" aria-label="Email Bookmarks" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h4">Email Bookmarks</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <%= render 'email_form' %>
+    </div>
+  </div>
+</div>

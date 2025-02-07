@@ -1,0 +1,130 @@
+/* Show page styles (typically a collection or component) */
+
+.al-show-breadcrumb {
+  .breadcrumb-text {
+    color: $gray-800;
+  }
+}
+
+h2#collection-nav {
+  @include visually-hidden;
+}
+
+section.show-document {
+  @include media-breakpoint-up(lg) {
+    padding-left: 2.5rem !important;
+  }
+}
+
+.al-show-breadcrumb {
+  margin-bottom: 1.25rem;
+  &:not(:has(.breadcrumb)) {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.title-container {
+  border-bottom: none;
+  padding-bottom: 0;
+  h1 {
+    @include fw-semibold;
+  }
+}
+
+.al-show-sub-heading {
+  font-weight: bold;
+  font-size: 1.75rem;
+  text-transform: none;
+  border-top: 1px dotted $gray-400;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  color: $primary;
+}
+
+.blacklight-catalog-show {
+  #appliedParams {
+    display: none;
+  }
+}
+
+#contents {
+  border-top: 0;
+}
+
+#using-these-materials-teaser {
+  width: 33%;
+  background: $whisper-gray;
+  border-left: 8px solid $dandelion;
+  padding: 1.5rem;
+  float: right;
+  margin: 2rem 0 1rem 2rem;
+  h2.al-show-sub-heading {
+    font-size: 1.3rem;
+  }
+}
+
+#using-these-materials {
+  background: $whisper-gray;
+  border-bottom: 8px solid $dandelion;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  h2.al-show-sub-heading {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  dd h2.al-show-sub-heading {
+    display: none;
+  }
+  .blacklight-before_you_visit a {
+    @include underlined-link;
+  }
+}
+
+#using-these-materials-teaser, #using-these-materials {
+  h3 {
+    display: none;
+  }
+
+  dt, dd {
+    font-size: 1rem;
+  }
+
+  dt.blacklight-using-these-materials-header {
+    display: none;
+  }
+  dd.blacklight-using-these-materials-header .al-show-sub-heading {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  ul.using-resources a:before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f058';
+    margin-right: 0.35rem;
+    display: inline-block;
+    text-decoration: none
+  }
+
+  @include media-breakpoint-down(md) {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+}
+
+// For accessibility of inline links surrounded by non-linked text.
+#metadata p a {
+  @include underlined-link;
+}
+
+#metadata, #about-this-level, #subjects, #access-and-use {
+  dt {
+    @include fw-semibold;
+    font-size: 1.2rem;
+  }
+}
+

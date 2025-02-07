@@ -1,0 +1,6 @@
+<div class="alert alert-warning site-alert" role="alert">
+  <% if I18n.exists?('dul_arclight.site_alert.title') %>
+    <h2 class="h3"><%= t('dul_arclight.site_alert.title') %></h2>
+  <% end %>
+  <div><%= t('dul_arclight.site_alert.message_html').html_safe %></div>
+</div>

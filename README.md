@@ -1,3 +1,5 @@
+cd to docker folder
+
 import the xml files under project create my-ead/atom-export-ead/ ****.xml's
 
 to Set correct permissions on solr directory:
@@ -11,12 +13,12 @@ to start containers
 docker-compose up -d
 
 to prepare db and load tables
-docker-compose exec app bundle exec rails db:prepare
-docker-compose exec app bundle exec rails db:migrate
+docker compose exec app bundle exec rails db:prepare
+docker compose exec app bundle exec rails db:migrate
 docker compose exec app bundle exec rails db:schema:load
 
 -> to index in to solr
-docker-compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
 
 now app is running on localhost:3000
 

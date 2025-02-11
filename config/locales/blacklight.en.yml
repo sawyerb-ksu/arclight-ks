@@ -1,6 +1,6 @@
 en:
   blacklight:
-    application_name: Archives & Manuscripts at Duke University Libraries
+    application_name: Archives & Special Collections at Kansas State University
     bookmarks:
       disclaimer_html: '<strong>Please note:</strong> saved bookmarks will expire within 30 days'
       per_page_warning: |
@@ -10,9 +10,9 @@ en:
         page <em>(up to 100)</em>.
       export_csv: Export CSV
     branding:
-          library_name: Duke University Libraries
-          primary: Archives & Manuscripts
-          secondary_html: Collection Guides
+          library_name: Kansas State University Libraries
+          primary: Archives & Special Collections
+          secondary_html: Special Collection Guides
     email:
       text:
         subject:

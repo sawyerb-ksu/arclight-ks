@@ -1,8 +1,8 @@
 #header-navbar {
-  background: $dul-masthead-blue;
+  background: white;
   padding-top: none;
   border-top: none;
-  padding: 18px 0 10px 0;
+  padding: 1rem;
   margin-bottom: 0;
   z-index: 200;
 
@@ -21,6 +21,8 @@
   .navbar-dul {
     margin-right: 1rem;
     float: left;
+    height: 100%;
+    align-content: center;
     @include media-breakpoint-only(xs) {
       margin-right: 0.75rem;
     }
@@ -30,18 +32,18 @@
   }
 
   .navbar-logo {
-    width: 134px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
-    background-image: asset_url('dul-logos/dul_logo_white.png');
+    background-image: asset_url('ksul-logos/ksulogo.svg');
     margin-right: 0;
     margin-top: 0;
     @include media-breakpoint-only(xs) {
-      background-image: asset_url('dul-logos/dul_devil_white.png');
+      background-image: asset_url('ksul-logos/ksulogo.svg');
       width: 24px;
     }
     @include media-breakpoint-only(md) {
-      background-image: asset_url('dul-logos/dul_devil_white.png');
+      background-image: asset_url('ksul-logos/ksulogo.svg');
       width: 24px;
     }
   }
@@ -65,7 +67,7 @@
       font-size: 24px;
       line-height: 18px;
       margin-top: 0;
-      color: white;
+      color: #512888;
       @include media-breakpoint-only(md) {
         font-size: 22px;
       }
@@ -101,9 +103,10 @@
   /* ============== */
 
   #user-utilities {
-
+    height: 100%;
+    
     .navbar-nav {
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       @media (max-width: 991px) {
         display: none;
       }
@@ -114,7 +117,7 @@
       }
 
       a {
-        color: $gray-200;
+        color: #512888;
         text-transform: none;
         margin-bottom: 0;
         font-size: 15px;

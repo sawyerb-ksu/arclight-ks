@@ -3,22 +3,20 @@
     <div class="<%= container_classes %> position-relative">
       <div class="row flex-grow-1">
         <div class="col-12 col-md-5 col-lg-6 col-xl-5 col-xxl-4 pl-2 pr-0" id="logo-col">
-          <a href="https://library.duke.edu" class="navbar-dul">
+          <a href="https://lib.ksu.edu" class="navbar-dul">
             <div class="navbar-logo">
-              <span class="sr-only">Duke University Libraries</span>
+              <span class="sr-only">Kansas State University Libraries</span>
+              <span>Libraries</span>
             </div>
           </a>
-          <a href="/" class="navbar-product-name text-decoration-none">
+          <a href="/" class="navbar-product-name text-decoration-none h-100 align-content-center">
             <span class="product-name-primary">
               <%= t('blacklight.branding.primary') %>
-            </span>
-            <span class="product-name-secondary">
-              <%= t('blacklight.branding.secondary_html') %>
             </span>
           </a>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5 flex-column my-2 my-md-0" id="search-col">
+        <div class="col-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5" id="search-col">
           <%= search_bar unless helpers.homepage? %>
           <%= render 'shared/search_extra_controls' unless helpers.homepage? %>
         </div>

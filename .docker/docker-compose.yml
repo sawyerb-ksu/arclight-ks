@@ -40,7 +40,6 @@ services:
       - solr
     volumes:
       - ../my-ead/atom-export-ead:/opt/app-root/finding-aid-data
-      - ../app:/opt/app-root/app:rw
     ports:
       - "3000:3000"
     environment:

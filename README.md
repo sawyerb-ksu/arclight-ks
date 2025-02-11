@@ -13,9 +13,9 @@ to start containers
 docker-compose up -d
 
 to prepare db and load tables
+docker compose exec app bundle exec rails db:schema:load
 docker compose exec app bundle exec rails db:prepare
 docker compose exec app bundle exec rails db:migrate
-docker compose exec app bundle exec rails db:schema:load
 
 -> to index in to solr
 docker compose exec app rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data

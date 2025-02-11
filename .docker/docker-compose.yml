@@ -47,7 +47,13 @@ services:
       # - FINDING_AID_DATA=./sample-ead
       - DATABASE_URL=postgresql://postgres:arclight@db/arclight
       - MATOMO_ANALYTICS_DEBUG=true
-      - MATOMO_ANALYTICS_HOST=analytics.lib.duke.edu
+      - MATOMO_ANALYTICS_HOST=
       - MATOMO_ANALYTICS_SITE_ID=3
       - REDIS_URL=redis://redis:6379
       - SOLR_URL=http://solr:8983/solr/arclight
+    develop:
+      watch:
+        - path: ../app
+          action: rebuild
+        - path: ../config
+          action: rebuild

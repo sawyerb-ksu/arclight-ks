@@ -61,7 +61,7 @@ applicationHostname: "" # REQUIRED
 authorizedUsers: []  # access control list for Solr admin and Sidekiq web
 externalRoute: false # whether the "public" route(s) should be mapped to the external router
 matomoAnalyticsDebug: false
-matomoAnalyticsHost: analytics.lib.duke.edu
+matomoAnalyticsHost: ""
 matomoAnalyticsSiteId: "" # REQUIRED
 # oidcAllowedGroup - group access control when app is retricted (externalRoute: false)
 oidcAllowedGroup: ""      # REQUIRED

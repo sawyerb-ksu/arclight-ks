@@ -18,7 +18,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Used for DUL testing
-  config.hosts << 'testapp'
+  config.hosts << 'dev-arclight.ksulib.net'
 
   # Enable server timing.
   config.server_timing = true

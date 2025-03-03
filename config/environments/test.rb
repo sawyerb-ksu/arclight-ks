@@ -27,7 +27,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Needed for DUL testing
-  config.hosts << 'testapp'
+  config.hosts << 'dev-arclight.ksulib.net'
 
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.

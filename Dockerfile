@@ -48,7 +48,7 @@ ARG git_commit="0"
 
 LABEL org.opencontainers.image.description="K-STATE University Libraries archives and manuscripts discovery UI"
 LABEL org.opencontainers.image.title="KSUL Archives & Manuscripts Collection Guides"
-LABEL org.opencontainers.image.url="https://archives.lib.duke.edu"
+LABEL org.opencontainers.image.url="https://dev-arclight.ksulib.net/"
 # LABEL org.opencontainers.image.url="https://dev-atom.ksulib.net/repository/browse"
 LABEL org.opencontainers.image.source="https://gitlab.oit.duke.edu/dul-its/dul-arclight"
 LABEL org.opencontainers.image.documentation="https://gitlab.oit.duke.edu/dul-its/dul-arclight"

@@ -41,7 +41,7 @@ class BookmarksCsvExportComponent < ViewComponent::Base
       # Multi-value fields delimited by pipe (|) character
       response.documents.each do |doc|
         csv << [
-          ['https://archives.lib.duke.edu/catalog/', doc.id].join,
+          ['https://dev-arclight.ksulib.net//catalog/', doc.id].join,
           doc.collection_unitid,
           doc.eadid,
           doc.aspace_id,

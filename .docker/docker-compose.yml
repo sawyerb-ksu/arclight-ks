@@ -20,7 +20,7 @@ services:
     image: solr:8-slim
     user: "8983:8983"
     volumes:
-      - ../solr/arclight/conf:/solr_config:ro
+      - ../solr/arclight/conf:/solr_config
       - ../solr/arclight/data:/var/solr/data/
     entrypoint:
       - docker-entrypoint.sh

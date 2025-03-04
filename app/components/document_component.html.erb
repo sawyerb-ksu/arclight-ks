@@ -13,7 +13,7 @@
 
 <div class="title-container">
   <%= content_tag :h1 do %>
-    <%= document.normalized_title %>
+    <%= raw(document.normalized_title) %>
   <% end %>
   <%= render 'arclight/requests', document: document %>
   <%= render Arclight::BookmarkComponent.new document: document, action: bookmark_config %>

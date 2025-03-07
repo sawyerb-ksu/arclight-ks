@@ -1,13 +1,22 @@
 SHELL = /bin/bash
 
-build_tag ?= dul-arclight:latest
+# Define variables
+BUILD_TAG ?= ksul-arclight:latest
+DOCKER_COMPOSE = docker compose -f .docker/docker-compose.yml
+APP_SERVICE = app
+SOLR_SERVICE = solr
+DATA_DIR = ./solr/arclight/data
+EAD_DIR = ./my-ead/atom-export-ead
 
-run_command = docker run --rm -v "$(shell pwd):/opt/app-root" $(build_tag)
+# Docker run helper
+run_command = docker run --rm -v "$(shell pwd):/opt/app-root" $(BUILD_TAG)
 
-.PHONY : build
+# Rebuild Docker images without cache.
+.PHONY: build 
 build:
-	./build.sh
+	$(DOCKER_COMPOSE) build --no-cache
 
+#
 .PHONY : clean
 clean:
 	rm -rf ./tmp/*
@@ -21,33 +30,75 @@ test:
 accessibility:
 	./test-a11y.sh
 
-.PHONY : rubocop
+# To start all the containers
+.PHONY: start
+start:
+	$(DOCKER_COMPOSE) up -d
+
+# To stop all the containers
+.PHONY: stop
+stop:
+	$(DOCKER_COMPOSE) down
+
+#To restart services without rebuilding
+.PHONY: restart
+restart:
+	$(DOCKER_COMPOSE) down && $(DOCKER_COMPOSE) up -d
+
+#To intialize db during intial set up
+.PHONY: db-setup
+db-setup:
+	$(DOCKER_COMPOSE) exec $(APP_SERVICE) bundle exec rails db:schema:load
+	$(DOCKER_COMPOSE) exec $(APP_SERVICE) bundle exec rails db:prepare
+	$(DOCKER_COMPOSE) exec $(APP_SERVICE) bundle exec rails db:migrate
+
+#to index the ead files in to solr
+.PHONY: index-solr
+index-solr:
+	$(DOCKER_COMPOSE) exec $(APP_SERVICE) rake dul_arclight:index_dir DIR=/opt/app-root/finding-aid-data
+
+#to fix solr permissions issue
+.PHONY: solr-permissions
+solr-permissions:
+	sudo chown -R 8983:8983 $(DATA_DIR)
+	sudo chmod -R 755 $(DATA_DIR)
+
+# to check code style
+.PHONY: rubocop
 rubocop:
 	$(run_command) bundle exec rubocop $(args)
 
-.PHONY : autocorrect
+# to fix code issues automatically like sytle issues
+.PHONY: autocorrect
 autocorrect:
 	$(run_command) bundle exec rubocop -a
 
+#freezes the dependencies before deploying
 .PHONY: lock
 lock:
 	$(run_command) bundle lock
 
-.PHONY: update
-update:
-	$(run_command) bundle update $(gems)
 
+.PHONY: bundle-update
+bundle-update:
+	$(run_command) bundle update $(gems)
 .PHONY: audit
 audit:
 	$(run_command) ./audit.sh
 
-.PHONY: update-chart
-update-chart:
-	helm dependency update chart
+# For kubernetes
+# .PHONY: update-chart
+# update-chart:
+# 	helm dependency update chart
 
-.PHONY: lint-chart
-lint-chart:
-	helm lint chart --with-subcharts
+# .PHONY: lint-chart
+# lint-chart:
+# 	helm lint chart --with-subcharts
 
-.PHONY: chart
-chart: update-chart lint-chart
+# .PHONY: chart
+# chart: update-chart lint-chart
+
+# one command for intial set up
+.PHONY: full-setup
+full-setup: solr-permissions build start db-setup index-solr
+
